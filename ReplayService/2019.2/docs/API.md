@@ -57,6 +57,7 @@ Source describes the session to replay.
 | indentifier | The friendly name of the output session. See below for [identifier placeholders](#identifier-placeholders). | `{{identifier}} replay {{time yyMMddHHmmss}}` | Any string
 | version | Versioning number of the resulting session. Mainly used when `inheritSourceId` is also specified as true. Used only when set to greater than 0 | `0` | null, 0 or more
 | inheritSourceId | Whether the resulting session should have the same SessionId as the source session. More info can be found regarding [versioning in TAP API](https://github.com/McLarenAppliedTechnologies/mat.tap.query.api/blob/master/docs/SessionVersions.md) documentation. | `false` | true or false
+| label | Sets the label for the resulting session. Label is useful in [Influx Writer](../../../InfluxWriter/2019.1.0/docs/SeedData.md#influx-db-connections) for example.
 
 <br>
 
