@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Replay Service
+# ![logo](/Branding/branding.png) SignalR Service
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
@@ -6,12 +6,11 @@
   - [*Run with Docker*](#run-with-docker)<br>
   - [*Run as daemon service*](#run-as-a-daemon-service)<br>
 - [**Service configuration**](ServiceConfig.md)<br>
-- [**Authorization**](Authorization.md)<br>
 - [**API**](API.md)<br>
 
 ## Run with Docker
 
-Replay Service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/replay-service#read).
+SignalR service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/signalr-service#read).
 
 ## Run as a daemon service
 ### .NET Core runtime dependency
@@ -27,7 +26,7 @@ sudo apt-get --yes install aspnetcore-runtime-2.1
 ```
 
 ### Daemon installation
-In the [release bundle](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/sections/115000825753-Downloads) the service is located at `services/MAT.TAP.ReplayService`.
+In the [release bundle](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/sections/115000825753-Downloads) the service is located at `services/MAT.TAP.AAS.SignalR`.
 
 In the folder you will find a shell script called `daemon_deploy.sh` to install the service.
 
@@ -45,24 +44,24 @@ Then run:
 You can check logs and verify its state with
 
 ```
-journalctl --unit MAT.TAP.ReplayService.API.service --follow -n 100
+journalctl --unit MAT.TAP.AAS.SignalR.service --follow -n 100
 ```
 
 
 and start or stop by 
 
 ```
-sudo systemctl stop MAT.TAP.ReplayService.API.service
-sudo systemctl start MAT.TAP.ReplayService.API.service
+sudo systemctl stop MAT.TAP.AAS.SignalR.service
+sudo systemctl start MAT.TAP.AAS.SignalR.service
 ```
 
 To configure the service according to the [Service Configuration section](ServiceConfig.md), edit
 ```
-/opt/MAT.TAP.ReplayService.API/appsettings.json
+/opt/MAT.TAP.AAS.SignalR/appsettings.json
 ```
 
 **Please note that after you change settings in appsettings.json in opt folder you need to restart service.**
 
 ## Logging
 
-Replay Service has logging and uses Nlog for logger implementation. You can configure logging in the `nlog.config` file or provide your own logging configuration. More information on available configuration options can be found [here](https://github.com/nlog/nlog/wiki/Configuration-file).
+SignalR Service has logging and uses Nlog for logger implementation. You can configure logging in the `nlog.config` file or provide your own logging configuration. More information on available configuration options can be found [here](https://github.com/nlog/nlog/wiki/Configuration-file).
