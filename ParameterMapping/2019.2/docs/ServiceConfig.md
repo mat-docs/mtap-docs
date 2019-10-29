@@ -42,7 +42,7 @@ The configuration file of the service is called ```appsettings.json```
 | Kafka | The Kafka broker configuration. [See below](#kafka-properties).
 | InputTopics | An array of topic names to listen to for live data. Linked to `OutputTopics` by index. | `[ "Topic1", "Topic2" ]` |
 | OutputTopics | An array of topic names to write the renamed parameteres to. Linked to `InputTopics` by index. | `[ "Topic1", "Topic2" ]` |
-| ParameterMappingSettings        | The parameter mapping configuration. See Below |  
+| ParameterMappings        | The parameter name mappings. [See below](#parametermappings-array) |  
 
 <br>
 
@@ -58,7 +58,7 @@ The configuration file of the service is called ```appsettings.json```
 <br>
 
 #### ParameterMappings array
-Contains a listo of source to target parameter name mappings.
+Contains a list of source to target parameter name mappings.
 | Property  | Description |  
 |-|-|
 | SourceIdentifier   |  The parameter identifier to rename in the source session |
