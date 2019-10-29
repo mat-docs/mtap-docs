@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Motorsport Telemetry Analytics Platform Documentations
+# ![logo](/Branding/branding.png) Motorsport Telemetry Analytics Platform Documentation
 
 ### Table of Contents
 - [**Influx Writer**](/InfluxWriter/README.md)<br>
