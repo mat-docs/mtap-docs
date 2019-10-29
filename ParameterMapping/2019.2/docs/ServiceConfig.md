@@ -24,14 +24,12 @@ The configuration file of the service is called ```appsettings.json```
   },
   "InputTopics": [ "input_topic" ],
   "OutputTopics": [ "output_topic" ],
-  "ParameterMappingSettings": {
-    "ParameterMappings": [
-      {
-        "SourceIdentifier": "carSpeed",
-        "TargetIdentifier":  "vCar:Chassis" 
-      }
-    ]
-  }
+  "ParameterMappings": [
+    {
+      "SourceIdentifier": "carSpeed",
+      "TargetIdentifier":  "vCar:Chassis" 
+    }
+  ]
 }
 ```
 
@@ -44,7 +42,7 @@ The configuration file of the service is called ```appsettings.json```
 | Kafka | The Kafka broker configuration. [See below](#kafka-properties).
 | InputTopics | An array of topic names to listen to for live data. Linked to `OutputTopics` by index. | `[ "Topic1", "Topic2" ]` |
 | OutputTopics | An array of topic names to write the renamed parameteres to. Linked to `InputTopics` by index. | `[ "Topic1", "Topic2" ]` |
-| ParameterMappingSettings        | The parameter mapping configuration. See Below |  
+| ParameterMappings        | The parameter name mappings. [See below](#parametermappings-array) |  
 
 <br>
 
@@ -52,20 +50,15 @@ The configuration file of the service is called ```appsettings.json```
 
 | Property  | Description                                                 | Default value | Example                                                                   |  
 |-|-|-|-|
-| DependencyService       |  The [dependency service] to publish dependencies to when replaying a session     |           |    `"http://dependency-service/api/dependencies/"`          |
 | BrokerList        | Address of the message broker cluster. Multiple can be specified using comma  |               |    `"127.0.0.1"`       |  
 | ConsumerGroup         | The identity to use when reading from Kafka. | `SignalR_production` | |
+| DependencyService       |  The [dependency service] to publish dependencies to when replaying a session     |           |    `"http://dependency-service/api/dependencies/"`          |
 | UseProtobuf         | True if [protobuf] should be used, false otherwise. If not enabled, message encoding will be JSON |   `false`      | `true` or `false` |
 
 <br>
 
-#### ParameterMappingSettings properties
-
-| Property  | Description |  
-|-|-|
-| ParameterMappings       |  Array of ParameterMappings. [See Below](#parametermappings-properties). |
-
-#### ParameterMapping properties
+#### ParameterMappings array
+Contains a list of source to target parameter name mappings.
 | Property  | Description |  
 |-|-|
 | SourceIdentifier   |  The parameter identifier to rename in the source session |
