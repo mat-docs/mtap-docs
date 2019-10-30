@@ -59,6 +59,7 @@ The configuration file of the service is called ```appsettings.json```
 
 #### ParameterMappings array
 Contains a list of source to target parameter name mappings.
+
 | Property  | Description |  
 |-|-|
 | SourceIdentifier   |  The parameter identifier to rename in the source session |
