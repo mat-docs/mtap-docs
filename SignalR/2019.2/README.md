@@ -9,4 +9,4 @@
 
 # Introduction
 
-SignalR is a websocket push mechanism based live service that allows multiple clients to subscribe to various parameters for live data and get pushed data streams. It is used by TAP DataExplorer UI.
+SignalR is a websocket based service that allows multiple clients to subscribe to various parameters for live data streams. It is used by TAP DataExplorer UI.
