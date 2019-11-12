@@ -8,8 +8,6 @@
 - [**Querying Metadata**](Metadata.md)<br>
 - **Consuming Data**<br>
 - [**Session Versions**](SessionVersions.md)<br>
-- [**Views**](Views.md)<br>
-
 
 Consuming Data
 =====================
