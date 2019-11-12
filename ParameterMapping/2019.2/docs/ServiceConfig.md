@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png)  Parameter Mapping Service
+# ![logo](/Media/branding.png)  Parameter Mapping Service
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
@@ -6,7 +6,7 @@
 - **Service configuration**<br>
 
 # Service Configuration
-[Identity Server]: https://github.com/McLarenAppliedTechnologies/mat.tap.query.api/blob/master/docs/IdentityServer.md
+[Identity Service]: /IdentityService/README.md
 [cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 [protobuf]: https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/360008375233-Protobuf-Extension
 

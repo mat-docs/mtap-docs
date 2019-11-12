@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Telemetry Analytics Data Persistence
+# ![logo](/Media/branding.png) Telemetry Analytics Data Persistence
 
 ## InfluxDb installation
 **We strongly recommend deploying InfluxDb writer and InfluxDb on one Linux VM. InfluxDb performs better on Linux and by deploying it on one machine together with service you reduce unnecessary network bandwidth between those services.**

@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Replay Service
+# ![logo](/Media/branding.png) Replay Service
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
@@ -10,8 +10,8 @@
 # Service Configuration
 [dependency service]: https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003531373-API-Reference-Dependencies-Service
 [protobuf]: https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/360008375233-Protobuf-Extension
-[TAP API]: https://github.com/McLarenAppliedTechnologies/mat.tap.query.api
-[Identity Server]: https://github.com/McLarenAppliedTechnologies/mat.tap.query.api/blob/master/docs/IdentityServer.md
+[TAP API]: /TapApi/README.md
+[Identity Service]: /IdentityService/README.md
 [cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 
@@ -79,7 +79,7 @@ The configuration file of the service is called ```appsettings.json```
 
 | Property  | Description | Example |  
 |-|-|-|
-| Enabled       | True if OAuth should be enabled. Suggested OAuth is [Identity Server]. If disabled then Replay Service endpoints do not require authentication.             |    true or false          |
+| Enabled       | True if OAuth should be enabled. Suggested OAuth is [Identity Service]. If disabled then Replay Service endpoints do not require authentication.             |    true or false          |
 | Url        | Th OAuth service provider adddress.               |     "http://identity-server"      |  
 
 

@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Replay Service
+# ![logo](/Media/branding.png) Replay Service
 
 ### Table of Contents
 - **Introduction**<br>
@@ -10,4 +10,4 @@
 
 # Introduction
 
-Replay Service allows the replay of historical sessions from [TAP API](https://github.com/McLarenAppliedTechnologies/mat.tap.query.api) as if they were live again. The service allows for custom using custom data selection for replay, e.g. specify a subset of the parameters.
+Replay Service allows the replay of historical sessions from [TAP API](/TAPApi/README.md) as if they were live again. The service allows for custom using custom data selection for replay, e.g. specify a subset of the parameters.

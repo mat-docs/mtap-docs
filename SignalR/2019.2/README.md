@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) SignalR Service
+# ![logo](/Media/branding.png) SignalR Service
 
 ### Table of Contents
 - **Introduction**<br>

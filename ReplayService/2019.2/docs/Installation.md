@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Replay Service
+# ![logo](/Media/branding.png) Replay Service
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
