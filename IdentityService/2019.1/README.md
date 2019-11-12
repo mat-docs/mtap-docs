@@ -7,5 +7,5 @@
 
 Identity Service implements OpenID Connect and provides authentication services for Telemetry Analytics API and other services in MTAP. Identity Service provides following services.
 
-- Provides a RESTful API to manage TAPI users and clients;
-- Facilitate OAuth2.0 flows to authorize access to TAPI resources.
+- Provides a RESTful API to manage TAP API users and clients;
+- Facilitate OAuth2.0 flows to authorize access to TAP API resources.

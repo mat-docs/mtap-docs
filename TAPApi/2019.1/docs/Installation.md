@@ -41,7 +41,7 @@ Configure the connection string, example:
 }
 ```
 Where:
- - SQLExpress refers to the SQLServer DB that holds the TAPI configuration.
+ - SQLExpress refers to the SQLServer DB that holds the TAP API configuration.
  - OAuthServer refers to your instance of the Identity Service. **If you are accessing the API from outside using an external IP adress you may need to use that external address here.**
 
 Set  `InitializeDatabase` to `True` to initialize database configured in ConnectionStrings section. This creates the database if it doesn't exist and applies any pending database migrations.

@@ -58,9 +58,9 @@ In the above json, `group`, `version` and `configuration` carry information abou
 
 #### Querying session versions
 
-Detailed information on querying sessions are described in [Querying Metadata](Metadata.md). Here we will focus on querying session versions. In TAPI, as far as the client interface concerned, sessions are identifed using the session `id` (not the stream id) to make sure that you can identify a session uniformly across the Atlas ecosystem (Atlas desktop client, ADS, etc) which uses session `id` as the primary session identifier. If there are multiple session versions with the same session `id`, you must specify the version of a session in TAPI using the optional `sessionVersion` query parameter.
+Detailed information on querying sessions are described in [Querying Metadata](Metadata.md). Here we will focus on querying session versions. In TAP API, as far as the client interface concerned, sessions are identifed using the session `id` (not the stream id) to make sure that you can identify a session uniformly across the Atlas ecosystem (Atlas desktop client, ADS, etc) which uses session `id` as the primary session identifier. If there are multiple session versions with the same session `id`, you must specify the version of a session in TAP API using the optional `sessionVersion` query parameter.
 
-If you do not specify the session version, TAPI returns the latest version of the session in storage. The latest version is determined, in order of precedence, using the `version`, quality (an internal value related to Atlas sessions) and time of recording. If you did not version the sessions or the session quality is not applicable to your usecase, TAPI will return the last recorded session based on the `timeOfRecording` for that session id.
+If you do not specify the session version, TAP API returns the latest version of the session in storage. The latest version is determined, in order of precedence, using the `version`, quality (an internal value related to Atlas sessions) and time of recording. If you did not version the sessions or the session quality is not applicable to your usecase, TAP API will return the last recorded session based on the `timeOfRecording` for that session id.
 
 You can use ```/sessions/{sessionId}/versions``` resource to explore different versions of the session.<br />
 

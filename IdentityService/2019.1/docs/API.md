@@ -186,7 +186,7 @@ DELETE api/v1/users/1e958756-40e7-4886-b58f-13055df8847c
 
 ## Client Management
 
-Identity Service exposes a resource under `/clients` path to create new TAPI clients.
+Identity Service exposes a resource under `/clients` path to create new TAP API clients.
 
 #### Create New Client
 
