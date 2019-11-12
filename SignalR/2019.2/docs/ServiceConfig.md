@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) SignalR Service
+# ![logo](/Media/branding.png) SignalR Service
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
@@ -7,7 +7,7 @@
 - [**API**](API.md)<br>
 
 # Service Configuration
-[Identity Server]: https://github.com/McLarenAppliedTechnologies/mat.tap.query.api/blob/master/docs/IdentityServer.md
+[Identity Service]: /IdentityService/README.md
 [cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 
 
@@ -46,7 +46,7 @@ The configuration file of the service is called ```appsettings.json```
 | Server | The API server configuration. [See below](#server-properties). | |
 | TopicNames | An array of topic names to listen to for live data | `[ "Topic1", "Topic2" ]` |
 | Kafka | The Kafka broker configuration. [See below](#kafka-properties).
-| OAuthServer        | The OAuth service provider adddress. TAP comes with [Identity Server] as OAuth provider.              |     `"http://identity-server"`      |  
+| OAuthServer        | The OAuth service provider adddress. TAP comes with [Identity Service] as OAuth provider.              |     `"http://identity-server"`      |  
 
 
 #### Server properties

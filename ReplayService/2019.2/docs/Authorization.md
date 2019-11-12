@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Replay Service
+# ![logo](/Media/branding.png) Replay Service
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
@@ -9,4 +9,4 @@
 
 # Authorization
 
-Authentication follows the same flow as with other TAP services, like the TAP API. Please visit [this link](https://github.com/McLarenAppliedTechnologies/mat.tap.query.api/blob/master/docs/Authorization.md) to read more about it.
+Authentication follows the same flow as with other TAP services, like the TAP API. Please visit [this link](/IdentityService/README.md) to read more about it.

@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Telemetry Analytics Data Persistence
+# ![logo](/Media/branding.png) Telemetry Analytics Data Persistence
 
 ### Table of Contents
 - **Introduction**<br>

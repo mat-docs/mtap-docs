@@ -1,4 +1,4 @@
-# ![logo](/Branding/branding.png) Parameter Mapping Service
+# ![logo](/Media/branding.png) Parameter Mapping Service
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
