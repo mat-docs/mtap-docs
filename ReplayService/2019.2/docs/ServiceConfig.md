@@ -71,6 +71,7 @@ The configuration file of the service is called ```appsettings.json```
 | Url       |  [TAP API] service address   |       "http://tap-api-service"          |
 | User      | The user to authenticate with when requesting data from TAP API. See `OAuth` section.  |              "replayuser" |  
 | Password   | The password for the specified `User`. | "myp@ssw0rd" |
+| MaxParametersPerRequest | The maximum number of parameters in a batch when querying data from TAP API. Increasing this might help when replaying session with multiple thousands of parameters. Default value is 100. | 100 |
 
 <br>
 
