@@ -1,7 +1,7 @@
 
 |Package Name|Package Version|License|
 |---|---|---|
-|<a name="Atrico.Lib.Common">Atrico.Lib.Common</a>|2.1.6318.37156|Apache 2.0|
+|<a name="Atrico.Lib.Common">Atrico.Lib.Common</a>|2.1.6318.37156|[Apache 2.0](#apache2.0)|
 |<a name="Autofac">Autofac</a> |4.5.0, 4.8.1, 4.6.2|MIT|
 |<a name="Autofac.Extensions.DependencyInjection">Autofac.Extensions.DependencyInjection</a> |4.3.0|MIT|
 |<a name="Autofac.Integration.WebApi">Autofac.Integration.WebApi</a> |4.0.0.0|MIT|
@@ -75,7 +75,7 @@
 |<a name="Unity.WebAPI">Unity.WebAPI</a> |5.2.3, 5.2.3.0|Apache 2.0|
 |<a name="Vibrant.InfluxDB.Client">Vibrant.InfluxDB.Client</a> |3.0.0|MIT|
 |<a name="Z.EntityFramework.Plus.EF6">Z.EntityFramework.Plus.EF6</a> |1.7.15|MIT|
-
+<a name="apache2.0"></a>
 ## Apache License, Version 2.0
 
 Packages that use this license:
