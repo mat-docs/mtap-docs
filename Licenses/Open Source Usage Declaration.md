@@ -55,7 +55,7 @@
 |<a name="Remotion.Linq">Remotion.Linq</a> |2.2.0|[Apache 2.0](#apache2.0)|
 |<a name="Simple.Migrations">Simple.Migrations</a> |0.9.18|[MIT](#MIT)|
 |<a name="Snappy.NET">Snappy.NET</a> |1.1.1.8|[BSD-3-Clause](#Crc32C.NET.BSD-3-Clause)|
-|<a name="StyleCop.Analyzers">StyleCop.Analyzers</a> |1.1.0-beta009, 1.0.2|Apache 2.0|
+|<a name="StyleCop.Analyzers">StyleCop.Analyzers</a> |1.1.0-beta009, 1.0.2|[Apache 2.0](#apache2.0)|
 |<a name="Swashbuckle.AspNetCore">Swashbuckle.AspNetCore</a> |3.0.0, 4.0.1|[MIT](#MIT)|
 |<a name="Swashbuckle.AspNetCore.Annotations">Swashbuckle.AspNetCore.Annotations</a> |3.0.0|[MIT](#MIT)|
 |<a name="Swashbuckle.Core">Swashbuckle.Core</a> |1.0.0.0|[BSD-3-Clause](#Swashbuckle.Core.BSD3)|
@@ -94,6 +94,7 @@ Packages that use this license:
 [Unity.RegistrationByConvention](#Unity.RegistrationByConvention)<br/>
 [Unity.ServiceLocation](#Unity.ServiceLocation)<br/>
 [Unity.WebAPI](#Unity.WebAPI)<br/>
+[StyleCop.Analyzers](#StyleCop.Analyzers)<br/>
 
 Apache License\
 
