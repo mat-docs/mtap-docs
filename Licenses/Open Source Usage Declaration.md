@@ -2,87 +2,85 @@
 | Package Name | Package Version | License |
 | --- | --- | --- |
 | <a name="Atrico.Lib.Common">Atrico.Lib.Common</a> | 2.1.6318.37156 | Apache 2.0 |
-| Autofac | 4.5.0, 4.8.1, 4.6.2 | MIT |
-| Autofac.Extensions.DependencyInjection | 4.3.0 | MIT |
-| Autofac.Integration.WebApi | 4.0.0.0 | MIT |
-| Autofac.WebApi2 | 4.0.1 | MIT |
-| AutoMapper | 6.0.2, 7.01 | MIT |
-| AutoMapper.Extensions.Microsoft.DependencyInjection | 6.0.0 | MIT |
-| Baseclass.Contrib.Nuget.Output | 2.4.3, 2.3.0 | MIT |
-| CommandLineParser | 2.4.3, 2.3.0 | MIT |
-| Confluent.Kafka | [0.11.6,1.0), 0.11.6 | Apache 2.0 |
-| Crc32C.NET | 1.0.5.0 | BSD-3-Clause |
-| CsvTextFieldParser | 1.1.1 | MIT |
-| EFCore.BulkExtensions | 2.1.8 | MIT |
-| Google.Protobuf | 3.6.1 | Google |
-| Iconic.Zlib.Netstandard | 1.0.0 | MIT |
-| IdentityServer4 | 2.2.0 | Apache 2.0 |
-| IdentityServer4.AccessTokenValidation | 2.6.0 | Apache 2.0 |
-| IdentityServer4.AspNetIdentity | 2.1.0 | Apache 2.0 |
-| IdentityServer4.EntityFramework | 2.1.1 | Apache 2.0 |
-| INIFileParser | 2.4.0.0 | MIT |
-| ini-parser | 2.4.0 | MIT |
-| Irony | 0.96 | MIT |
-| librdkafka.redist | 0.11.6 | Apache 2.0 |
-| LumenWorksCsvReader | 4.0.0 | MIT |
-| M2Mqtt | 4.3.0.0 | MIT |
-| M2MqttDotnetCore | 1.0.7, 1.0.8 | Eclipse Public License 1.0 |
-| MathNet.Numerics | 3.17.0 | MIT/X11 |
-| Nancy | 1.4.4 | MIT |
-| Nancy.Hosting.Self | 1.4.1 | MIT |
-| Nancy.Serialization.JsonNet | 1.4.1 | MIT |
-| NCalc | 1.6.0 | MIT |
-| netstandard | 2.0.0.0 | MIT |
-| NETStandard.Library | 2.0.0 | MIT |
-| Newtonsoft.Json | 11.0.2, 12.0.1, 12.0.2 | MIT |
-| Newtonsoft.Json.Bson | 1.0.1 | MIT |
-| NLog | 4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7 | BSD-3-Clause |
-| NLog.Config | 4.5.11 | BSD-3-Clause |
-| NLog.Extensions.Logging | 1.2.1 | BSD-2-Clause |
-| NLog.Schema | 4.5.11 | BSD-3-Clause |
-| NLog.Web.AspNetCore | 4.5.4, 4.8.0, 4.8.1, 4.8.5 | BSD-3-Clause |
-| Owin | 1 | Apache 2.0 |
-| OxyPlot | 1.0.0.0 | MIT |
-| OxyPlot.Core | 1.0.0 | MIT |
-| OxyPlot.Wpf | 1.0.0 | MIT |
-| Prism | 6.3.0.0 | MIT |
-| Prism.Core | 6.3.0 | MIT |
-| Prism.Wpf | 6.3.0 | MIT |
-| Prometheus.NetStandard | 2.0.0.0 | MIT |
-| prometheus-net | 1.5.0.0, 1.5.1-mat, 2.0.0 | MIT |
-| prometheus-net.AspNetCore | 3.1.1 | MIT |
-| protobuf-net | 2.1.0, 2.3.4 | BSD |
-| Remotion.Linq | 2.2.0 | Apache 2.0 |
-| Simple.Migrations | 0.9.18 | MIT |
-| Snappy.NET | 1.1.1.8 | BSD-3-Clause |
-| StyleCop.Analyzers | 1.1.0-beta009, 1.0.2 | Apache 2.0 |
-| Swashbuckle.AspNetCore | 3.0.0, 4.0.1 | MIT |
-| Swashbuckle.AspNetCore.Annotations | 3.0.0 | MIT |
-| Swashbuckle.Core | 1.0.0.0 | BSD-3-Clause |
-| Swashbuckle.Core.Net45 | 5.2.1 | BSD-3-Clause |
-| Topshelf | 4.0.3, 4.2.0 | Apache 2.0 |
-| Topshelf.Autofac | 4.0.1 | MIT |
-| Topshelf.NLog | 4.0.3, 4.2.0 | Apache 2.0 |
-| Unity | 5.8.6 | Apache 2.0 |
-| Unity.Abstractions | 3.3.0.0 | Apache 2.0 |
-| Unity.Configuration | 5.2.1.0 | Apache 2.0 |
-| Unity.Container | 5.8.6.0 | Apache 2.0 |
-| Unity.Interception | 5.5.1.0 | Apache 2.0 |
-| Unity.Interception.Configuration | 5.1.4.0 | Apache 2.0 |
-| Unity.Microsoft.DependencyInjection | 2.0.10, 2.1.0 | Apache 2.0 |
-| Unity.RegistrationByConvention | 2.1.5.0 | Apache 2.0 |
-| Unity.ServiceLocation | 2.1.2.0 | Apache 2.0 |
-| Unity.WebAPI | 5.2.3, 5.2.3.0 | Apache 2.0 |
-| Vibrant.InfluxDB.Client | 3.0.0 | MIT |
-| Z.EntityFramework.Plus.EF6 | 1.7.15 | MIT |
+| <a name="Autofac">Autofac</a>  | 4.5.0, 4.8.1, 4.6.2 | MIT |
+| <a name="Autofac.Extensions.DependencyInjection">Autofac.Extensions.DependencyInjection</a>  | 4.3.0 | MIT |
+| <a name="Autofac.Integration.WebApi">Autofac.Integration.WebApi</a>  | 4.0.0.0 | MIT |
+| <a name="Autofac.WebApi2">Autofac.WebApi2</a>  | 4.0.1 | MIT |
+| <a name="AutoMapper">AutoMapper</a>  | 6.0.2, 7.01 | MIT |
+| <a name="AutoMapper.Extensions.Microsoft.DependencyInjection">AutoMapper.Extensions.Microsoft.DependencyInjection</a>  | 6.0.0 | MIT |
+| <a name="Baseclass.Contrib.Nuget.Output">Baseclass.Contrib.Nuget.Output</a>  | 2.4.3, 2.3.0 | MIT |
+| <a name="CommandLineParser">CommandLineParser</a>  | 2.4.3, 2.3.0 | MIT |
+| <a name="Confluent.Kafka">Confluent.Kafka</a>  | [0.11.6,1.0), 0.11.6 | Apache 2.0 |
+| <a name="Crc32C.NET">Crc32C.NET</a>  | 1.0.5.0 | BSD-3-Clause |
+| <a name="CsvTextFieldParser">CsvTextFieldParser</a>  | 1.1.1 | MIT |
+| <a name="EFCore.BulkExtensions">EFCore.BulkExtensions</a>  | 2.1.8 | MIT |
+| <a name="Google.Protobuf">Google.Protobuf</a>  | 3.6.1 | Google |
+| <a name="Iconic.Zlib.Netstandard">Iconic.Zlib.Netstandard</a>  | 1.0.0 | MIT |
+| <a name="IdentityServer4">IdentityServer4</a>  | 2.2.0 | Apache 2.0 |
+| <a name="IdentityServer4.AccessTokenValidation">IdentityServer4.AccessTokenValidation</a>  | 2.6.0 | Apache 2.0 |
+| <a name="IdentityServer4.AspNetIdentity">IdentityServer4.AspNetIdentity</a>  | 2.1.0 | Apache 2.0 |
+| <a name="IdentityServer4.EntityFramework">IdentityServer4.EntityFramework</a>  | 2.1.1 | Apache 2.0 |
+| <a name="INIFileParser">INIFileParser</a>  | 2.4.0.0 | MIT |
+| <a name="ini-parser">ini-parser</a>  | 2.4.0 | MIT |
+| <a name="Irony">Irony</a>  | 0.96 | MIT |
+| <a name="librdkafka.redist">librdkafka.redist</a>  | 0.11.6 | Apache 2.0 |
+| <a name="LumenWorksCsvReader">LumenWorksCsvReader</a>  | 4.0.0 | MIT |
+| <a name="M2Mqtt">M2Mqtt</a>  | 4.3.0.0 | MIT |
+| <a name="M2MqttDotnetCore">M2MqttDotnetCore</a>  | 1.0.7, 1.0.8 | Eclipse Public License 1.0 |
+| <a name="MathNet.Numerics">MathNet.Numerics</a>  | 3.17.0 | MIT/X11 |
+| <a name="Nancy">Nancy</a>  | 1.4.4 | MIT |
+| <a name="Nancy.Hosting.Self">Nancy.Hosting.Self</a>  | 1.4.1 | MIT |
+| <a name="Nancy.Serialization.JsonNet">Nancy.Serialization.JsonNet</a>  | 1.4.1 | MIT |
+| <a name="NCalc">NCalc</a>  | 1.6.0 | MIT |
+| <a name="netstandard">netstandard</a>  | 2.0.0.0 | MIT |
+| <a name="NETStandard.Library">NETStandard.Library</a>  | 2.0.0 | MIT |
+| <a name="Newtonsoft.Json">Newtonsoft.Json</a>  | 11.0.2, 12.0.1, 12.0.2 | MIT |
+| <a name="Newtonsoft.Json.Bson">Newtonsoft.Json.Bson</a>  | 1.0.1 | MIT |
+| <a name="NLog">NLog</a>  | 4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7 | BSD-3-Clause |
+| <a name="NLog.Config">NLog.Config</a>  | 4.5.11 | BSD-3-Clause |
+| <a name="NLog.Extensions.Logging">NLog.Extensions.Logging</a>  | 1.2.1 | BSD-2-Clause |
+| <a name="NLog.Schema">NLog.Schema</a>  | 4.5.11 | BSD-3-Clause |
+| <a name="NLog.Web.AspNetCore">NLog.Web.AspNetCore</a>  | 4.5.4, 4.8.0, 4.8.1, 4.8.5 | BSD-3-Clause |
+| <a name="Owin">Owin</a>  | 1 | Apache 2.0 |
+| <a name="OxyPlot">OxyPlot</a>  | 1.0.0.0 | MIT |
+| <a name="OxyPlot.Core">OxyPlot.Core</a>  | 1.0.0 | MIT |
+| <a name="OxyPlot.Wpf">OxyPlot.Wpf</a>  | 1.0.0 | MIT |
+| <a name="Prism">Prism</a>  | 6.3.0.0 | MIT |
+| <a name="Prism.Core">Prism.Core</a>  | 6.3.0 | MIT |
+| <a name="Prism.Wpf">Prism.Wpf</a>  | 6.3.0 | MIT |
+| <a name="Prometheus.NetStandard">Prometheus.NetStandard</a>  | 2.0.0.0 | MIT |
+| <a name="prometheus-net">prometheus-net</a>  | 1.5.0.0, 1.5.1-mat, 2.0.0 | MIT |
+| <a name="prometheus-net.AspNetCore">prometheus-net.AspNetCore</a>  | 3.1.1 | MIT |
+| <a name="protobuf-net">protobuf-net</a>  | 2.1.0, 2.3.4 | BSD |
+| <a name="Remotion.Linq">Remotion.Linq</a>  | 2.2.0 | Apache 2.0 |
+| <a name="Simple.Migrations">Simple.Migrations</a>  | 0.9.18 | MIT |
+| <a name="Snappy.NET">Snappy.NET</a>  | 1.1.1.8 | BSD-3-Clause |
+| <a name="StyleCop.Analyzers">StyleCop.Analyzers</a>  | 1.1.0-beta009, 1.0.2 | Apache 2.0 |
+| <a name="Swashbuckle.AspNetCore">Swashbuckle.AspNetCore</a>  | 3.0.0, 4.0.1 | MIT |
+| <a name="Swashbuckle.AspNetCore.Annotations">Swashbuckle.AspNetCore.Annotations</a>  | 3.0.0 | MIT |
+| <a name="Swashbuckle.Core">Swashbuckle.Core</a>  | 1.0.0.0 | BSD-3-Clause |
+| <a name="Swashbuckle.Core.Net45">Swashbuckle.Core.Net45</a>  | 5.2.1 | BSD-3-Clause |
+| <a name="Topshelf">Topshelf</a>  | 4.0.3, 4.2.0 | Apache 2.0 |
+| <a name="Topshelf.Autofac">Topshelf.Autofac</a>  | 4.0.1 | MIT |
+| <a name="Topshelf.NLog">Topshelf.NLog</a>  | 4.0.3, 4.2.0 | Apache 2.0 |
+| <a name="Unity">Unity</a>  | 5.8.6 | Apache 2.0 |
+| <a name="Unity.Abstractions">Unity.Abstractions</a>  | 3.3.0.0 | Apache 2.0 |
+| <a name="Unity.Configuration">Unity.Configuration</a>  | 5.2.1.0 | Apache 2.0 |
+| <a name="Unity.Container">Unity.Container</a>  | 5.8.6.0 | Apache 2.0 |
+| <a name="Unity.Interception">Unity.Interception</a>  | 5.5.1.0 | Apache 2.0 |
+| <a name="Unity.Interception.Configuration">Unity.Interception.Configuration</a>  | 5.1.4.0 | Apache 2.0 |
+| <a name="Unity.Microsoft.DependencyInjection">Unity.Microsoft.DependencyInjection</a>  | 2.0.10, 2.1.0 | Apache 2.0 |
+| <a name="Unity.RegistrationByConvention">Unity.RegistrationByConvention</a>  | 2.1.5.0 | Apache 2.0 |
+| <a name="Unity.ServiceLocation">Unity.ServiceLocation</a>  | 2.1.2.0 | Apache 2.0 |
+| <a name="Unity.WebAPI">Unity.WebAPI</a>  | 5.2.3, 5.2.3.0 | Apache 2.0 |
+| <a name="Vibrant.InfluxDB.Client">Vibrant.InfluxDB.Client</a>  | 3.0.0 | MIT |
+| <a name="Z.EntityFramework.Plus.EF6">Z.EntityFramework.Plus.EF6</a>  | 1.7.15 | MIT |
 
 Apache License, Version 2.0
 Packages that use this license:
 
 [Atrico.Lib.Common](#Atrico.Lib.Common)
-
 Owin
-
 Remotion.Linq
 Topshelf
 Topshelf.NLog
