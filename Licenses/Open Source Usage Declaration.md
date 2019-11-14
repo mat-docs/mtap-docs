@@ -1034,7 +1034,7 @@ Further resources on the  **3-clause BSD license**
 
 _Note: This license has also been called the &quot;New BSD License&quot; or &quot;Modified BSD License&quot;. See also the _[_2-clause BSD License_](https://opensource.org/licenses/BSD-2-Clause)_._
 
-Copyright \&lt;YEAR\&gt; \&lt;COPYRIGHT HOLDER\&gt;
+Copyright <YEAR> <COPYRIGHT HOLDER>;
 
 Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
 
@@ -1125,7 +1125,7 @@ Packages that use this license:
 
 BSD 3-Clause License 
 
-Copyright (c) 2015-2016, Jaroslaw Kowalski \&lt;jaak@jkowalski.net\&gt;, Kim Christensen, Julian Verdurmen 
+Copyright (c) 2015-2016, Jaroslaw Kowalski jaak@jkowalski.net, Kim Christensen, Julian Verdurmen 
 All rights reserved. 
 
 Redistribution and use in source and binary forms, with or without 
