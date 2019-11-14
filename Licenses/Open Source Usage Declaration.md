@@ -10,32 +10,32 @@
 |<a name="AutoMapper.Extensions.Microsoft.DependencyInjection">AutoMapper.Extensions.Microsoft.DependencyInjection</a> |6.0.0|[MIT](#MIT)|
 |<a name="Baseclass.Contrib.Nuget.Output">Baseclass.Contrib.Nuget.Output</a> |2.4.3, 2.3.0|[MIT](#MIT)|
 |<a name="CommandLineParser">CommandLineParser</a> |2.4.3, 2.3.0|[MIT](#MIT)|
-|<a name="Confluent.Kafka">Confluent.Kafka</a> |[0.11.6,1.0), 0.11.6|Apache 2.0|
-|<a name="Crc32C.NET">Crc32C.NET</a> |1.0.5.0|BSD-3-Clause|
+|<a name="Confluent.Kafka">Confluent.Kafka</a> |[0.11.6,1.0), 0.11.6|[Apache 2.0](#Confluent.Kafka.apache2.0)|
+|<a name="Crc32C.NET">Crc32C.NET</a> |1.0.5.0|[BSD-3-Clause](#Crc32C.NET.BSD-3-Clause)|
 |<a name="CsvTextFieldParser">CsvTextFieldParser</a> |1.1.1|[MIT](#MIT)|
 |<a name="EFCore.BulkExtensions">EFCore.BulkExtensions</a> |2.1.8|[MIT](#MIT)|
-|<a name="Google.Protobuf">Google.Protobuf</a> |3.6.1|Google|
+|<a name="Google.Protobuf">Google.Protobuf</a> |3.6.1|[Google](#Google.Protobuf.Google)|
 |<a name="Iconic.Zlib.Netstandard">Iconic.Zlib.Netstandard</a> |1.0.0|[MIT](#MIT)|
-|<a name="IdentityServer4">IdentityServer4</a> |2.2.0|Apache 2.0|
-|<a name="IdentityServer4.AccessTokenValidation">IdentityServer4.AccessTokenValidation</a> |2.6.0|Apache 2.0|
-|<a name="IdentityServer4.AspNetIdentity">IdentityServer4.AspNetIdentity</a> |2.1.0|Apache 2.0|
-|<a name="IdentityServer4.EntityFramework">IdentityServer4.EntityFramework</a> |2.1.1|Apache 2.0|
+|<a name="IdentityServer4">IdentityServer4</a> |2.2.0|[Apache 2.0](#IdentityServer4.apache2.0)|
+|<a name="IdentityServer4.AccessTokenValidation">IdentityServer4.AccessTokenValidation</a> |2.6.0|[Apache 2.0](#IdentityServer4.apache2.0)|
+|<a name="IdentityServer4.AspNetIdentity">IdentityServer4.AspNetIdentity</a> |2.1.0|[Apache 2.0](#IdentityServer4.apache2.0)|
+|<a name="IdentityServer4.EntityFramework">IdentityServer4.EntityFramework</a> |2.1.1|[Apache 2.0](#IdentityServer4.apache2.0)|
 |<a name="INIFileParser">INIFileParser</a> |2.4.0.0|[MIT](#MIT)|
 |<a name="ini-parser">ini-parser</a> |2.4.0|[MIT](#MIT)|
 |<a name="Irony">Irony</a> |0.96|[MIT](#MIT)|
-|<a name="librdkafka.redist">librdkafka.redist</a> |0.11.6|Apache 2.0|
+|<a name="librdkafka.redist">librdkafka.redist</a> |0.11.6|[Apache 2.0](#librdkafka.redist.apache2.0)|
 |<a name="LumenWorksCsvReader">LumenWorksCsvReader</a> |4.0.0|[MIT](#MIT)|
 |<a name="M2Mqtt">M2Mqtt</a> |4.3.0.0|[MIT](#MIT)|
-|<a name="M2MqttDotnetCore">M2MqttDotnetCore</a> |1.0.7, 1.0.8|Eclipse Public License 1.0|
+|<a name="M2MqttDotnetCore">M2MqttDotnetCore</a> |1.0.7, 1.0.8|[Eclipse Public License 1.0](#M2MqttDotnetCore.eclipse)|
 |<a name="MathNet.Numerics">MathNet.Numerics</a> |3.17.0|[MIT](#MIT)|
 |<a name="Nancy">Nancy</a> |1.4.4|[MIT](#MIT)|
 |<a name="Nancy.Hosting.Self">Nancy.Hosting.Self</a> |1.4.1|[MIT](#MIT)|
-|<a name="Nancy.Serialization.JsonNet">Nancy.Serialization.JsonNet</a> |1.4.1|MIT|
+|<a name="Nancy.Serialization.JsonNet">Nancy.Serialization.JsonNet</a> |1.4.1|[MIT](#MIT)|
 |<a name="NCalc">NCalc</a> |1.6.0|[MIT](#MIT)|
 |<a name="netstandard">netstandard</a> |2.0.0.0|[MIT](#MIT)|
-|<a name="NETStandard.Library">NETStandard.Library</a> |2.0.0|MIT|
+|<a name="NETStandard.Library">NETStandard.Library</a> |2.0.0|[MIT](#MIT)|
 |<a name="Newtonsoft.Json">Newtonsoft.Json</a> |11.0.2, 12.0.1, 12.0.2|[MIT](#MIT)|
-|<a name="Newtonsoft.Json.Bson">Newtonsoft.Json.Bson</a> |1.0.1|MIT|
+|<a name="Newtonsoft.Json.Bson">Newtonsoft.Json.Bson</a> |1.0.1|[MIT](#MIT)|
 |<a name="NLog">NLog</a> |4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7|BSD-3-Clause|
 |<a name="NLog.Config">NLog.Config</a> |4.5.11|BSD-3-Clause|
 |<a name="NLog.Extensions.Logging">NLog.Extensions.Logging</a> |1.2.1|BSD-2-Clause|
@@ -50,7 +50,7 @@
 |<a name="Prism.Wpf">Prism.Wpf</a> |6.3.0|[MIT](#MIT)|
 |<a name="Prometheus.NetStandard">Prometheus.NetStandard</a> |2.0.0.0|MIT|
 |<a name="prometheus-net">prometheus-net</a> |1.5.0.0, 1.5.1-mat, 2.0.0|[MIT](#MIT)|
-|<a name="prometheus-net.AspNetCore">prometheus-net.AspNetCore</a> |3.1.1|MIT|
+|<a name="prometheus-net.AspNetCore">prometheus-net.AspNetCore</a> |3.1.1|[MIT](#MIT)|
 |<a name="protobuf-net">protobuf-net</a> |2.1.0, 2.3.4|BSD|
 |<a name="Remotion.Linq">Remotion.Linq</a> |2.2.0|Apache 2.0|
 |<a name="Simple.Migrations">Simple.Migrations</a> |0.9.18|[MIT](#MIT)|
@@ -298,6 +298,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and 
 limitations under the License. 
 
+<a name="Confluent.Kafka.apache2.0"></a>
 ## Apache License 2.0
 
 Packages that use this license:
@@ -532,7 +533,7 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 POSSIBILITY OF SUCH DAMAGE. 
-
+<a name="IdentityServer4.apache2.0"></a>
 ## Apache License 2.0
 
 Packages that use this license:
@@ -980,7 +981,7 @@ distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. 
-
+<a name="librdkafka.redist.apache2.0"></a>
 ## Apache License 2.0
 
 Packages that use this license:
@@ -1013,7 +1014,7 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 POSSIBILITY OF SUCH DAMAGE. 
-
+<a name="Crc32C.NET.BSD-3-Clause"></a>
 ## The 3-Clause BSD License
 
 Packages that use this license:
@@ -1170,7 +1171,7 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission. 
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE 
-
+<a name="M2MqttDotnetCore.eclipse"></a>
 ## Eclipse Public License 1.0
 
 Packages that use this license:
@@ -1380,7 +1381,7 @@ intellectual property laws of the United States of America. No party to this
 Agreement will bring a legal action under this Agreement more than one year 
 after the cause of action arose. Each party waives its rights to a jury trial in 
 any resulting litigation. 
-
+<a name="Google.Protobuf.Google"></a>
 ## Google (BSD)
 
 Packages that use this license:
@@ -1444,6 +1445,7 @@ Packages that use this license:
 |[M2Mqtt ](#M2Mqtt )| |
 |[Nancy ](#Nancy )|2010 Andreas Håkansson, Steven Robbins and contributors|
 |[Nancy.Hosting.Self](#Nancy.Hosting.Self)|2010 Andreas Håkansson, Steven Robbins and contributors|
+|[Nancy.Serialization.JsonNet](#Nancy.Serialization.JsonNet)|2010 Andreas Håkansson, Steven Robbins and contributors|
 |[NCalc ](#NCalc )|2011 Sebastien Ros|
 |[netstandard](#netstandard)|.NET Foundation and Contributors|
 |[NETStandard.Library](#NETStandard.Library)|.NET Foundation and Contributors|
@@ -1456,6 +1458,8 @@ Packages that use this license:
 |[Prism.Core](#Prism.Core)|.NET Foundation|
 |[Prism.Wpf](#Prism.Wpf)|.NET Foundation|
 |[prometheus-net](#prometheus-net)|2015 andrasm|
+|[prometheus-net.AspNetCore](#prometheus-net.AspNetCore)|2015 andrasm|
+|[Prometheus.NetStandard](#Prometheus.NetStandard)|2015 andrasm|
 |[prometheus-net.AspNetCore](#prometheus-net.AspNetCore)|2015 andrasm|
 |[Simple.Migrations](#Simple.Migrations)|2015 Antony Male|
 |[Swashbuckle.AspNetCore](#Swashbuckle.AspNetCore)|2016 Richard Morris|
