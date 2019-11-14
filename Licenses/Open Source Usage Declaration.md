@@ -36,43 +36,43 @@
 |<a name="NETStandard.Library">NETStandard.Library</a> |2.0.0|[MIT](#MIT)|
 |<a name="Newtonsoft.Json">Newtonsoft.Json</a> |11.0.2, 12.0.1, 12.0.2|[MIT](#MIT)|
 |<a name="Newtonsoft.Json.Bson">Newtonsoft.Json.Bson</a> |1.0.1|[MIT](#MIT)|
-|<a name="NLog">NLog</a> |4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7|BSD-3-Clause|
-|<a name="NLog.Config">NLog.Config</a> |4.5.11|BSD-3-Clause|
-|<a name="NLog.Extensions.Logging">NLog.Extensions.Logging</a> |1.2.1|BSD-2-Clause|
-|<a name="NLog.Schema">NLog.Schema</a> |4.5.11|BSD-3-Clause|
-|<a name="NLog.Web.AspNetCore">NLog.Web.AspNetCore</a> |4.5.4, 4.8.0, 4.8.1, 4.8.5|BSD-3-Clause|
-|<a name="Owin">Owin</a> |1|Apache 2.0|
+|<a name="NLog">NLog</a> |4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7|[BSD-3-Clause](#NLog.BSD3)|
+|<a name="NLog.Config">NLog.Config</a> |4.5.11|[BSD-3-Clause](#NLog.BSD3)|
+|<a name="NLog.Extensions.Logging">NLog.Extensions.Logging</a> |1.2.1|[BSD-2-Clause](#NLog.Extensions.Logging.BSD2)|
+|<a name="NLog.Schema">NLog.Schema</a> |4.5.11|[BSD-3-Clause](#NLog.BSD3)|
+|<a name="NLog.Web.AspNetCore">NLog.Web.AspNetCore</a> |4.5.4, 4.8.0, 4.8.1, 4.8.5|[BSD-3-Clause](#NLog.Web.AspNetCore.BSD3)|
+|<a name="Owin">Owin</a> |1|[Apache 2.0](#apache2.0)|
 |<a name="OxyPlot">OxyPlot</a> |1.0.0.0|[MIT](#MIT)|
 |<a name="OxyPlot.Core">OxyPlot.Core</a> |1.0.0|[MIT](#MIT)|
 |<a name="OxyPlot.Wpf">OxyPlot.Wpf</a> |1.0.0|[MIT](#MIT)|
 |<a name="Prism">Prism</a> |6.3.0.0|[MIT](#MIT)|
 |<a name="Prism.Core">Prism.Core</a> |6.3.0|[MIT](#MIT)|
 |<a name="Prism.Wpf">Prism.Wpf</a> |6.3.0|[MIT](#MIT)|
-|<a name="Prometheus.NetStandard">Prometheus.NetStandard</a> |2.0.0.0|MIT|
+|<a name="Prometheus.NetStandard">Prometheus.NetStandard</a> |2.0.0.0|[MIT](#MIT)|
 |<a name="prometheus-net">prometheus-net</a> |1.5.0.0, 1.5.1-mat, 2.0.0|[MIT](#MIT)|
 |<a name="prometheus-net.AspNetCore">prometheus-net.AspNetCore</a> |3.1.1|[MIT](#MIT)|
-|<a name="protobuf-net">protobuf-net</a> |2.1.0, 2.3.4|BSD|
-|<a name="Remotion.Linq">Remotion.Linq</a> |2.2.0|Apache 2.0|
+|<a name="protobuf-net">protobuf-net</a> |2.1.0, 2.3.4|[Apache 2.0](#protobuf-net.apache2.0)|
+|<a name="Remotion.Linq">Remotion.Linq</a> |2.2.0|[Apache 2.0](#apache2.0)|
 |<a name="Simple.Migrations">Simple.Migrations</a> |0.9.18|[MIT](#MIT)|
-|<a name="Snappy.NET">Snappy.NET</a> |1.1.1.8|BSD-3-Clause|
+|<a name="Snappy.NET">Snappy.NET</a> |1.1.1.8|[BSD-3-Clause](#Crc32C.NET.BSD-3-Clause)|
 |<a name="StyleCop.Analyzers">StyleCop.Analyzers</a> |1.1.0-beta009, 1.0.2|Apache 2.0|
 |<a name="Swashbuckle.AspNetCore">Swashbuckle.AspNetCore</a> |3.0.0, 4.0.1|[MIT](#MIT)|
 |<a name="Swashbuckle.AspNetCore.Annotations">Swashbuckle.AspNetCore.Annotations</a> |3.0.0|[MIT](#MIT)|
-|<a name="Swashbuckle.Core">Swashbuckle.Core</a> |1.0.0.0|BSD-3-Clause|
-|<a name="Swashbuckle.Core.Net45">Swashbuckle.Core.Net45</a> |5.2.1|BSD-3-Clause|
-|<a name="Topshelf">Topshelf</a> |4.0.3, 4.2.0|Apache 2.0|
+|<a name="Swashbuckle.Core">Swashbuckle.Core</a> |1.0.0.0|[BSD-3-Clause](#Swashbuckle.Core.BSD3)|
+|<a name="Swashbuckle.Core.Net45">Swashbuckle.Core.Net45</a> |5.2.1|[BSD-3-Clause](#Crc32C.NET.BSD-3-Clause)|
+|<a name="Topshelf">Topshelf</a> |4.0.3, 4.2.0|[Apache 2.0](#apache2.0)|
 |<a name="Topshelf.Autofac">Topshelf.Autofac</a> |4.0.1|[MIT](#MIT)|
-|<a name="Topshelf.NLog">Topshelf.NLog</a> |4.0.3, 4.2.0|Apache 2.0|
-|<a name="Unity">Unity</a> |5.8.6|Apache 2.0|
-|<a name="Unity.Abstractions">Unity.Abstractions</a> |3.3.0.0|Apache 2.0|
-|<a name="Unity.Configuration">Unity.Configuration</a> |5.2.1.0|Apache 2.0|
-|<a name="Unity.Container">Unity.Container</a> |5.8.6.0|Apache 2.0|
-|<a name="Unity.Interception">Unity.Interception</a> |5.5.1.0|Apache 2.0|
-|<a name="Unity.Interception.Configuration">Unity.Interception.Configuration</a> |5.1.4.0|Apache 2.0|
-|<a name="Unity.Microsoft.DependencyInjection">Unity.Microsoft.DependencyInjection</a> |2.0.10, 2.1.0|Apache 2.0|
-|<a name="Unity.RegistrationByConvention">Unity.RegistrationByConvention</a> |2.1.5.0|Apache 2.0|
-|<a name="Unity.ServiceLocation">Unity.ServiceLocation</a> |2.1.2.0|Apache 2.0|
-|<a name="Unity.WebAPI">Unity.WebAPI</a> |5.2.3, 5.2.3.0|Apache 2.0|
+|<a name="Topshelf.NLog">Topshelf.NLog</a> |4.0.3, 4.2.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity">Unity</a> |5.8.6|[Apache 2.0](#apache2.0)|
+|<a name="Unity.Abstractions">Unity.Abstractions</a> |3.3.0.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.Configuration">Unity.Configuration</a> |5.2.1.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.Container">Unity.Container</a> |5.8.6.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.Interception">Unity.Interception</a> |5.5.1.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.Interception.Configuration">Unity.Interception.Configuration</a> |5.1.4.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.Microsoft.DependencyInjection">Unity.Microsoft.DependencyInjection</a> |2.0.10, 2.1.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.RegistrationByConvention">Unity.RegistrationByConvention</a> |2.1.5.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.ServiceLocation">Unity.ServiceLocation</a> |2.1.2.0|[Apache 2.0](#apache2.0)|
+|<a name="Unity.WebAPI">Unity.WebAPI</a> |5.2.3, 5.2.3.0|[Apache 2.0](#apache2.0)|
 |<a name="Vibrant.InfluxDB.Client">Vibrant.InfluxDB.Client</a> |3.0.0|[MIT](#MIT)|
 |<a name="Z.EntityFramework.Plus.EF6">Z.EntityFramework.Plus.EF6</a> |1.7.15|[MIT](#MIT)|
 <a name="apache2.0"></a>
@@ -953,7 +953,7 @@ distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. 
 See the License for the specific language governing permissions and 
 limitations under the License. 
-
+<a name="protobuf-net.apache2.0"></a>
 ## Apache License 2.0
 
 Packages that use this license:
@@ -1044,7 +1044,7 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-
+<a name="NLog.Extensions.Logging.BSD2"></a>
 ## BSD 2-Clause &quot;Simplified&quot; License
 
 Packages that use this license:
@@ -1075,14 +1075,14 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
-
+<a name="NLog.BSD3"></a>
 ## BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
 
 Packages that use this license:
 
 [NLog](#NLog)<br/>
 [NLog.Config](#NLog.Config)<br/>
-[NLog.Schema](#test)
+[NLog.Schema](#NLog.Schema)
 
 Copyright (c) 2004-2019 Jaroslaw Kowalski jaak@jkowalski.net, Kim Christensen, Julian Verdurmen 
 
@@ -1115,7 +1115,7 @@ INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
 CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) 
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 THE POSSIBILITY OF SUCH DAMAGE. 
-
+<a name="NLog.Web.AspNetCore.BSD3"></a>
 ## BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
 
 Packages that use this license:
@@ -1151,7 +1151,7 @@ SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER
 CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, 
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
-
+<a name="Swashbuckle.Core.BSD3"></a>
 ## BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
 
 Packages that use this license:
