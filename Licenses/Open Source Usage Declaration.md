@@ -80,21 +80,22 @@
 
 Packages that use this license:
 
-[Atrico.Lib.Common](#Atrico.Lib.Common)
-[Owin](#Owin)
-[Remotion.Linq](#Remotion.Linq)
-[Topshelf](#Topshelf)
-[Topshelf.NLog](#Topshelf.NLog)
-[Unity](#Unity)
-[Unity.Configuration](#Unity.Configuration)
-[Unity.Container](#Unity.Container)
-[Unity.Interception](#Unity.Interception)
-[Unity.Interception.Configuration](#Unity.Interception.Configuration)
-[Unity.Microsoft.DependencyInjection](#Unity.Microsoft.DependencyInjection)
-[Unity.RegistrationByConvention](#Unity.RegistrationByConvention)
-[Unity.ServiceLocation](#Unity.ServiceLocation)
-[Unity.WebAPI](#Unity.WebAPI)
-[Apache License ](#Apache License )
+[Atrico.Lib.Common](#Atrico.Lib.Common)\
+[Owin](#Owin)\
+[Remotion.Linq](#Remotion.Linq)\
+[Topshelf](#Topshelf)\
+[Topshelf.NLog](#Topshelf.NLog)\
+[Unity](#Unity)\
+[Unity.Configuration](#Unity.Configuration)\
+[Unity.Container](#Unity.Container)\
+[Unity.Interception](#Unity.Interception)\
+[Unity.Interception.Configuration](#Unity.Interception.Configuration)\
+[Unity.Microsoft.DependencyInjection](#Unity.Microsoft.DependencyInjection)\
+[Unity.RegistrationByConvention](#Unity.RegistrationByConvention)\
+[Unity.ServiceLocation](#Unity.ServiceLocation)\
+[Unity.WebAPI](#Unity.WebAPI)\
+
+Apache License\
 
 Version 2.0, January 2004 
 http://www.apache.org/licenses/ 
@@ -536,9 +537,9 @@ POSSIBILITY OF SUCH DAMAGE.
 
 Packages that use this license:
 
-[IdentityServer4](#IdentityServer4)
-[IdentityServer4.AccessTokenValidation](#IdentityServer4.AccessTokenValidation)
-[IdentityServer4.AspNetIdentity](#IdentityServer4.AspNetIdentity)
+[IdentityServer4](#IdentityServer4)\
+[IdentityServer4.AccessTokenValidation](#IdentityServer4.AccessTokenValidation)\
+[IdentityServer4.AspNetIdentity](#IdentityServer4.AspNetIdentity)\
 [IdentityServer4.EntityFramework](#IdentityServer4.EntityFramework)
 
 Apache License 
@@ -1017,8 +1018,8 @@ POSSIBILITY OF SUCH DAMAGE.
 
 Packages that use this license:
 
-[Crc32C.NET](#Crc32C.NET)
-[Swashbuckle.Core.Net45](#Swashbuckle.Core.Net45)
+[Crc32C.NET](#Crc32C.NET)\
+[Swashbuckle.Core.Net45](#Swashbuckle.Core.Net45)\
 [Snappy.NET](#Snappy.NET)
 
 **SPDX short identifier: BSD-3-Clause**
@@ -1078,8 +1079,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 Packages that use this license:
 
-[NLog](#NLog)
-[NLog.Config](#NLog.Config)
+[NLog](#NLog)\
+[NLog.Config](#NLog.Config)\
 [NLog.Schema](#test)
 
 Copyright (c) 2004-2019 Jaroslaw Kowalski jaak@jkowalski.net, Kim Christensen, Julian Verdurmen 
