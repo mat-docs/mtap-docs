@@ -1,6 +1,7 @@
+
 | Package Name | Package Version | License |
 | --- | --- | --- |
-| Atrico.Lib.Common | 2.1.6318.37156 | Apache 2.0 |
+| <a name="Atrico.Lib.Common">Atrico.Lib.Common</a> | 2.1.6318.37156 | Apache 2.0 |
 | Autofac | 4.5.0, 4.8.1, 4.6.2 | MIT |
 | Autofac.Extensions.DependencyInjection | 4.3.0 | MIT |
 | Autofac.Integration.WebApi | 4.0.0.0 | MIT |
@@ -78,8 +79,10 @@
 Apache License, Version 2.0
 Packages that use this license:
 
-Atrico.Lib.Common
+[Atrico.Lib.Common](#Atrico.Lib.Common)
+
 Owin
+
 Remotion.Linq
 Topshelf
 Topshelf.NLog
@@ -296,7 +299,6 @@ See the License for the specific language governing permissions and
 limitations under the License. 
 
 Apache License 2.0
-
 Packages that use this license:
 
 Confluent.Kafka
