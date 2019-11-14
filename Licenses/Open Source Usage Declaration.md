@@ -2,39 +2,39 @@
 |Package Name|Package Version|License|
 |---|---|---|
 |<a name="Atrico.Lib.Common">Atrico.Lib.Common</a>|2.1.6318.37156|[Apache 2.0](#apache2.0)|
-|<a name="Autofac">Autofac</a> |4.5.0, 4.8.1, 4.6.2|MIT|
-|<a name="Autofac.Extensions.DependencyInjection">Autofac.Extensions.DependencyInjection</a> |4.3.0|MIT|
-|<a name="Autofac.Integration.WebApi">Autofac.Integration.WebApi</a> |4.0.0.0|MIT|
-|<a name="Autofac.WebApi2">Autofac.WebApi2</a> |4.0.1|MIT|
-|<a name="AutoMapper">AutoMapper</a> |6.0.2, 7.01|MIT|
-|<a name="AutoMapper.Extensions.Microsoft.DependencyInjection">AutoMapper.Extensions.Microsoft.DependencyInjection</a> |6.0.0|MIT|
-|<a name="Baseclass.Contrib.Nuget.Output">Baseclass.Contrib.Nuget.Output</a> |2.4.3, 2.3.0|MIT|
-|<a name="CommandLineParser">CommandLineParser</a> |2.4.3, 2.3.0|MIT|
+|<a name="Autofac">Autofac</a> |4.5.0, 4.8.1, 4.6.2|[MIT](#MIT)|
+|<a name="Autofac.Extensions.DependencyInjection">Autofac.Extensions.DependencyInjection</a> |4.3.0|[MIT](#MIT)|
+|<a name="Autofac.Integration.WebApi">Autofac.Integration.WebApi</a> |4.0.0.0|[MIT](#MIT)|
+|<a name="Autofac.WebApi2">Autofac.WebApi2</a> |4.0.1|[MIT](#MIT)|
+|<a name="AutoMapper">AutoMapper</a> |6.0.2, 7.01|[MIT](#MIT)|
+|<a name="AutoMapper.Extensions.Microsoft.DependencyInjection">AutoMapper.Extensions.Microsoft.DependencyInjection</a> |6.0.0|[MIT](#MIT)|
+|<a name="Baseclass.Contrib.Nuget.Output">Baseclass.Contrib.Nuget.Output</a> |2.4.3, 2.3.0|[MIT](#MIT)|
+|<a name="CommandLineParser">CommandLineParser</a> |2.4.3, 2.3.0|[MIT](#MIT)|
 |<a name="Confluent.Kafka">Confluent.Kafka</a> |[0.11.6,1.0), 0.11.6|Apache 2.0|
 |<a name="Crc32C.NET">Crc32C.NET</a> |1.0.5.0|BSD-3-Clause|
-|<a name="CsvTextFieldParser">CsvTextFieldParser</a> |1.1.1|MIT|
-|<a name="EFCore.BulkExtensions">EFCore.BulkExtensions</a> |2.1.8|MIT|
+|<a name="CsvTextFieldParser">CsvTextFieldParser</a> |1.1.1|[MIT](#MIT)|
+|<a name="EFCore.BulkExtensions">EFCore.BulkExtensions</a> |2.1.8|[MIT](#MIT)|
 |<a name="Google.Protobuf">Google.Protobuf</a> |3.6.1|Google|
-|<a name="Iconic.Zlib.Netstandard">Iconic.Zlib.Netstandard</a> |1.0.0|MIT|
+|<a name="Iconic.Zlib.Netstandard">Iconic.Zlib.Netstandard</a> |1.0.0|[MIT](#MIT)|
 |<a name="IdentityServer4">IdentityServer4</a> |2.2.0|Apache 2.0|
 |<a name="IdentityServer4.AccessTokenValidation">IdentityServer4.AccessTokenValidation</a> |2.6.0|Apache 2.0|
 |<a name="IdentityServer4.AspNetIdentity">IdentityServer4.AspNetIdentity</a> |2.1.0|Apache 2.0|
 |<a name="IdentityServer4.EntityFramework">IdentityServer4.EntityFramework</a> |2.1.1|Apache 2.0|
-|<a name="INIFileParser">INIFileParser</a> |2.4.0.0|MIT|
-|<a name="ini-parser">ini-parser</a> |2.4.0|MIT|
-|<a name="Irony">Irony</a> |0.96|MIT|
+|<a name="INIFileParser">INIFileParser</a> |2.4.0.0|[MIT](#MIT)|
+|<a name="ini-parser">ini-parser</a> |2.4.0|[MIT](#MIT)|
+|<a name="Irony">Irony</a> |0.96|[MIT](#MIT)|
 |<a name="librdkafka.redist">librdkafka.redist</a> |0.11.6|Apache 2.0|
-|<a name="LumenWorksCsvReader">LumenWorksCsvReader</a> |4.0.0|MIT|
-|<a name="M2Mqtt">M2Mqtt</a> |4.3.0.0|MIT|
+|<a name="LumenWorksCsvReader">LumenWorksCsvReader</a> |4.0.0|[MIT](#MIT)|
+|<a name="M2Mqtt">M2Mqtt</a> |4.3.0.0|[MIT](#MIT)|
 |<a name="M2MqttDotnetCore">M2MqttDotnetCore</a> |1.0.7, 1.0.8|Eclipse Public License 1.0|
-|<a name="MathNet.Numerics">MathNet.Numerics</a> |3.17.0|MIT/X11|
-|<a name="Nancy">Nancy</a> |1.4.4|MIT|
-|<a name="Nancy.Hosting.Self">Nancy.Hosting.Self</a> |1.4.1|MIT|
+|<a name="MathNet.Numerics">MathNet.Numerics</a> |3.17.0|[MIT](#MIT)|
+|<a name="Nancy">Nancy</a> |1.4.4|[MIT](#MIT)|
+|<a name="Nancy.Hosting.Self">Nancy.Hosting.Self</a> |1.4.1|[MIT](#MIT)|
 |<a name="Nancy.Serialization.JsonNet">Nancy.Serialization.JsonNet</a> |1.4.1|MIT|
-|<a name="NCalc">NCalc</a> |1.6.0|MIT|
-|<a name="netstandard">netstandard</a> |2.0.0.0|MIT|
+|<a name="NCalc">NCalc</a> |1.6.0|[MIT](#MIT)|
+|<a name="netstandard">netstandard</a> |2.0.0.0|[MIT](#MIT)|
 |<a name="NETStandard.Library">NETStandard.Library</a> |2.0.0|MIT|
-|<a name="Newtonsoft.Json">Newtonsoft.Json</a> |11.0.2, 12.0.1, 12.0.2|MIT|
+|<a name="Newtonsoft.Json">Newtonsoft.Json</a> |11.0.2, 12.0.1, 12.0.2|[MIT](#MIT)|
 |<a name="Newtonsoft.Json.Bson">Newtonsoft.Json.Bson</a> |1.0.1|MIT|
 |<a name="NLog">NLog</a> |4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7|BSD-3-Clause|
 |<a name="NLog.Config">NLog.Config</a> |4.5.11|BSD-3-Clause|
@@ -42,26 +42,26 @@
 |<a name="NLog.Schema">NLog.Schema</a> |4.5.11|BSD-3-Clause|
 |<a name="NLog.Web.AspNetCore">NLog.Web.AspNetCore</a> |4.5.4, 4.8.0, 4.8.1, 4.8.5|BSD-3-Clause|
 |<a name="Owin">Owin</a> |1|Apache 2.0|
-|<a name="OxyPlot">OxyPlot</a> |1.0.0.0|MIT|
-|<a name="OxyPlot.Core">OxyPlot.Core</a> |1.0.0|MIT|
-|<a name="OxyPlot.Wpf">OxyPlot.Wpf</a> |1.0.0|MIT|
-|<a name="Prism">Prism</a> |6.3.0.0|MIT|
-|<a name="Prism.Core">Prism.Core</a> |6.3.0|MIT|
-|<a name="Prism.Wpf">Prism.Wpf</a> |6.3.0|MIT|
+|<a name="OxyPlot">OxyPlot</a> |1.0.0.0|[MIT](#MIT)|
+|<a name="OxyPlot.Core">OxyPlot.Core</a> |1.0.0|[MIT](#MIT)|
+|<a name="OxyPlot.Wpf">OxyPlot.Wpf</a> |1.0.0|[MIT](#MIT)|
+|<a name="Prism">Prism</a> |6.3.0.0|[MIT](#MIT)|
+|<a name="Prism.Core">Prism.Core</a> |6.3.0|[MIT](#MIT)|
+|<a name="Prism.Wpf">Prism.Wpf</a> |6.3.0|[MIT](#MIT)|
 |<a name="Prometheus.NetStandard">Prometheus.NetStandard</a> |2.0.0.0|MIT|
-|<a name="prometheus-net">prometheus-net</a> |1.5.0.0, 1.5.1-mat, 2.0.0|MIT|
+|<a name="prometheus-net">prometheus-net</a> |1.5.0.0, 1.5.1-mat, 2.0.0|[MIT](#MIT)|
 |<a name="prometheus-net.AspNetCore">prometheus-net.AspNetCore</a> |3.1.1|MIT|
 |<a name="protobuf-net">protobuf-net</a> |2.1.0, 2.3.4|BSD|
 |<a name="Remotion.Linq">Remotion.Linq</a> |2.2.0|Apache 2.0|
-|<a name="Simple.Migrations">Simple.Migrations</a> |0.9.18|MIT|
+|<a name="Simple.Migrations">Simple.Migrations</a> |0.9.18|[MIT](#MIT)|
 |<a name="Snappy.NET">Snappy.NET</a> |1.1.1.8|BSD-3-Clause|
 |<a name="StyleCop.Analyzers">StyleCop.Analyzers</a> |1.1.0-beta009, 1.0.2|Apache 2.0|
-|<a name="Swashbuckle.AspNetCore">Swashbuckle.AspNetCore</a> |3.0.0, 4.0.1|MIT|
-|<a name="Swashbuckle.AspNetCore.Annotations">Swashbuckle.AspNetCore.Annotations</a> |3.0.0|MIT|
+|<a name="Swashbuckle.AspNetCore">Swashbuckle.AspNetCore</a> |3.0.0, 4.0.1|[MIT](#MIT)|
+|<a name="Swashbuckle.AspNetCore.Annotations">Swashbuckle.AspNetCore.Annotations</a> |3.0.0|[MIT](#MIT)|
 |<a name="Swashbuckle.Core">Swashbuckle.Core</a> |1.0.0.0|BSD-3-Clause|
 |<a name="Swashbuckle.Core.Net45">Swashbuckle.Core.Net45</a> |5.2.1|BSD-3-Clause|
 |<a name="Topshelf">Topshelf</a> |4.0.3, 4.2.0|Apache 2.0|
-|<a name="Topshelf.Autofac">Topshelf.Autofac</a> |4.0.1|MIT|
+|<a name="Topshelf.Autofac">Topshelf.Autofac</a> |4.0.1|[MIT](#MIT)|
 |<a name="Topshelf.NLog">Topshelf.NLog</a> |4.0.3, 4.2.0|Apache 2.0|
 |<a name="Unity">Unity</a> |5.8.6|Apache 2.0|
 |<a name="Unity.Abstractions">Unity.Abstractions</a> |3.3.0.0|Apache 2.0|
@@ -73,8 +73,8 @@
 |<a name="Unity.RegistrationByConvention">Unity.RegistrationByConvention</a> |2.1.5.0|Apache 2.0|
 |<a name="Unity.ServiceLocation">Unity.ServiceLocation</a> |2.1.2.0|Apache 2.0|
 |<a name="Unity.WebAPI">Unity.WebAPI</a> |5.2.3, 5.2.3.0|Apache 2.0|
-|<a name="Vibrant.InfluxDB.Client">Vibrant.InfluxDB.Client</a> |3.0.0|MIT|
-|<a name="Z.EntityFramework.Plus.EF6">Z.EntityFramework.Plus.EF6</a> |1.7.15|MIT|
+|<a name="Vibrant.InfluxDB.Client">Vibrant.InfluxDB.Client</a> |3.0.0|[MIT](#MIT)|
+|<a name="Z.EntityFramework.Plus.EF6">Z.EntityFramework.Plus.EF6</a> |1.7.15|[MIT](#MIT)|
 <a name="apache2.0"></a>
 ## Apache License, Version 2.0
 
@@ -1419,7 +1419,7 @@ Code generated by the Protocol Buffer compiler is owned by the owner
 of the input file used when generating it.  This code is not 
 standalone and requires a support library to be linked with it.  This 
 support library is itself covered by the above license. 
-
+<a name="MIT"></a>
 ## MIT
 
 Packages that use this license:
