@@ -1,99 +1,100 @@
 
-| Package Name | Package Version | License |
-| --- | --- | --- |
-| <a name="Atrico.Lib.Common">Atrico.Lib.Common</a> | 2.1.6318.37156 | Apache 2.0 |
-| <a name="Autofac">Autofac</a>  | 4.5.0, 4.8.1, 4.6.2 | MIT |
-| <a name="Autofac.Extensions.DependencyInjection">Autofac.Extensions.DependencyInjection</a>  | 4.3.0 | MIT |
-| <a name="Autofac.Integration.WebApi">Autofac.Integration.WebApi</a>  | 4.0.0.0 | MIT |
-| <a name="Autofac.WebApi2">Autofac.WebApi2</a>  | 4.0.1 | MIT |
-| <a name="AutoMapper">AutoMapper</a>  | 6.0.2, 7.01 | MIT |
-| <a name="AutoMapper.Extensions.Microsoft.DependencyInjection">AutoMapper.Extensions.Microsoft.DependencyInjection</a>  | 6.0.0 | MIT |
-| <a name="Baseclass.Contrib.Nuget.Output">Baseclass.Contrib.Nuget.Output</a>  | 2.4.3, 2.3.0 | MIT |
-| <a name="CommandLineParser">CommandLineParser</a>  | 2.4.3, 2.3.0 | MIT |
-| <a name="Confluent.Kafka">Confluent.Kafka</a>  | [0.11.6,1.0), 0.11.6 | Apache 2.0 |
-| <a name="Crc32C.NET">Crc32C.NET</a>  | 1.0.5.0 | BSD-3-Clause |
-| <a name="CsvTextFieldParser">CsvTextFieldParser</a>  | 1.1.1 | MIT |
-| <a name="EFCore.BulkExtensions">EFCore.BulkExtensions</a>  | 2.1.8 | MIT |
-| <a name="Google.Protobuf">Google.Protobuf</a>  | 3.6.1 | Google |
-| <a name="Iconic.Zlib.Netstandard">Iconic.Zlib.Netstandard</a>  | 1.0.0 | MIT |
-| <a name="IdentityServer4">IdentityServer4</a>  | 2.2.0 | Apache 2.0 |
-| <a name="IdentityServer4.AccessTokenValidation">IdentityServer4.AccessTokenValidation</a>  | 2.6.0 | Apache 2.0 |
-| <a name="IdentityServer4.AspNetIdentity">IdentityServer4.AspNetIdentity</a>  | 2.1.0 | Apache 2.0 |
-| <a name="IdentityServer4.EntityFramework">IdentityServer4.EntityFramework</a>  | 2.1.1 | Apache 2.0 |
-| <a name="INIFileParser">INIFileParser</a>  | 2.4.0.0 | MIT |
-| <a name="ini-parser">ini-parser</a>  | 2.4.0 | MIT |
-| <a name="Irony">Irony</a>  | 0.96 | MIT |
-| <a name="librdkafka.redist">librdkafka.redist</a>  | 0.11.6 | Apache 2.0 |
-| <a name="LumenWorksCsvReader">LumenWorksCsvReader</a>  | 4.0.0 | MIT |
-| <a name="M2Mqtt">M2Mqtt</a>  | 4.3.0.0 | MIT |
-| <a name="M2MqttDotnetCore">M2MqttDotnetCore</a>  | 1.0.7, 1.0.8 | Eclipse Public License 1.0 |
-| <a name="MathNet.Numerics">MathNet.Numerics</a>  | 3.17.0 | MIT/X11 |
-| <a name="Nancy">Nancy</a>  | 1.4.4 | MIT |
-| <a name="Nancy.Hosting.Self">Nancy.Hosting.Self</a>  | 1.4.1 | MIT |
-| <a name="Nancy.Serialization.JsonNet">Nancy.Serialization.JsonNet</a>  | 1.4.1 | MIT |
-| <a name="NCalc">NCalc</a>  | 1.6.0 | MIT |
-| <a name="netstandard">netstandard</a>  | 2.0.0.0 | MIT |
-| <a name="NETStandard.Library">NETStandard.Library</a>  | 2.0.0 | MIT |
-| <a name="Newtonsoft.Json">Newtonsoft.Json</a>  | 11.0.2, 12.0.1, 12.0.2 | MIT |
-| <a name="Newtonsoft.Json.Bson">Newtonsoft.Json.Bson</a>  | 1.0.1 | MIT |
-| <a name="NLog">NLog</a>  | 4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7 | BSD-3-Clause |
-| <a name="NLog.Config">NLog.Config</a>  | 4.5.11 | BSD-3-Clause |
-| <a name="NLog.Extensions.Logging">NLog.Extensions.Logging</a>  | 1.2.1 | BSD-2-Clause |
-| <a name="NLog.Schema">NLog.Schema</a>  | 4.5.11 | BSD-3-Clause |
-| <a name="NLog.Web.AspNetCore">NLog.Web.AspNetCore</a>  | 4.5.4, 4.8.0, 4.8.1, 4.8.5 | BSD-3-Clause |
-| <a name="Owin">Owin</a>  | 1 | Apache 2.0 |
-| <a name="OxyPlot">OxyPlot</a>  | 1.0.0.0 | MIT |
-| <a name="OxyPlot.Core">OxyPlot.Core</a>  | 1.0.0 | MIT |
-| <a name="OxyPlot.Wpf">OxyPlot.Wpf</a>  | 1.0.0 | MIT |
-| <a name="Prism">Prism</a>  | 6.3.0.0 | MIT |
-| <a name="Prism.Core">Prism.Core</a>  | 6.3.0 | MIT |
-| <a name="Prism.Wpf">Prism.Wpf</a>  | 6.3.0 | MIT |
-| <a name="Prometheus.NetStandard">Prometheus.NetStandard</a>  | 2.0.0.0 | MIT |
-| <a name="prometheus-net">prometheus-net</a>  | 1.5.0.0, 1.5.1-mat, 2.0.0 | MIT |
-| <a name="prometheus-net.AspNetCore">prometheus-net.AspNetCore</a>  | 3.1.1 | MIT |
-| <a name="protobuf-net">protobuf-net</a>  | 2.1.0, 2.3.4 | BSD |
-| <a name="Remotion.Linq">Remotion.Linq</a>  | 2.2.0 | Apache 2.0 |
-| <a name="Simple.Migrations">Simple.Migrations</a>  | 0.9.18 | MIT |
-| <a name="Snappy.NET">Snappy.NET</a>  | 1.1.1.8 | BSD-3-Clause |
-| <a name="StyleCop.Analyzers">StyleCop.Analyzers</a>  | 1.1.0-beta009, 1.0.2 | Apache 2.0 |
-| <a name="Swashbuckle.AspNetCore">Swashbuckle.AspNetCore</a>  | 3.0.0, 4.0.1 | MIT |
-| <a name="Swashbuckle.AspNetCore.Annotations">Swashbuckle.AspNetCore.Annotations</a>  | 3.0.0 | MIT |
-| <a name="Swashbuckle.Core">Swashbuckle.Core</a>  | 1.0.0.0 | BSD-3-Clause |
-| <a name="Swashbuckle.Core.Net45">Swashbuckle.Core.Net45</a>  | 5.2.1 | BSD-3-Clause |
-| <a name="Topshelf">Topshelf</a>  | 4.0.3, 4.2.0 | Apache 2.0 |
-| <a name="Topshelf.Autofac">Topshelf.Autofac</a>  | 4.0.1 | MIT |
-| <a name="Topshelf.NLog">Topshelf.NLog</a>  | 4.0.3, 4.2.0 | Apache 2.0 |
-| <a name="Unity">Unity</a>  | 5.8.6 | Apache 2.0 |
-| <a name="Unity.Abstractions">Unity.Abstractions</a>  | 3.3.0.0 | Apache 2.0 |
-| <a name="Unity.Configuration">Unity.Configuration</a>  | 5.2.1.0 | Apache 2.0 |
-| <a name="Unity.Container">Unity.Container</a>  | 5.8.6.0 | Apache 2.0 |
-| <a name="Unity.Interception">Unity.Interception</a>  | 5.5.1.0 | Apache 2.0 |
-| <a name="Unity.Interception.Configuration">Unity.Interception.Configuration</a>  | 5.1.4.0 | Apache 2.0 |
-| <a name="Unity.Microsoft.DependencyInjection">Unity.Microsoft.DependencyInjection</a>  | 2.0.10, 2.1.0 | Apache 2.0 |
-| <a name="Unity.RegistrationByConvention">Unity.RegistrationByConvention</a>  | 2.1.5.0 | Apache 2.0 |
-| <a name="Unity.ServiceLocation">Unity.ServiceLocation</a>  | 2.1.2.0 | Apache 2.0 |
-| <a name="Unity.WebAPI">Unity.WebAPI</a>  | 5.2.3, 5.2.3.0 | Apache 2.0 |
-| <a name="Vibrant.InfluxDB.Client">Vibrant.InfluxDB.Client</a>  | 3.0.0 | MIT |
-| <a name="Z.EntityFramework.Plus.EF6">Z.EntityFramework.Plus.EF6</a>  | 1.7.15 | MIT |
+|Package Name|Package Version|License|
+|---|---|---|
+|<a name="Atrico.Lib.Common">Atrico.Lib.Common</a>|2.1.6318.37156|Apache 2.0|
+|<a name="Autofac">Autofac</a> |4.5.0, 4.8.1, 4.6.2|MIT|
+|<a name="Autofac.Extensions.DependencyInjection">Autofac.Extensions.DependencyInjection</a> |4.3.0|MIT|
+|<a name="Autofac.Integration.WebApi">Autofac.Integration.WebApi</a> |4.0.0.0|MIT|
+|<a name="Autofac.WebApi2">Autofac.WebApi2</a> |4.0.1|MIT|
+|<a name="AutoMapper">AutoMapper</a> |6.0.2, 7.01|MIT|
+|<a name="AutoMapper.Extensions.Microsoft.DependencyInjection">AutoMapper.Extensions.Microsoft.DependencyInjection</a> |6.0.0|MIT|
+|<a name="Baseclass.Contrib.Nuget.Output">Baseclass.Contrib.Nuget.Output</a> |2.4.3, 2.3.0|MIT|
+|<a name="CommandLineParser">CommandLineParser</a> |2.4.3, 2.3.0|MIT|
+|<a name="Confluent.Kafka">Confluent.Kafka</a> |[0.11.6,1.0), 0.11.6|Apache 2.0|
+|<a name="Crc32C.NET">Crc32C.NET</a> |1.0.5.0|BSD-3-Clause|
+|<a name="CsvTextFieldParser">CsvTextFieldParser</a> |1.1.1|MIT|
+|<a name="EFCore.BulkExtensions">EFCore.BulkExtensions</a> |2.1.8|MIT|
+|<a name="Google.Protobuf">Google.Protobuf</a> |3.6.1|Google|
+|<a name="Iconic.Zlib.Netstandard">Iconic.Zlib.Netstandard</a> |1.0.0|MIT|
+|<a name="IdentityServer4">IdentityServer4</a> |2.2.0|Apache 2.0|
+|<a name="IdentityServer4.AccessTokenValidation">IdentityServer4.AccessTokenValidation</a> |2.6.0|Apache 2.0|
+|<a name="IdentityServer4.AspNetIdentity">IdentityServer4.AspNetIdentity</a> |2.1.0|Apache 2.0|
+|<a name="IdentityServer4.EntityFramework">IdentityServer4.EntityFramework</a> |2.1.1|Apache 2.0|
+|<a name="INIFileParser">INIFileParser</a> |2.4.0.0|MIT|
+|<a name="ini-parser">ini-parser</a> |2.4.0|MIT|
+|<a name="Irony">Irony</a> |0.96|MIT|
+|<a name="librdkafka.redist">librdkafka.redist</a> |0.11.6|Apache 2.0|
+|<a name="LumenWorksCsvReader">LumenWorksCsvReader</a> |4.0.0|MIT|
+|<a name="M2Mqtt">M2Mqtt</a> |4.3.0.0|MIT|
+|<a name="M2MqttDotnetCore">M2MqttDotnetCore</a> |1.0.7, 1.0.8|Eclipse Public License 1.0|
+|<a name="MathNet.Numerics">MathNet.Numerics</a> |3.17.0|MIT/X11|
+|<a name="Nancy">Nancy</a> |1.4.4|MIT|
+|<a name="Nancy.Hosting.Self">Nancy.Hosting.Self</a> |1.4.1|MIT|
+|<a name="Nancy.Serialization.JsonNet">Nancy.Serialization.JsonNet</a> |1.4.1|MIT|
+|<a name="NCalc">NCalc</a> |1.6.0|MIT|
+|<a name="netstandard">netstandard</a> |2.0.0.0|MIT|
+|<a name="NETStandard.Library">NETStandard.Library</a> |2.0.0|MIT|
+|<a name="Newtonsoft.Json">Newtonsoft.Json</a> |11.0.2, 12.0.1, 12.0.2|MIT|
+|<a name="Newtonsoft.Json.Bson">Newtonsoft.Json.Bson</a> |1.0.1|MIT|
+|<a name="NLog">NLog</a> |4.4.8, 4.5.6, 4.5.9, 4.5.11, 4.6.2, 4.6.7|BSD-3-Clause|
+|<a name="NLog.Config">NLog.Config</a> |4.5.11|BSD-3-Clause|
+|<a name="NLog.Extensions.Logging">NLog.Extensions.Logging</a> |1.2.1|BSD-2-Clause|
+|<a name="NLog.Schema">NLog.Schema</a> |4.5.11|BSD-3-Clause|
+|<a name="NLog.Web.AspNetCore">NLog.Web.AspNetCore</a> |4.5.4, 4.8.0, 4.8.1, 4.8.5|BSD-3-Clause|
+|<a name="Owin">Owin</a> |1|Apache 2.0|
+|<a name="OxyPlot">OxyPlot</a> |1.0.0.0|MIT|
+|<a name="OxyPlot.Core">OxyPlot.Core</a> |1.0.0|MIT|
+|<a name="OxyPlot.Wpf">OxyPlot.Wpf</a> |1.0.0|MIT|
+|<a name="Prism">Prism</a> |6.3.0.0|MIT|
+|<a name="Prism.Core">Prism.Core</a> |6.3.0|MIT|
+|<a name="Prism.Wpf">Prism.Wpf</a> |6.3.0|MIT|
+|<a name="Prometheus.NetStandard">Prometheus.NetStandard</a> |2.0.0.0|MIT|
+|<a name="prometheus-net">prometheus-net</a> |1.5.0.0, 1.5.1-mat, 2.0.0|MIT|
+|<a name="prometheus-net.AspNetCore">prometheus-net.AspNetCore</a> |3.1.1|MIT|
+|<a name="protobuf-net">protobuf-net</a> |2.1.0, 2.3.4|BSD|
+|<a name="Remotion.Linq">Remotion.Linq</a> |2.2.0|Apache 2.0|
+|<a name="Simple.Migrations">Simple.Migrations</a> |0.9.18|MIT|
+|<a name="Snappy.NET">Snappy.NET</a> |1.1.1.8|BSD-3-Clause|
+|<a name="StyleCop.Analyzers">StyleCop.Analyzers</a> |1.1.0-beta009, 1.0.2|Apache 2.0|
+|<a name="Swashbuckle.AspNetCore">Swashbuckle.AspNetCore</a> |3.0.0, 4.0.1|MIT|
+|<a name="Swashbuckle.AspNetCore.Annotations">Swashbuckle.AspNetCore.Annotations</a> |3.0.0|MIT|
+|<a name="Swashbuckle.Core">Swashbuckle.Core</a> |1.0.0.0|BSD-3-Clause|
+|<a name="Swashbuckle.Core.Net45">Swashbuckle.Core.Net45</a> |5.2.1|BSD-3-Clause|
+|<a name="Topshelf">Topshelf</a> |4.0.3, 4.2.0|Apache 2.0|
+|<a name="Topshelf.Autofac">Topshelf.Autofac</a> |4.0.1|MIT|
+|<a name="Topshelf.NLog">Topshelf.NLog</a> |4.0.3, 4.2.0|Apache 2.0|
+|<a name="Unity">Unity</a> |5.8.6|Apache 2.0|
+|<a name="Unity.Abstractions">Unity.Abstractions</a> |3.3.0.0|Apache 2.0|
+|<a name="Unity.Configuration">Unity.Configuration</a> |5.2.1.0|Apache 2.0|
+|<a name="Unity.Container">Unity.Container</a> |5.8.6.0|Apache 2.0|
+|<a name="Unity.Interception">Unity.Interception</a> |5.5.1.0|Apache 2.0|
+|<a name="Unity.Interception.Configuration">Unity.Interception.Configuration</a> |5.1.4.0|Apache 2.0|
+|<a name="Unity.Microsoft.DependencyInjection">Unity.Microsoft.DependencyInjection</a> |2.0.10, 2.1.0|Apache 2.0|
+|<a name="Unity.RegistrationByConvention">Unity.RegistrationByConvention</a> |2.1.5.0|Apache 2.0|
+|<a name="Unity.ServiceLocation">Unity.ServiceLocation</a> |2.1.2.0|Apache 2.0|
+|<a name="Unity.WebAPI">Unity.WebAPI</a> |5.2.3, 5.2.3.0|Apache 2.0|
+|<a name="Vibrant.InfluxDB.Client">Vibrant.InfluxDB.Client</a> |3.0.0|MIT|
+|<a name="Z.EntityFramework.Plus.EF6">Z.EntityFramework.Plus.EF6</a> |1.7.15|MIT|
 
-Apache License, Version 2.0
+## Apache License, Version 2.0
+
 Packages that use this license:
 
 [Atrico.Lib.Common](#Atrico.Lib.Common)
-Owin
-Remotion.Linq
-Topshelf
-Topshelf.NLog
-Unity
-Unity.Configuration
-Unity.Container
-Unity.Interception
-Unity.Interception.Configuration
-Unity.Microsoft.DependencyInjection
-Unity.RegistrationByConvention
-Unity.ServiceLocation
-Unity.WebAPI
-Apache License 
+[Owin](#Owin)
+[Remotion.Linq](#Remotion.Linq)
+[Topshelf](#Topshelf)
+[Topshelf.NLog](#Topshelf.NLog)
+[Unity](#Unity)
+[Unity.Configuration](#Unity.Configuration)
+[Unity.Container](#Unity.Container)
+[Unity.Interception](#Unity.Interception)
+[Unity.Interception.Configuration](#Unity.Interception.Configuration)
+[Unity.Microsoft.DependencyInjection](#Unity.Microsoft.DependencyInjection)
+[Unity.RegistrationByConvention](#Unity.RegistrationByConvention)
+[Unity.ServiceLocation](#Unity.ServiceLocation)
+[Unity.WebAPI](#Unity.WebAPI)
+[Apache License ](#Apache License )
 
 Version 2.0, January 2004 
 http://www.apache.org/licenses/ 
@@ -296,10 +297,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and 
 limitations under the License. 
 
-Apache License 2.0
+## Apache License 2.0
+
 Packages that use this license:
 
-Confluent.Kafka
+[Confluent.Kafka](#Confluent.Kafka)
 
 Version 2.0, January 2004 
 
@@ -530,20 +532,16 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 POSSIBILITY OF SUCH DAMAGE. 
 
-Apache License 2.0
+## Apache License 2.0
 
 Packages that use this license:
 
-IdentityServer4
+[IdentityServer4](#IdentityServer4)
+[IdentityServer4.AccessTokenValidation](#IdentityServer4.AccessTokenValidation)
+[IdentityServer4.AspNetIdentity](#IdentityServer4.AspNetIdentity)
+[IdentityServer4.EntityFramework](#IdentityServer4.EntityFramework)
 
-IdentityServer4.AccessTokenValidation
-
-IdentityServer4.AspNetIdentity
-
-IdentityServer4.EntityFramework
-
-Apache License  
---- 
+Apache License 
 Version 2.0, January 2004 
 http://www.apache.org/licenses/ 
 
@@ -745,78 +743,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and 
 limitations under the License. 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-Apache License 2.0
+## Apache License 2.0
 
 Packages that use this license:
 
-Unity.Abstractions
+[Unity.Abstractions](#Unity.Abstractions)
 
 Apache License 
 
@@ -1021,11 +952,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and 
 limitations under the License. 
 
-Apache License 2.0
+## Apache License 2.0
 
 Packages that use this license:
 
-protobuf-net
+[protobuf-net](#protobuf-net)
 
 The core Protocol Buffers technology is provided courtesy of Google.  
 
@@ -1049,11 +980,11 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License. 
 
-Apache License 2.0
+## Apache License 2.0
 
 Packages that use this license:
 
-librdkafka.redist
+[librdkafka.redist](#librdkafka.redist)
 
 librdkafka - Apache Kafka C driver library 
 
@@ -1082,15 +1013,13 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 POSSIBILITY OF SUCH DAMAGE. 
 
-The 3-Clause BSD License
+## The 3-Clause BSD License
 
 Packages that use this license:
 
-Crc32C.NET
-
-Swashbuckle.Core.Net45
-
-Snappy.NET
+[Crc32C.NET](#Crc32C.NET)
+[Swashbuckle.Core.Net45](#Swashbuckle.Core.Net45)
+[Snappy.NET](#Snappy.NET)
 
 **SPDX short identifier: BSD-3-Clause**
 
@@ -1114,11 +1043,11 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
-BSD 2-Clause &quot;Simplified&quot; License
+## BSD 2-Clause &quot;Simplified&quot; License
 
 Packages that use this license:
 
-NLog.Extensions.Logging
+[NLog.Extensions.Logging](#NLog.Extensions.Logging)
 
 Copyright (c) 2016, NLog 
 
@@ -1145,17 +1074,15 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
-BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
+## BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
 
 Packages that use this license:
 
-NLog
+[NLog](#NLog)
+[NLog.Config](#NLog.Config)
+[NLog.Schema](#test)
 
-NLog.Config
-
-NLog.Schema
-
-Copyright (c) 2004-2019 Jaroslaw Kowalski \&lt;jaak@jkowalski.net\&gt;, Kim Christensen, Julian Verdurmen 
+Copyright (c) 2004-2019 Jaroslaw Kowalski jaak@jkowalski.net, Kim Christensen, Julian Verdurmen 
 
 
 All rights reserved. 
@@ -1187,14 +1114,13 @@ CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
 ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF 
 THE POSSIBILITY OF SUCH DAMAGE. 
 
-BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
+## BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
 
 Packages that use this license:
 
-NLog.Web.AspNetCore
+[NLog.Web.AspNetCore](#NLog.Web.AspNetCore)
 
 BSD 3-Clause License 
-
 
 Copyright (c) 2015-2016, Jaroslaw Kowalski \&lt;jaak@jkowalski.net\&gt;, Kim Christensen, Julian Verdurmen 
 All rights reserved. 
@@ -1224,11 +1150,11 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE 
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. 
 
-BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
+## BSD 3-Clause &quot;New&quot; or &quot;Revised&quot; License
 
 Packages that use this license:
 
-Swashbuckle.Core
+[Swashbuckle.Core](#Swashbuckle.Core)
 
 Copyright (c) 2013, Richard Morris 
 
@@ -1244,14 +1170,13 @@ Redistribution and use in source and binary forms, with or without modification,
 
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS &quot;AS IS&quot; AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE 
 
-Eclipse Public License 1.0
+## Eclipse Public License 1.0
 
 Packages that use this license:
 
-M2MqttDotnetCore
+[M2MqttDotnetCore](#M2MqttDotnetCore)
 
 Eclipse Public License - v 1.0 
-
 
 THE ACCOMPANYING PROGRAM IS PROVIDED UNDER THE TERMS OF THIS ECLIPSE PUBLIC 
 LICENSE (&quot;AGREEMENT&quot;). ANY USE, REPRODUCTION OR DISTRIBUTION OF THE PROGRAM 
@@ -1455,14 +1380,13 @@ Agreement will bring a legal action under this Agreement more than one year
 after the cause of action arose. Each party waives its rights to a jury trial in 
 any resulting litigation. 
 
-Google (BSD)
+## Google (BSD)
 
 Packages that use this license:
 
-Google.Protobuf
+[Google.Protobuf](#Google.Protobuf)
 
 Copyright 2008 Google Inc.  All rights reserved. 
-
 
 Redistribution and use in source and binary forms, with or without 
 modification, are permitted provided that the following conditions are 
@@ -1495,54 +1419,52 @@ of the input file used when generating it.  This code is not
 standalone and requires a support library to be linked with it.  This 
 support library is itself covered by the above license. 
 
-MIT
+## MIT
 
 Packages that use this license:
 
-
-| Package Name | Copyright © |
-| --- | --- |
-| Autofac | 2014 Autofac Project |
-| Autofac.Extensions.DependencyInjection | 2014 Autofac Project |
-| Autofac.Integration.WebApi | 2014 Autofac Project |
-| Autofac.WebApi2 | 2014 Autofac Project |
-| CommandLineParser | 2005 - 2015 Giacomo Stelluti Scala &amp; Contributors |
-| CsvTextFieldParser | 2018 22222 |
-| EFCore.BulkExtensions | 2017 borisdj |
-| AutoMapper | 2016 Jimmy Bogard |
-| AutoMapper.Extensions.Microsoft.DependencyInjection | 2016 Jimmy Bogard |
-| Baseclass.Contrib.Nuget.Output |   |
-| Iconic.Zlib.Netstandard | 2017 Glader |
-| INIFileParser | 2008 Ricardo Amores Hernández |
-| ini-parser | 2008 Ricardo Amores Hernández |
-| Irony | 2019 Irony Project (https://github.com/IronyProject) |
-| LumenWorksCsvReader | 2005-2011 Sébastien Lorion Copyright (c) 2014 Paul Hatcher |
-| M2Mqtt |   |
-| Nancy | 2010 Andreas Håkansson, Steven Robbins and contributors |
-| Nancy.Hosting.Self | 2010 Andreas Håkansson, Steven Robbins and contributors |
-| NCalc | 2011 Sebastien Ros |
-| netstandard | .NET Foundation and Contributors |
-| NETStandard.Library | .NET Foundation and Contributors |
-| Newtonsoft.Json | 2007 James Newton-King |
-| Newtonsoft.Json.Bson | 2007 James Newton-King |
-| OxyPlot | 2014 OxyPlot contributors |
-| OxyPlot.Core | 2014 OxyPlot contributors |
-| OxyPlot.Wpf | 2014 OxyPlot contributors |
-| Prism | .NET Foundation |
-| Prism.Core | .NET Foundation |
-| Prism.Wpf | .NET Foundation |
-| prometheus-net | 2015 andrasm |
-| prometheus-net.AspNetCore | 2015 andrasm |
-| Simple.Migrations | 2015 Antony Male |
-| Swashbuckle.AspNetCore | 2016 Richard Morris |
-| Swashbuckle.AspNetCore.Annotations | 2016 Richard Morris |
-| Topshelf.Autofac | 2013 qwesoftware |
-| Vibrant.InfluxDB.Client | 2015 MikaelGRA |
-| Z.EntityFramework.Plus.EF6 |   |
-| MathNet.Numerics | 2002-2019 Math.NET |
+|Package Name|Copyright ©|
+|---|---|
+|[Autofac ](#Autofac )|2014 Autofac Project|
+|[Autofac.Extensions.DependencyInjection](#Autofac.Extensions.DependencyInjection)|2014 Autofac Project|
+|[Autofac.Integration.WebApi](#Autofac.Integration.WebApi)|2014 Autofac Project|
+|[Autofac.WebApi2](#Autofac.WebApi2)|2014 Autofac Project|
+|[CommandLineParser ](#CommandLineParser )|2005 - 2015 Giacomo Stelluti Scala &amp; Contributors|
+|[CsvTextFieldParser ](#CsvTextFieldParser )|2018 22222|
+|[EFCore.BulkExtensions](#EFCore.BulkExtensions)|2017 borisdj|
+|[AutoMapper ](#AutoMapper )|2016 Jimmy Bogard|
+|[AutoMapper.Extensions.Microsoft.DependencyInjection](#AutoMapper.Extensions.Microsoft.DependencyInjection)|2016 Jimmy Bogard|
+|[Baseclass.Contrib.Nuget.Output](#Baseclass.Contrib.Nuget.Output)| |
+|[Iconic.Zlib.Netstandard](#Iconic.Zlib.Netstandard)|2017 Glader|
+|[INIFileParser ](#INIFileParser )|2008 Ricardo Amores Hernández|
+|[ini-parser](#ini-parser)|2008 Ricardo Amores Hernández|
+|[Irony](#Irony)|2019 Irony Project (https://github.com/IronyProject)|
+|[LumenWorksCsvReader](#LumenWorksCsvReader )|2005-2011 Sébastien Lorion Copyright (c) 2014 Paul Hatcher|
+|[M2Mqtt ](#M2Mqtt )| |
+|[Nancy ](#Nancy )|2010 Andreas Håkansson, Steven Robbins and contributors|
+|[Nancy.Hosting.Self](#Nancy.Hosting.Self)|2010 Andreas Håkansson, Steven Robbins and contributors|
+|[NCalc ](#NCalc )|2011 Sebastien Ros|
+|[netstandard](#netstandard)|.NET Foundation and Contributors|
+|[NETStandard.Library](#NETStandard.Library)|.NET Foundation and Contributors|
+|[Newtonsoft.Json](#Newtonsoft.Json)|2007 James Newton-King|
+|[Newtonsoft.Json.Bson](#Newtonsoft.Json.Bson)|2007 James Newton-King|
+|[OxyPlot](#OxyPlot)|2014 OxyPlot contributors|
+|[OxyPlot.Core](#OxyPlot.Core)|2014 OxyPlot contributors|
+|[OxyPlot.Wpf](#OxyPlot.Wpf)|2014 OxyPlot contributors|
+|[Prism](#Prism)|.NET Foundation|
+|[Prism.Core](#Prism.Core)|.NET Foundation|
+|[Prism.Wpf](#Prism.Wpf)|.NET Foundation|
+|[prometheus-net](#prometheus-net)|2015 andrasm|
+|[prometheus-net.AspNetCore](#prometheus-net.AspNetCore)|2015 andrasm|
+|[Simple.Migrations](#Simple.Migrations)|2015 Antony Male|
+|[Swashbuckle.AspNetCore](#Swashbuckle.AspNetCore)|2016 Richard Morris|
+|[Swashbuckle.AspNetCore.Annotations](#Swashbuckle.AspNetCore.Annotations)|2016 Richard Morris|
+|[Topshelf.Autofac](#Topshelf.Autofac)|2013 qwesoftware|
+|[Vibrant.InfluxDB.Client](#Vibrant.InfluxDB.Client)|2015 MikaelGRA|
+|[Z.EntityFramework.Plus.EF6](#Z.EntityFramework.Plus.EF6)| |
+|[MathNet.Numerics](#MathNet.Numerics)|2002-2019 Math.NET|
 
 The MIT License (MIT) 
-
 
 Copyright © {copyright\_placeholder} 
 
