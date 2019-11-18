@@ -3,6 +3,7 @@
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
 - [**Installation**](Installation.md)<br>
+- [**Service Config**](ServiceConfig.md)<br>
 - **API**<br>
   - [User Management](#user-management)
   - [Client Management](#client-management)

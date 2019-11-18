@@ -833,7 +833,7 @@ This endpoint provides a set of optional parameters.
 | order          | It allows ordering of the results.                          | number:desc       |
 | sessionVersion | Session version.                                            | 3                 |
 
-### <ins>Query all laps from a given session</ins>
+### Query all laps from a given session
 
 Endpoint
 ```
@@ -898,7 +898,7 @@ Result
 
 ```streamId``` is a unique identifier that identifies a specific session version.
 
-### <ins>Query a lap for a given session</ins>
+### Query a lap for a given session
 
 Endpoint
 ```

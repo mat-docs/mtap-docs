@@ -59,6 +59,8 @@ dotnet MAT.TAP.AAS.InfluxDb.Writer.Hosting.dll
 ```
 
 ## Run as a daemon service
+<span style="color:red">Please note daemon service installation will be deprecated in future releases in favour of docker.</span>
+
 In the release bundle, which you can [download from here](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/sections/115000825753-Downloads), there is a shell script `services/MAT.TAP.AAS.InfluxDb.Writer/daemon_deploy.sh` for daemon service installation. 
 
 Before you run it, execute following commands:

@@ -18,14 +18,13 @@ A [TAP Data Explorer](#tap-data-explorer) web application is also provided to he
 
 ## Get a bearer token
 The TAP API requires an authenticated user.
-Get a bearer token from the [**Identity Service**](/IdentityService/README.md)
-	- For an example of this, see the [Authorization](Authorization.md) page (but change the username and password)
+Get a bearer token from the [**Identity Service**](/IdentityService/README.md). For an example of this, see the [Authorization](Authorization.md) page (but change the username and password)
 
 ## Configure the data connections
 
 The TAP API allows connections to be queried (GET), created (POST), updated (PUT) and deleted (DELETE). In order to create, update or delete, you must be a user with the admin role.
 
-### InfluxDb Connections
+## InfluxDb Connections
 
 Before being able to use the API to query the system, configure the InfluxDB connection(s) (`api/v1/connections`) to match the [InfluxDb Writer](/InfluxWriter/README.md) configuration(s). 
 
@@ -100,7 +99,7 @@ Result:
 
 You can also update and delete existing connections using `PUT` and `DELETE` requests based on the **connection identifier**. Please refer to the [Swagger UI](#swagger) for more information.
 
-### SqlRace Connections
+## SqlRace Connections
 
 SQLRace connections retrieved via api/v1/connections are from the shared SQLRace configuration on the server. If you are working locally with this API service you can configure these connections using ATLAS 10 or SQLRace client. You can access connections configuration from Atlas 10 via Options -> Database Connection Manager:
 

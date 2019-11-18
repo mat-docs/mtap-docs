@@ -3,6 +3,8 @@
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
 - **Installation**<br>
+  - [Influx TAP API](#influx)
+  - [SQLRace TAP API](#sqlrace)
 - [**Getting started**](GettingStarted.md)<br>
 - [**Authorization**](Authorization.md)<br>
 - [**Querying Metadata**](Metadata.md)<br>
@@ -13,9 +15,7 @@
 
 The TAP API provides a micro service per persitence mechanism (Influx and SQLRace)
 
-## InfluxDb
-### Deployment
-
+## Influx
 #### Install the Identity Service
 The [**Identity Service**](/IdentityService/README.md) must be installed before installing MAT.TAP.TelemetryAnalytics.API.
 
