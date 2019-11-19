@@ -49,7 +49,8 @@ The json representation of a session model:
     "group": "Group10",
     "version": 1,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   }
 ```
 
@@ -90,7 +91,8 @@ Result
     "group": "Group10",
     "version": 1,
     "configuration": "{ \"key\": \"value1\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "0151d834-7a23-46c6-a3fc-eb536adcf93b",
@@ -106,7 +108,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value2\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "0151d834-7a23-46c6-a3fc-eb536adcf93b",
@@ -122,7 +125,8 @@ Result
     "group": "Group10",
     "version": 3,
     "configuration": "{ \"key\": \"value3\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   }
 ]
 ```

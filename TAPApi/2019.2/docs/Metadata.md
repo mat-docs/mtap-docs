@@ -49,7 +49,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "01bdac9f-18d9-4e8c-956b-c397206bf5a4",
@@ -65,7 +66,8 @@ Result
     "group": "Group10",
     "version": 1,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "09d6802c-a9b8-4a77-bc40-3dbffd88ac7b",
@@ -81,7 +83,8 @@ Result
     "group": "Group10",
     "version": 3,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "0fa13add-4c1f-4dda-a7be-32bbfc1b8fc6",
@@ -97,7 +100,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "150cc8cc-ef42-4730-826f-3705af91360c",
@@ -113,7 +117,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   }
 ]
 ```
@@ -189,7 +194,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "23d61829-cd8d-4522-8951-f9c0f3867548",
@@ -205,7 +211,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "7a3eb574-2038-4fa8-bebe-9b13eef64ab7",
@@ -221,7 +228,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "7a5e7a00-1860-449f-913b-e03688223622",
@@ -237,7 +245,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "8b420497-c312-45c5-93cd-4a2758d28e66",
@@ -253,7 +262,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   }
 ]
 ```
@@ -287,7 +297,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "16881d4c-7bcc-48f1-934f-a32645fc829f",
@@ -303,7 +314,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "23d61829-cd8d-4522-8951-f9c0f3867548",
@@ -319,7 +331,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "52930321-f71b-4380-a886-45a8fe077e29",
@@ -335,7 +348,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "8b420497-c312-45c5-93cd-4a2758d28e66",
@@ -351,7 +365,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   }
 ]
 ```
@@ -400,7 +415,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "c64c8e95-7540-4951-8815-c908e51b2491",
@@ -417,7 +433,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "b52b6bac-474b-4e8c-b2cd-bae44c35e71c",
@@ -434,7 +451,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": ""
   },
   {
     "id": "test-session-id",
@@ -451,7 +469,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "0179b921-1d0d-4b9e-96e1-9e9f1d86ccfd",
@@ -468,7 +487,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": ""
   }
 ]
 ```
@@ -504,7 +524,8 @@ Result
   "group": "Group10",
   "version": 2,
   "configuration": "{ \"key\": \"value\" }",
-  "sessionDetails": []
+  "sessionDetails": [],
+  "label": "*"
 }
 ```
 
@@ -550,7 +571,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": "*"
   },
   {
     "id": "0151d834-7a23-46c6-a3fc-eb536adcf93b",
@@ -566,7 +588,8 @@ Result
     "group": "Group10",
     "version": 2,
     "configuration": "{ \"key\": \"value\" }",
-    "sessionDetails": []
+    "sessionDetails": [],
+    "label": ""
   }
 ]
 ```

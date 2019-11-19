@@ -16,8 +16,10 @@ The Telemetry Analytics API (TAP API) service provides programmatic access to pe
 
 # Change log
 
-- [Metadata filter now supports 'contain'](docs/Metadata.md#filter-types)
-- [Laps now expose trigger source](docs/Metadata.md#query-all-laps-from-a-given-session)
 - Session version is no longer nullable.
 - [Renamed 'items' optional metadata query parameter to 'details'](docs/Metadata.md#optional-parameters)
+- [Metadata filter now supports 'contain'](docs/Metadata.md#filter-types)
 - [Lap filter for data request now supports multiple laps](docs/ConsumingData.md#optional-parameters-for-both-base-urls)
+- [Sessions now return the 'label'](docs/Metadata.md#query-all-available-sessions)
+- Session delete now supports optional parameter 'streamId'
+- [Laps now expose trigger source](docs/Metadata.md#query-all-laps-from-a-given-session)
