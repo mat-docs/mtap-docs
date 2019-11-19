@@ -160,7 +160,7 @@ Property filter url mask
 {property};{filterOperationShortcut};{value}
 ```
   
-#### <ins>Filtering by closed state</ins>
+#### Filtering by closed state
 
 Endpoint
 ```
@@ -258,7 +258,7 @@ Result
 ]
 ```
 
-#### <ins>Filtering by time of recording bigger than</ins>
+#### Filtering by time of recording bigger than
 
 Endpoint
 ```
@@ -370,7 +370,7 @@ Property filter url mask
 {property};{order}
 ```
 
-#### <ins>Ordering by end time descending</ins>
+#### Ordering by end time descending
 
 Endpoint
 ```
@@ -474,7 +474,7 @@ Result
 ```
 <br />
 
-### <ins>Query a specific session by its identifier</ins>
+### Query a specific session by its identifier
 
 The API allows to retrieve a session by its identifier. If there are multiple versions of sessions for the same session identifier, latest version of the session is returned by default. Use the optional query parameter ```sessionVersion``` to query a specific version.
 
@@ -519,7 +519,7 @@ The ```/sessions/identifier``` resource supports the following optional paramete
 
 <br />
 
-### <ins>Query all sessions by their sessions ids</ins>
+### Query all sessions by their sessions ids
 
 The API resource can be used to query multiple sessions using the session ids. ```sessionIds``` route parameter is a comma-separated list of session ids. When more than one session exists for a session id, the latest version of the session is returned by default.
 
