@@ -127,7 +127,7 @@ The ```/sessions``` endpoint provides a set of optional parameters from which is
 |----------------|-------------------------------------------------------------|---------------|---------------------------------------------------------------------------|
 | page           | Index of the page returned in result (0 is first page)      |               | 3                                                                         |  
 | pageSize       | Size of one page.                                           | 200           | 50                                                                        |
-| items          | Filters sessions by session details like driver, car etc.   |               | Driver:KHA,Car:P1GTR                                                      |  
+| details        | Filters sessions by session details like driver, car etc.   |               | Driver:KHA,Car:P1GTR                                                      |  
 | filter         | It allows filtering on the results.                         |               | state;eq;Closed                                                           |  
 | order          | It allows ordering of the results.                          |               | timeofrecording:desc                                                      |
 
@@ -148,6 +148,7 @@ There are multiple types of filters being those:
 | lt       | Less than             |
 | le       | Less than or equal    |
 | ne       | Not equal             |
+| contain  | Contain               |
   
 
 #### Property filter construction
@@ -855,7 +856,8 @@ Result
     "countForFastestLap": true,
     "name": "Name2",
     "number": 2,
-    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704"
+    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704",
+    "triggerSource": 0
   },
   {
     "start": "1970-01-01T00:00:00Z",
@@ -864,7 +866,8 @@ Result
     "countForFastestLap": false,
     "name": "Name3",
     "number": 3,
-    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704"
+    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704",
+    "triggerSource": 1
   },
   {
     "start": "1970-01-01T00:00:00Z",
@@ -873,7 +876,8 @@ Result
     "countForFastestLap": true,
     "name": "Name4",
     "number": 4,
-    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704"
+    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704",
+    "triggerSource": 0
   },
   {
     "start": "1970-01-01T00:00:00Z",
@@ -882,7 +886,8 @@ Result
     "countForFastestLap": false,
     "name": "Name5",
     "number": 5,
-    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704"
+    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704",
+    "triggerSource": 0
   },
   {
     "start": "1970-01-01T00:00:00Z",
@@ -891,7 +896,8 @@ Result
     "countForFastestLap": true,
     "name": "Name6",
     "number": 6,
-    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704"
+    "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704",
+    "triggerSource": 0
   }
 ]
 ```
@@ -919,6 +925,7 @@ Result
   "countForFastestLap": false,
   "name": "Lap",
   "number": 5,
-  "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704"
+  "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704",
+  "triggerSource": 0
 }
 ```
