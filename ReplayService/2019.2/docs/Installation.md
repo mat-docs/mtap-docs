@@ -27,7 +27,7 @@ sudo apt-get --yes install aspnetcore-runtime-2.1
 ```
 
 ### Daemon installation
-<span style="color:red">Please note daemon service installation will be deprecated in future releases in favour of docker.</span>
+<span style="color:red">**Note:** Support of using daemon services is deprecated from 2019.2. In future, please use the [docker image](#run-with-docker).</span>
 
 In the [release bundle](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/sections/115000825753-Downloads) the service is located at `services/MAT.TAP.ReplayService`.
 

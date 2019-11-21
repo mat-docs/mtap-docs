@@ -14,9 +14,9 @@
 
 Identity service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/identity-service?tab=readme).
 
-## Run as a daemon service
-### .NET Core runtime dependency
-First you need to install .NET Core 2.1 runtime. You can download it [here](https://www.microsoft.com/net/download/dotnet-core/2.1). Example for Ubuntu 18.04 LTE: 
+
+## .NET Core runtime dependency
+If you install service as daemon or run as standalone you need to install .NET Core 2.1 runtime. You can download it [here](https://www.microsoft.com/net/download/dotnet-core/2.1). Example for Ubuntu 18.04 LTE: 
 
 ```
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
@@ -27,14 +27,17 @@ sudo apt-get update
 sudo apt-get --yes install aspnetcore-runtime-2.1
 ```
 
-### Run from terminal
+## Run from terminal
+First you need to [install dependencies](#net-core-runtime-dependency).
 
 Alternatively, you can use Identity Service by adding the [relevant configuration](ServiceConfig.md) in `appsettings.Production.json` file and running the following command from the terminal. Make sure you are in the same directory as the **MAT.TAP.IdentityServer.dll**.
 
     dotnet MAT.TAP.IdentityServer.dll --urls="http://*:5000"
 
-### Daemon installation
-<span style="color:red">Please note daemon service installation will be deprecated in future releases in favour of docker.</span>
+## Run as a daemon service
+<span style="color:red">**Note:** Support of using daemon services is deprecated from 2019.2. In future, please use the [docker image](#run-with-docker).</span>
+
+First you need to [install dependencies](#net-core-runtime-dependency).
 
 In the [release bundle](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/sections/115000825753-Downloads) the service is located at `services/MAT.TAP.IdentityServer`.
 
@@ -68,4 +71,4 @@ sudo systemctl start MAT.TAP.IdentityServer.service
 To configure the service according to the [Service Configuration section](ServiceConfig.md), edit
 ```
 /opt/MAT.TAP.AAS.SignalR/appsettings.json
-```    
+```
