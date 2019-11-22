@@ -5,6 +5,7 @@
 - **Installation**<br>
   - [*Influx DB Installation*](#influxdb-installation)<br>
   - [*Influx Writer prerequisites*](#influxdb-writer-prerequisites)<br>
+  - [*Run with docker*](#run-with-docker)<br>
   - [*Run as standalone*](#run-as-standalone)<br>
   - [*Run as a daemon service*](#run-as-a-daemon-service)<br>
   - [*Influx Writer configuration*](#influx-writer-configuration)<br>
@@ -39,7 +40,7 @@ Disk: SSD min 15000 IOPS
 InfluxDb writer subscribes to message brokers and saves telemetry data and session metadata in real-time to time-series and relational databases respectively. InfluxDb Writer is platform-independent and hence can be deployed on Windows or Unix-based systems as a service but **we strongly recommend deploying InfluxDb writer and InfluxDb on one Linux VM. InfluxDb performs better on Linux and by deploying it on one machine together with service you reduce unnecessary network bandwidth between those services.**
 
 ### .NET Core runtime
-First you need to install .NET Core 2.1 runtime. You can download it [here](https://www.microsoft.com/net/download/dotnet-core/2.1). Example for Ubuntu 18.04 LTE: 
+If you install service as daemon or run as standalone you need to install .NET Core 2.1 runtime. You can download it [here](https://www.microsoft.com/net/download/dotnet-core/2.1). Example for Ubuntu 18.04 LTE: 
 
 ```
 wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb
@@ -50,6 +51,9 @@ sudo apt-get update
 sudo apt-get --yes install aspnetcore-runtime-2.1
 ```
 
+## Run with Docker
+
+Influx Writer is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/influx-writer-service?tab=readme).
 
 ## Run as standalone
 
@@ -59,6 +63,8 @@ dotnet MAT.TAP.AAS.InfluxDb.Writer.Hosting.dll
 ```
 
 ## Run as a daemon service
+<span style="color:red">**Note:** Support of using daemon services is deprecated from 2019.2. In future, please use the [docker image](#run-with-docker).</span>
+
 In the release bundle, which you can [download from here](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/sections/115000825753-Downloads), there is a shell script `services/MAT.TAP.AAS.InfluxDb.Writer/daemon_deploy.sh` for daemon service installation. 
 
 Before you run it, execute following commands:

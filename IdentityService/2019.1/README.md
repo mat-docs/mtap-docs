@@ -3,6 +3,7 @@
 ### Table of Contents
 - **Introduction**<br>
 - [**Installation**](docs/Installation.md)<br>
+- [**Service Config**](docs/ServiceConfig.md)<br>
 - [**API**](docs/API.md)<br>
 
 Identity Service implements OpenID Connect and provides authentication services for Telemetry Analytics API and other services in MTAP. Identity Service provides following services.
