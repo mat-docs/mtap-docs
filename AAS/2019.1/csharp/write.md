@@ -49,7 +49,7 @@ using (var outputTopic = client.OpenOutputTopic(topicName)) // Open a KafkaOutpu
 }
 ```
 
-[Create a SessionTelemetryDataOutput](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L117) and configure session output [properties](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L118-L123).
+[Create a SessionTelemetryDataOutput](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L118) and configure session output [properties](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L118-L125).
 ```cs
 var output = new SessionTelemetryDataOutput(outputTopic, dataFormatId, dataFormatClient);
 output.SessionOutput.AddSessionDependency(DependencyTypes.DataFormat, dataFormatId); // Add session dependencies to the output
@@ -69,46 +69,46 @@ output.SessionOutput.SendSession();
 
 
 ### Telemetry Data
-You will need **TelemetryData** to write to the output. In this example we [generate some random telemetryData](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L125) for the purpose of demonstration.
+You will need **TelemetryData** to write to the output. In this example we [generate some random telemetryData](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L128) for the purpose of demonstration.
 ```cs
 var telemetryData = GenerateData(10, (DateTime)output.SessionOutput.SessionStart); // Generate some telemetry data
 ```
 
-[Bind the feed to **DataOutput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L128-L129) by its name. You can use the default feedname or use a custom one.
+[Bind the feed to **DataOutput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L130-L131) by its name. You can use the default feedname or use a custom one.
 ```cs
 const string feedName = ""; // As sample DataFormat uses default feed, we will leave this empty.
 var outputFeed = output.DataOutput.BindFeed(feedName); // bind your feed by its name to the Data Output
 ```
 
-[Enqueue and send](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L131) the telemetry data.
+[Enqueue and send](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L133) the telemetry data.
 ```cs
 Task.WaitAll(outputFeed.EnqueueAndSendData(telemetryData)); // enqueue and send the data to the output through the outputFeed
 ```
 
 ### Telemetry Samples
-You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L123) for the purpose of demonstration.
+You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L125) for the purpose of demonstration.
 ```cs
 var telemetrySamples = GenerateSamples(10, (DateTime)output.SessionOutput.SessionStart); // Generate some telemetry samples
 ```
 
-[Bind the feed to **SamplesOutput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L125-L126) by its name. You can use the default feedname or use a custom one.
+[Bind the feed to **SamplesOutput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L127-L128) by its name. You can use the default feedname or use a custom one.
 ```cs
 const string feedName = ""; // As sample DataFormat uses default feed, we will leave this empty.
 var outputFeed = output.SamplesOutput.BindFeed(feedName); // bind your feed by its name to the SamplesOutput
 ```
 
-[Send Samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L128).
+[Send Samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L130).
 ```cs
 Task.WaitAll(outputFeed.SendSamples(telemetrySamples)); // send the samples to the output through the outputFeed
 ```
 
 
-Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L133) 
+Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L132) 
 ```cs
 output.SessionOutput.SessionState = StreamSessionState.Closed; // set session state to closed. In case of any unintended session close, set state to Truncated
 ```
 
-and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L134).
+and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L133).
 ```cs
 output.SessionOutput.SendSession(); // send session
 ```

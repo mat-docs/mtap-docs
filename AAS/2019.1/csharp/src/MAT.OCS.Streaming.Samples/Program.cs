@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Threading;
 using MAT.OCS.Streaming.Samples.Models;
 using MAT.OCS.Streaming.Samples.Samples;
 using MAT.OCS.Streaming.Samples.Samples.Basic;
-
-using NLog;
 
 namespace MAT.OCS.Streaming.Samples
 {
@@ -16,50 +12,88 @@ namespace MAT.OCS.Streaming.Samples
             // Samples show how to read and write Telemetry Data and Telemetry Samples
             // For basic usage please look at the samples in the Samples/Basic folder
 
-            /*// Read Telemetry Data
+            // Uncomment the method which you wish to run
+
+            // ReadTelemetryData();
+
+            WriteTelemetryData();
+
+            // ReadTelemetrySamples();
+
+            // WriteTelemetrySamples();
+
+            // RunAModel();
+
+            // For advanced usage with structured code please look at the samples in the Samples folder
+
+            // AdvancedExample();
+        }
+
+        /// <summary>
+        /// Read telemetry data to kafka
+        /// </summary>
+        private static void ReadTelemetryData()
+        {
             Console.WriteLine("Reading TData");
             var rtData = new TData();
             rtData.ReadTData();
             Console.WriteLine("Reading TData finished");
-            */
+        }
 
-            // Write Telemetry Data
+        /// <summary>
+        /// Write telemetry data to kafka
+        /// </summary>
+        private static void WriteTelemetryData()
+        {
             Console.WriteLine("Writing TData");
             var tData = new TData();
             tData.WriteTData();
             Console.WriteLine("Writing TData finished");
-            
-            /*
-            // Read Telemetry Samples
+        }
+
+        /// <summary>
+        /// Read telemetry samples from kafka
+        /// </summary>
+        private static void ReadTelemetrySamples()
+        {
             Console.WriteLine("Reading TSamples");
             var rtSamples = new TSamples();
             rtSamples.ReadTSamples();
             Console.WriteLine("Reading TSamples finished");
-            */
+        }
 
-            /*// Write Telemetry Samples
+        /// <summary>
+        /// Write telemetry samples to kafka
+        /// </summary>
+        private static void WriteTelemetrySamples()
+        {
             Console.WriteLine("Writing TSamples");
             var wtSamples = new TSamples();
             wtSamples.WriteTSamples();
             Console.WriteLine("Writing TSamples finished");
-            */
+        }
 
-            /*// Run a model
+
+        /// <summary>
+        /// Run a read/write example with simple model executing
+        /// code on incoming data to generate outgoing data
+        /// </summary>
+        private static void RunAModel()
+        {
             Console.WriteLine("Running model");
             var model = new ModelSample();
             model.Run();
             Console.WriteLine("Running model finished");
-            */
+        }
 
-            // For advanced usage with structured code please look at the samples in the Samples folder
-
-            /* Read/Write/Read and link TDataSingleFeedSingleParameter
-
+        /// <summary>
+        /// Read/Write/Read and link TDataSingleFeedSingleParameter
+        /// </summary>
+        private static void AdvancedExample()
+        {
             TDataSingleFeedSingleParameter.Read();
             TDataSingleFeedSingleParameter.Write();
             TDataSingleFeedSingleParameter.ReadAndLink();
-
-             */
         }
     }
 }
