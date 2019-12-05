@@ -6,10 +6,10 @@
   - [Samples project](./src)
   - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
-    - [Tamples](read.md#telemetry-samples)
+    - [TSamples](read.md#telemetry-samples)
   - [Write](write.md#basic-samples)
     - [TData](write.md#telemetry-data)
-    - [Tamples](write.md#telemetry-samples)
+    - [TSamples](write.md#telemetry-samples)
   - Advanced Samples
 
 # Advanced Samples
