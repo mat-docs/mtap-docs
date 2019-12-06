@@ -7,10 +7,10 @@
   - [Samples project](./src)
   - [Read](read.md)
     - [TData](read.md#telemetry-data)
-    - [Tamples](read.md#telemetry-samples)
+    - [TSamples](read.md#telemetry-samples)
   - [Write](write.md#basic-samples)
     - [TData](write.md#telemetry-data)
-    - [Tamples](write.md#telemetry-samples)
+    - [TSamples](write.md#telemetry-samples)
 
 ## Basic samples
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read and write to and from Kafka or Mqtt streams.
