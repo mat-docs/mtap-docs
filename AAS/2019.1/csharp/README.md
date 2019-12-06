@@ -6,10 +6,10 @@
   - [Samples project](./src)
   - [Read](read.md)
     - [TData](read.md#telemetry-data)
-    - [Tamples](read.md#telemetry-samples)
+    - [TSamples](read.md#telemetry-samples)
   - [Read](write.md)
     - [TData](write.md#telemetry-data)
-    - [Tamples](write.md#telemetry-samples)
+    - [TSamples](write.md#telemetry-samples)
   - [Advanced Samples](advanced.md)
 - [**Python Samples**](./python/README.md)<br>
 

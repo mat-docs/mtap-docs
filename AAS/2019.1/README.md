@@ -5,5 +5,5 @@
 - [**C# Samples**](./csharp/README.md)<br>
 - [**Python Samples**](./python/README.md)<br>
 
-Python Atlas Advanced Stream is the transportation protocol over Kafka/MQTT used by MTAP.
+Atlas Advanced Stream is the transportation protocol over Kafka/MQTT used by MTAP.
 Documentation for the protocol can be found at our [zendesk page](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/categories/115000361553-MTAP-McLaren-Telemetry-Analytics-Platform).
