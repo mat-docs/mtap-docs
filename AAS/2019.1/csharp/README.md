@@ -11,6 +11,7 @@
     - [TData](write.md#telemetry-data)
     - [Tamples](write.md#telemetry-samples)
   - [Advanced Samples](advanced.md)
+- [**Python Samples**](./python/README.md)<br>
 
 # Introduction
 This API provides infrastructure for streaming data around the ATLAS technology platform.

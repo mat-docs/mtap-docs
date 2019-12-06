@@ -11,6 +11,7 @@
     - [TData](write.md#telemetry-data)
     - [Tamples](write.md#telemetry-samples)
   - [Advanced Samples](advanced.md#advanced-samples)
+- [**Python Samples**](./python/README.md)<br>
 
 ## Basic samples
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read and write to and from Kafka or Mqtt streams.
