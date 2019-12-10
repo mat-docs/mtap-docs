@@ -68,10 +68,47 @@ Unsubscribes from a single parameter's data notifications for a stream the [hub 
 hubConnection.invoke('UnsubscribeFromParameterByStream', parameterIdentifier, streamId);
 ```
 
+## Subscribe to events by stream
+Subscribes to the Events notifications for a stream.
+
+#### Events model
+
+| Property | Description |
+| - | - |
+| TopicName | Name of the topic the session is streaming on|
+| StreamId | The unique id of the stream this Event belongs to |
+| EventId | Unique Event Id |
+| Description | Description of the Event |
+| Priority | Priority of the Event. Possible values are `High`, `Medium`, `Low`, `Debug` |
+| GroupName | Group the Event belongs to |
+| Timestamp | Timestamp in nanoseconds when the event occurred |
+| Values | Array of the associated event values |
+
+``` TypeScript
+// TypeScript example
+// subscribe to a specific eventId or to all events ('*') of a stream
+hubConnection.invoke('SubscribeToEventsByStream', eventId, streamId);
+
+// then the events will be delivered to clients using callback
+hubConnection.on('OnEventReceived', (event : EventSignalR) =>
+    {
+        // do something with `event`
+    });
+```
+
+## Unsubscribe from events by stream
+
+Unsubscribes from events notifications for a stream the [hub connection previously subscribed to](#subscribe-to-events-by-stream).
+
+``` TypeScript
+// TypeScript example
+// Unsubscribe from a specific eventId or from all events ('*') of a stream
+hubConnection.invoke('UnsubscribeFromEventsByStream', eventId, streamId);
+```
 
 ## Unsubscribe from stream
 
-Unsubscribes from all parameter data notifications for a stream the [hub connection previously subscribed to](#subscribe-to-parameter-by-stream).
+Unsubscribes from all parameter data and events notifications for a stream the [hub connection previously subscribed to](#subscribe-to-parameter-by-stream).
 
 ``` TypeScript
 // TypeScript example
@@ -150,3 +187,4 @@ Unsubscribes from live session updates the [hub connection previously subscribed
 // TypeScript example
 hubConnection.invoke('UnsubscribeFromLiveSessions');
 ```
+
