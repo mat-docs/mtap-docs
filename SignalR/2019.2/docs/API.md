@@ -7,6 +7,8 @@
 - **API**<br>
   - [Subscribe to parameter by stream](#subscribe-to-parameter-by-stream)
   - [Unsubscribe from parameter by stream](#unsubscribe-from-parameter-by-stream)
+  - [Subscribe to events by stream](#subscribe-to-events-by-stream)
+  - [Unsubscribe from events by stream](#unsubscribe-from-events-by-stream)
   - [Unsubscribe from stream](#unsubscribe-from-stream)
   - [Subscribe to session update](#subscribe-to-session-update)
   - [Unsubscribe from session update](#unsubscribe-from-session-update)
