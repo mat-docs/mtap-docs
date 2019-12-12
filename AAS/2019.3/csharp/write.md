@@ -7,13 +7,15 @@
   - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Events](read.md#events)
   - Write
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+    - [Events](write.md#events)
   - [Advanced Samples](advanced.md#advanced-samples)
 
-## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read and write to and from Kafka or Mqtt streams.
+## Basic samples (Write)
+Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Events Writes to and from Kafka or Mqtt streams.
 
 First of all you need to configure the [dependencies](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L102-L113)
 ```cs
@@ -102,15 +104,21 @@ var outputFeed = output.SamplesOutput.BindFeed(feedName); // bind your feed by i
 Task.WaitAll(outputFeed.SendSamples(telemetrySamples)); // send the samples to the output through the outputFeed
 ```
 
+### Events
+You will need **Events** to write to the output. In this example we [generate some random Event samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L67) for the purpose of demonstration.
+```cs
+var events = GenerateEvents(20, (DateTime)output.SessionOutput.SessionStart); // Generate some events data
+```
 
-Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L132) 
+Then you can just [send the Events using `SendEvent` method in **EventsOuput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L68).
+```cs
+var tasks = events.Select(ev => output.EventsOutput.SendEvent(ev)).ToArray(); // enqueue and send the events to the output through the EventsOutput
+```
+
+### Closing session
+
+Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L132) and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L133).
 ```cs
 output.SessionOutput.SessionState = StreamSessionState.Closed; // set session state to closed. In case of any unintended session close, set state to Truncated
-```
-
-and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L133).
-```cs
 output.SessionOutput.SendSession(); // send session
 ```
-
-

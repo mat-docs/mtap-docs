@@ -34,7 +34,7 @@ namespace MAT.OCS.Streaming.Samples.Samples.Basic
 
                 input.SessionInput.SessionDependenciesChanged += (s, a) =>
                 {
-                    if (!a.Session.Dependencies.TryGetValue("AtlasConfiguration", out var atlasConfigIds))
+                    if (!a.Session.Dependencies.TryGetValue("atlasConfiguration", out var atlasConfigIds))
                     {
                         return;
                     }
@@ -60,7 +60,7 @@ namespace MAT.OCS.Streaming.Samples.Samples.Basic
                             continue;
                         }
 
-                        Trace.WriteLine($"- Event: {ev.Id} - {eventDefinition.Description} - Priority: {eventDefinition.Priority.ToString()} - Value: {ev.Values?.First()}");
+                        Console.WriteLine($"- Event: {ev.Id} - {eventDefinition.Description} - Priority: {eventDefinition.Priority.ToString()} - Value: {ev.Values?.First()}");
                     }
                 };
 
