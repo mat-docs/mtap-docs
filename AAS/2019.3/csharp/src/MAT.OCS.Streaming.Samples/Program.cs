@@ -16,11 +16,15 @@ namespace MAT.OCS.Streaming.Samples
 
             // ReadTelemetryData();
 
-            WriteTelemetryData();
+            // WriteTelemetryData();
 
             // ReadTelemetrySamples();
 
             // WriteTelemetrySamples();
+
+            ReadEvents();
+
+            // WriteEvents();
 
             // RunAModel();
 
@@ -73,6 +77,27 @@ namespace MAT.OCS.Streaming.Samples
             Console.WriteLine("Writing TSamples finished");
         }
 
+        /// <summary>
+        /// Read events from kafka
+        /// </summary>
+        private static void ReadEvents()
+        {
+            Console.WriteLine("Reading Events");
+            var eventsRead = new EventsRead();
+            eventsRead.ReadEvents();
+            Console.WriteLine("Reading Events finished");
+        }
+
+        /// <summary>
+        /// Write events to kafka
+        /// </summary>
+        private static void WriteEvents()
+        {
+            Console.WriteLine("Writing Events");
+            var eventsWrite = new EventsWrite();
+            eventsWrite.WriteEvents();
+            Console.WriteLine("Writing Events finished");
+        }
 
         /// <summary>
         /// Run a read/write example with simple model executing
