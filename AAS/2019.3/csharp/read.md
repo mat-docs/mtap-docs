@@ -80,7 +80,7 @@ input.SamplesInput.AutoBindFeeds((s, e) => // Take the input and bind feed to an
 
 ### Events
 
-In this example we [subscribe to **EventsInput** with a handler method](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L45) and simply [print out some details of each Event received](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L52-L63)
+In this example we [subscribe to **EventsInput** with a handler method](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L45) and simply [print out some details of each event received](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L52-L63).
 
 ```cs
 input.EventsInput.EventsBuffered += (sender, e) => // Subscribe to incoming events
@@ -106,7 +106,7 @@ input.EventsInput.EventsBuffered += (sender, e) => // Subscribe to incoming even
 };
 ```
 
-Notice that we are [querying to Atlas configuration dependency](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L57) some details of the Event not available in the Event object like `Description` or `Priority`. You must [subscribe to session dependencies change](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L35-L43) to get this Atlas configuration dependency.
+Notice that we are [querying the Atlas configuration dependency](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L57) for event details. These details include properties like `Description`, `Priority`. You must [subscribe to session dependencies change](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L35-L43) to get this Atlas configuration dependency.
 
 
 ### Waits for completion

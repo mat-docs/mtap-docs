@@ -5,6 +5,5 @@ Documentation for the protocol can be found at our [zendesk page](https://mclare
 
 
 ### Versions
-- [**MTAP 2019.1.x and before**](2019.1/README.md)<br>
-- [**MTAP 2019.2.x**](2019.3/README.md)<br>
+- [**MTAP 2019.2.x and before**](2019.1/README.md)<br>
 - [**MTAP 2019.3.x and after**](2019.3/README.md)<br>

@@ -71,7 +71,7 @@ output.SessionOutput.SendSession();
 
 
 ### Telemetry Data
-You will need **TelemetryData** to write to the output. In this example we [generate some random telemetryData](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L128) for the purpose of demonstration.
+You will need **TelemetryData** to write to the output. In this example we [generate some random telemetry data](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L128) for the purpose of demonstration.
 ```cs
 var telemetryData = GenerateData(10, (DateTime)output.SessionOutput.SessionStart); // Generate some telemetry data
 ```
@@ -88,7 +88,7 @@ Task.WaitAll(outputFeed.EnqueueAndSendData(telemetryData)); // enqueue and send 
 ```
 
 ### Telemetry Samples
-You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L125) for the purpose of demonstration.
+You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetry samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L125) for the purpose of demonstration.
 ```cs
 var telemetrySamples = GenerateSamples(10, (DateTime)output.SessionOutput.SessionStart); // Generate some telemetry samples
 ```
@@ -105,19 +105,19 @@ Task.WaitAll(outputFeed.SendSamples(telemetrySamples)); // send the samples to t
 ```
 
 ### Events
-You will need **Events** to write to the output. In this example we [generate some random Event samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L67) for the purpose of demonstration.
+You will need **Events** to write to the output. In this example we [generate some random event samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L67) for the purpose of demonstration.
 ```cs
 var events = GenerateEvents(20, (DateTime)output.SessionOutput.SessionStart); // Generate some events data
 ```
 
-Then you can just [send the Events using `SendEvent` method in **EventsOuput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L68).
+Then you can just [send the events using `SendEvent` method on **EventsOuput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L68).
 ```cs
 var tasks = events.Select(ev => output.EventsOutput.SendEvent(ev)).ToArray(); // enqueue and send the events to the output through the EventsOutput
 ```
 
 ### Closing session
 
-Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L132) and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L133).
+Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L135) and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L136).
 ```cs
 output.SessionOutput.SessionState = StreamSessionState.Closed; // set session state to closed. In case of any unintended session close, set state to Truncated
 output.SessionOutput.SendSession(); // send session
