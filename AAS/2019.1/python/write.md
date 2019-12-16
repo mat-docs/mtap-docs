@@ -11,6 +11,7 @@
   - Write
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+  - [Model](models.md)
 
 ## Basic samples
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples write to Kafka or Mqtt streams.

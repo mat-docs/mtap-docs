@@ -1,14 +1,17 @@
-# ATLAS Advanced Streaming Samples
+# ![logo](/Media/branding.png) Atlas Advanced Stream
 
-![Build Status](https://mat-ocs.visualstudio.com/Telemetry%20Analytics%20Platform/_apis/build/status/MAT.OCS.Streaming/Streaming%20Samples?branchName=develop)
-
-Table of Contents
-=================
-<!--ts-->
-* [Introduction - MAT.OCS.Streaming library](/../../README.md)
-* [Python# Samples](/../../README.md)
-* [Model sample](/README.md)
-<!--te-->
+### Table of Contents
+- [**Introduction**](../README.md)<br>
+- [**C# Samples**](../csharp/README.md)<br>
+- [**Python Samples**](README.md)<br>
+  - [Samples project](./src)
+  - [Read](read.md#basic-samples)
+    - [TData](read.md#telemetry-data)
+    - [TSamples](read.md#telemetry-samples)
+  - [Write](write.md#basic-samples)
+    - [TData](write.md#telemetry-data)
+    - [TSamples](write.md#telemetry-samples)
+  - Model
 
 # Model sample
 
@@ -16,12 +19,12 @@ A basic example of a model calculating the total horizontal acceleration paramet
 
 gTotal = |gLat| + |gLong|. 
 
-Model consists from two classes, [ModelSample](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelExample.py) and [StreamModel](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelInstance.py)
+Model consists from two classes, [ModelExample](./src/Models/ModelExample.py) and [ModelInstance](./src/Models/ModelInstance.py)
 .
 ## Environment setup
 You need to prepare environment variables as follows:
 
-[Environment variables](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelExample.py#L18-L22)
+[Environment variables](./src/Models/ModelExample.py#L18-L22)
 ```python
 DEPENDENCY_SERVER_URI = 'http://10.228.4.9:8180/api/dependencies'
 DEPENDENCY_GROUP = 'dev'
@@ -35,7 +38,7 @@ Before you start your model, create all the necessary topics using Topic managem
 ## Output format 
 Specify output data of the model and publish it to dependency service:
 
-[Output format](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelExample.py#L25-L33)
+[Output format](./src/Models/ModelExample.py#L25-L33)
 ```python
 dependency_client = HttpDependencyClient(DEPENDENCY_SERVER_URI, DEPENDENCY_GROUP)
 data_format_client = DataFormatClient(dependency_client)
@@ -48,7 +51,7 @@ data_format = DataFormat({feed_name: feed})
 data_format_id = data_format_client.put_and_identify_data_format(data_format)
 ```
 
-If you want to use your data in Atlas, you need to specify and upload (put) your [Atlas configuration](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelExample.py#L35-L44)
+If you want to use your data in Atlas, you need to specify and upload (put) your [Atlas configuration](./src/Models/ModelExample.py#L35-L44)
 ```python
 atlas_configuration_client = AtlasConfigurationClient(dependency_client)
 atlas_configuration = AtlasConfiguration({"Models":
@@ -63,7 +66,7 @@ atlas_configuration_id = atlas_configuration_client.put_and_identify_atlas_confi
 ```
 
 ## Subscribe
-[Subscribe](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelExample.py#L46-L47) for input topic streams:
+[Subscribe](./src/Models/ModelExample.py#L46-L47) for input topic streams:
 
 ```python
 kafka_client = KafkaStreamClient(kafka_address=KAFKA_IP, consumer_group=DEPENDENCY_GROUP)
@@ -71,13 +74,13 @@ output_topic = kafka_client.open_output_topic(OUTPUT_TOPIC_NAME)
 ```
 
 ## Into
-Each stream will raise callback [Into](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelExample.py#L58)() where a new instance of the model for the new stream is created.
+Each stream will raise callback [Into](./src/Models/ModelExample.py#L58)() where a new instance of the model for the new stream is created.
 
 ```python
 pipeline: StreamPipeline = kafka_client.stream_topic(INPUT_TOPIC_NAME).into(stream_input_handler)
 ```
 
-This block of code is called for each new stream as a [stream_input_handler](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelExample.py#L50-L55)
+This block of code is called for each new stream as a [stream_input_handler](./src/Models/ModelExample.py#L50-L55)
 
 ```python
 def stream_input_handler(stream_id: str) -> StreamInput:
@@ -90,12 +93,12 @@ def stream_input_handler(stream_id: str) -> StreamInput:
 
 ## Stream model
 For each new stream, we create a instance of ModelInstance class.
-[ModelInstance](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelInstance.py#L14-L25)
+[ModelInstance](./src/Models/ModelInstance.py#L14-L25)
 
 ### Create stream input
 At the beginning of each stream, we create new stream input handler
 
-[stream_input_handler](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelInstance.py#L27-L48)
+[stream_input_handler](./src/Models/ModelInstance.py#L27-L48)
 
 ```python
 def stream_input_handler(self, stream_id: str) -> StreamInput:
@@ -123,7 +126,7 @@ def stream_input_handler(self, stream_id: str) -> StreamInput:
 ```
 ### gTotal function
 In the callback, each bucket of data is calculated and the result is sent to the output topic.
-[gTotal_model](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/Models/ModelInstance.py#L50-L67)
+[gTotal_model](./src/Models/ModelInstance.py#L50-L67)
 
 ```python
 def gTotal_model(self, sender, event_args: TelemetryDataFeedEventArgs):
