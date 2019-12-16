@@ -15,7 +15,6 @@
 ## Basic samples
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples write to Kafka or Mqtt streams.
 
-## Write
 First of all you need to configure the [dependencies](./src/TDataWrite.py#L33-L66)
 ```python
 """Setup details"""

@@ -15,7 +15,6 @@
 ## Basic samples
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read from Kafka or Mqtt streams.
 
-## Read
 First of all you need to configure the [dependencies](./src/TDataRead.py#L11-L20)
 ```python
 DEPENDENCY_SERVER_URI = 'http://10.228.4.9:8180/api/dependencies'
