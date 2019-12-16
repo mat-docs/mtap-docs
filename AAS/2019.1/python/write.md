@@ -16,7 +16,7 @@
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples write to Kafka or Mqtt streams.
 
 ## Write
-First of all you need to configure the [dependencies](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L33-L66)
+First of all you need to configure the [dependencies](./src/TDataWrite.py#L33-L66)
 ```python
 """Setup details"""
 # Populate these constants with the correct values for your project.
@@ -60,14 +60,14 @@ DataFormat is required when writing to stream, as it is used to define the struc
 
 AtlasConfigurationId is needed only if you want to display your data in Atlas10.
 
-[Open the output topic](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L68-L69) using the preferred client (KafkaStreamClient or MqttStreamClient) and the topicName.
+[Open the output topic](./src/TDataWrite.py#L68-L69) using the preferred client (KafkaStreamClient or MqttStreamClient) and the topicName.
 ```python
 output: SessionTelemetryDataOutput = None
 with client.open_output_topic(TOPIC_NAME) as output_topic:
 	...
 ```
 
-[Create a SessionTelemetryDataOutput](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L71-L73) and configure session output [properties](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L75-L84).
+[Create a SessionTelemetryDataOutput](./src/TDataWrite.py#L71-L73) and configure session output [properties](./src/TDataWrite.py#L75-L84).
 ```python
 try:
     output = SessionTelemetryDataOutput(output_topic=output_topic,
@@ -103,45 +103,45 @@ You must add data_format_id and atlas_configuration_id to session dependencies t
 
 ### Telemetry Data
 
-[Bind the feed to **output.data_output**](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L86) by its name. You can use the default feedname or use a custom one.
+[Bind the feed to **output.data_output**](./src/TDataWrite.py#L86) by its name. You can use the default feedname or use a custom one.
 ```python
 output_feed: TelemetryDataFeedOutput = output.data_output.bind_default_feed()
 ```
 
-You will need **TelemetryData** to write to the output. In this example we [generate some random TelemetryData](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L88-L91) for the purpose of demonstration.
+You will need **TelemetryData** to write to the output. In this example we [generate some random TelemetryData](./src/TDataWrite.py#L88-L91) for the purpose of demonstration.
 ```python
 data: TelemetryData = output_feed.make_telemetry_data(samples=10, epoch=to_telemetry_time(datetime.utcnow()))
 data = generate_data(data, frequency)
 ```
 
-[send](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L94) the telemetry data.
+[send](./src/TDataWrite.py#L94) the telemetry data.
 ```python
 output_feed.send(data)
 ```
 
 ### Telemetry Samples
-You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.samples/blob/f9f66fa96aaa51a4ec24bf921461918b3771d929/src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamplesWrite.cs#L92-L96) for the purpose of demonstration.
+You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](./src/TSamplesWrite.py#L92-L96) for the purpose of demonstration.
 ```python
 telemetry_samples = generate_samples(sample_count=10, session_start=datetime.utcnow(), parameter_id="vCar:Chassis", frequency=frequency)
 ```
 
-[Bind the feed to **output.samples_output**](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TSamplesWrite.py#L98-L99) by its name. You can use the default feedname or use a custom one.
+[Bind the feed to **output.samples_output**](./src/TSamplesWrite.py#L98-L99) by its name. You can use the default feedname or use a custom one.
 ```python
 output_feed: TelemetrySamplesFeedOutput = output.samples_output.bind_feed(feed_name="")
 ```
 
-[Send Samples](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TSamplesWrite.py#L101).
+[Send Samples](./src/TSamplesWrite.py#L101).
 ```python
 output_feed.send(telemetry_samples)
 ```
 
 
-Once you sent all your data, don't forget to [set the session state to closed](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L95) 
+Once you sent all your data, don't forget to [set the session state to closed](./src/TDataWrite.py#L95) 
 ```python
 output.session_output.session_state = StreamSessionState.Closed
 ```
 
-and [send the session details](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L100-L102) or do it in the finally block as recommended above.
+and [send the session details](./src/TDataWrite.py#L100-L102) or do it in the finally block as recommended above.
 ```python
 output.SessionOutput.SendSession(); // send session
 ```
