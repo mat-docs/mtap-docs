@@ -2,16 +2,15 @@
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
-- [**C# Samples**](./csharp/README.md)<br>
+- [**C# Samples**](../csharp/README.md)<br>
 - **Python Samples**<br>
   - [Samples project](./src)
-  - [Read](read.md)
+  - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
-  - [Read](write.md)
+  - [Write](write.md#basic-samples)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
-  - [Advanced Samples](advanced.md)
 
 # Introduction
 This API provides infrastructure for streaming data around the ATLAS technology platform.

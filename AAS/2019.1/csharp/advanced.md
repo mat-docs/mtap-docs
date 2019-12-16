@@ -11,7 +11,7 @@
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
   - Advanced Samples
-- [**Python Samples**](./python/README.md)<br>
+- [**Python Samples**](../python/README.md)<br>
 
 # Advanced Samples
 

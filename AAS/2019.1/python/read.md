@@ -2,10 +2,10 @@
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
-- [**C# Samples**](README.md)<br>
-- **Python Samples**(./python/README.md)<br>
+- [**C# Samples**](../csharp/README.md)<br>
+- [**Python Samples**](README.md)<br>
   - [Samples project](./src)
-  - [Read](read.md)
+  - Read
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
   - [Write](write.md#basic-samples)
@@ -13,11 +13,10 @@
     - [TSamples](write.md#telemetry-samples)
 
 ## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read and write to and from Kafka or Mqtt streams.
+Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read from Kafka or Mqtt streams.
 
 ## Read
-First of all you need to configure the [dependencies]
-(https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataRead.py#L11-L20)
+First of all you need to configure the [dependencies](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataRead.py#L11-L20)
 ```python
 DEPENDENCY_SERVER_URI = 'http://10.228.4.9:8180/api/dependencies'
 DEPENDENCY_GROUP = 'dev'
@@ -48,7 +47,7 @@ Create a [SessionTelemetryDataInput](https://github.com/McLarenAppliedTechnologi
 telemetry_input = SessionTelemetryDataInput(stream_id=stream_id, data_format_client=data_format_client)
 ```
 
-### Read Telemetry Data
+### Telemetry Data
 In this example we [bind the **data_input** to the handler method](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataRead.py#L33) using the default feed and simply [print out some details](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataRead.py#L22-L27) about the incoming data.
 
 ```python
@@ -63,7 +62,7 @@ telemetry_input.data_input.bind_default_feed("").data_buffered += print_data
 
 ```
 
-### Read Telemetry Samples
+### Telemetry Samples
 In this example we [bind the **samples_input** to the handler method](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TSamplesRead.py#L34) and simply [print out some details](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TSamplesRead.py#L23-L27) 
 ```python
 def print_samples(sender, event_args: TelemetryEventArgs):

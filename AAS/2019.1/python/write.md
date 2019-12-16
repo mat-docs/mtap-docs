@@ -2,18 +2,18 @@
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
-- [**C# Samples**](README.md)<br>
-- **Python Samples**(./python/README.md)<br>
+- [**C# Samples**](../csharp/README.md)<br>
+- [**Python Samples**](README.md)<br>
   - [Samples project](./src)
-  - [Read](read.md)
+  - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
-  - [Write](write.md#basic-samples)
+  - Write
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
 
 ## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read and write to and from Kafka or Mqtt streams.
+Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples write to Kafka or Mqtt streams.
 
 ## Write
 First of all you need to configure the [dependencies](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L33-L66)
@@ -101,14 +101,14 @@ Open the session within a Try Except block and handle sesseion status sending as
 You must add data_format_id and atlas_configuration_id to session dependencies to be able to use them during the streaming session.
 
 
-### Write Telemetry Data
+### Telemetry Data
 
 [Bind the feed to **output.data_output**](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L86) by its name. You can use the default feedname or use a custom one.
 ```python
 output_feed: TelemetryDataFeedOutput = output.data_output.bind_default_feed()
 ```
 
-You will need **TelemetryData** to write to the output. In this example we [generate some random TelemetryData](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L88-L915) for the purpose of demonstration.
+You will need **TelemetryData** to write to the output. In this example we [generate some random TelemetryData](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.python.samples/blob/develop/src/TDataWrite.py#L88-L91) for the purpose of demonstration.
 ```python
 data: TelemetryData = output_feed.make_telemetry_data(samples=10, epoch=to_telemetry_time(datetime.utcnow()))
 data = generate_data(data, frequency)
@@ -119,8 +119,8 @@ data = generate_data(data, frequency)
 output_feed.send(data)
 ```
 
-### Write Telemetry Samples
-You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.samples/blob/f9f66fa96aaa51a4ec24bf921461918b3771d929/src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L123) for the purpose of demonstration.
+### Telemetry Samples
+You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](https://github.com/McLarenAppliedTechnologies/mat.ocs.streaming.samples/blob/f9f66fa96aaa51a4ec24bf921461918b3771d929/src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamplesWrite.cs#L92-L96) for the purpose of demonstration.
 ```python
 telemetry_samples = generate_samples(sample_count=10, session_start=datetime.utcnow(), parameter_id="vCar:Chassis", frequency=frequency)
 ```
