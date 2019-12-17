@@ -8,3 +8,4 @@
 - [**SignalR**](/SignalR/README.md)<br>
 - [**Identity Service**](/IdentityService/README.md)<br>
 - [**Telemetry Analytics API**](/TAPApi/README.md)<br>
+- [**TAP Helm charts**](/Helm/README.md)<br>
