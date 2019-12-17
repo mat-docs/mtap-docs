@@ -2,7 +2,7 @@
 
 ## What is TAP Helm Charts
 
-TAP Helm charts allows you to define and deploy a functional TAP platform into the Kubernetes cluster with just an easy configuration file and a command-line.
+[TAP Helm charts](https://github.com/mat-docs/mtap-docs/blob/master/Helm/README.md) allows you to define and deploy a functional TAP platform into the Kubernetes cluster with just an easy configuration file and a command-line.
 
 Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application. 
 
