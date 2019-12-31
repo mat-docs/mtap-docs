@@ -8,9 +8,11 @@
   - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Events](read.md#telemetry-events)
   - [Write](write.md#basic-samples)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+    - [Events](write.md#telemetry-events)
   - [Model](models.md#model-sample)
 
 # Introduction
@@ -154,6 +156,9 @@ Telemetry samples messages can be sent using the initally created SessionTelemet
 
 ##### Telemetry Data:
 Telemetry data messages can be sent using the initally created SessionTelemetryDataOutput object and its data_output member, by binding to either the default feed or a specific feed. Once bound to a feed simply invoke the send() method, passing your TelemetryData object to it.
+
+##### Telemetry Event:
+Telemetry domain related, custom defined events.
 
 ##### BackFill Data:
 BackFill data messages can be sent using the initally created SessionTelemetryDataOutput object and its backfill_data_output member, by binding to either the default feed or a specific feed. Once bound to a feed simply invoke the send() method, passing your BackFillData object to it.
