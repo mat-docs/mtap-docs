@@ -8,6 +8,7 @@
   - Read
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Events](read.md#telemetry-events)
   - [Write](write.md#basic-samples)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
@@ -74,9 +75,7 @@ def print_samples(sender, event_args: TelemetryEventArgs):
 telemetry_input.samples_input.autobind_feeds += print_samples
 ```
 
-```
-
-### Telemetry Event
+### Telemetry Events
 In this example we [subscribe to the **events_input**'s data_buffered event with the handler method](./src/EventRead.py#L30) and simply [print out some details](./src/EventRead.py#L22-L24) 
 ```python
     def print_event(sender, event_args: EventsEventArgs):
