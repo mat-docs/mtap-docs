@@ -8,9 +8,11 @@
   - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Events](read.md#telemetry-events)
   - Write
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+    - [Events](write.md#telemetry-events)
   - [Model](models.md#model-sample)
 
 ## Basic samples
@@ -135,6 +137,17 @@ output_feed: TelemetrySamplesFeedOutput = output.samples_output.bind_feed(feed_n
 output_feed.send(telemetry_samples)
 ```
 
+### Telemetry Events
+
+You will need **Event** to write to the output. In this example we [use some test Event data](./src/EventWrite.py#L60) for the purpose of demonstration.
+```python
+event = Event("testEvent", 1, 1, "testing", [1.0, 2.0])
+```
+
+We simply [send](./src/TDataWrite.py#L63) the Event data through the **event_output***
+```python
+output.events_output.send(event)
+```
 
 Once you sent all your data, don't forget to [set the session state to closed](./src/TDataWrite.py#L95) 
 ```python
