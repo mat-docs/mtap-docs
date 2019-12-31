@@ -48,7 +48,7 @@ telemetry_input = SessionTelemetryDataInput(stream_id=stream_id, data_format_cli
 ```
 
 ### Telemetry Data
-In this example we [bind the **data_input** to the handler method](./src/TDataRead.py#L33) using the default feed and simply [print out some details](./src/TDataRead.py#L22-L27) about the incoming data.
+In this example we [bind the **data_input** using the default feed and subscribe to the data_buffered event with the handler method](./src/TDataRead.py#L33) and simply [print out some details](./src/TDataRead.py#L22-L27) about the incoming data.
 
 ```python
 def print_data(sender, event_args: TelemetryDataFeedEventArgs):
@@ -63,7 +63,7 @@ telemetry_input.data_input.bind_default_feed("").data_buffered += print_data
 ```
 
 ### Telemetry Samples
-In this example we [bind the **samples_input** to the handler method](./src/TSamplesRead.py#L34) and simply [print out some details](./src/TSamplesRead.py#L23-L27) 
+In this example we [bind the **samples_input** by subscribing to the autobind_feeds event with the handler method](./src/TSamplesRead.py#L34) and simply [print out some details](./src/TSamplesRead.py#L23-L27) 
 ```python
 def print_samples(sender, event_args: TelemetryEventArgs):
     s: TelemetrySamples = event_args.data
@@ -72,6 +72,18 @@ def print_samples(sender, event_args: TelemetryEventArgs):
         str(len(s.parameters.keys()))))
 
 telemetry_input.samples_input.autobind_feeds += print_samples
+```
+
+```
+
+### Telemetry Event
+In this example we [subscribe to the **events_input**'s data_buffered event with the handler method](./src/EventRead.py#L30) and simply [print out some details](./src/EventRead.py#L22-L24) 
+```python
+    def print_event(sender, event_args: EventsEventArgs):
+        event: Event = event_args.buffer.get_first()
+        print(event.status)
+
+telemetry_input.events_input.data_buffered += print_event
 ```
 
 You can optionally handle the stream_finished event.
