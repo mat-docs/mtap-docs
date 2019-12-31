@@ -12,6 +12,7 @@
   - [Write](write.md#basic-samples)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+    - [Events](write.md#telemetry-events)
   - [Model](models.md#model-sample)
 
 ## Basic samples
