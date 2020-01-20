@@ -39,6 +39,10 @@ The configuration file of the service is called ```appsettings.json```
   "OAuth": {
     "Enabled": true,
     "Url": "http://identity-server"
+  },
+  "Licensing": {
+    "CustomerId": "00000000-0000-0000-0000-000000000000",
+    "LicenseServerUri": "https://localhost/mockSentinelEMS"
   }
 }
 ```
@@ -83,4 +87,10 @@ The configuration file of the service is called ```appsettings.json```
 | Enabled       | True if OAuth should be enabled. Suggested OAuth is [Identity Service]. If disabled then Replay Service endpoints do not require authentication.             |    true or false          |
 | Url        | Th OAuth service provider adddress.               |     "http://identity-server"      |  
 
+
+#### Licensing properties
+| Property | Description | Example |
+|--|--|--|
+| CustomerId| Unique id for every customer. It is used to identify if the customer is licensed to use this application. |  |
+| LicenseServerUri | License server URI, provided to the customer upfront. It is used to host the licensing service for customer license management and validation. | https://localhost/mockSentinelEMS |
 
