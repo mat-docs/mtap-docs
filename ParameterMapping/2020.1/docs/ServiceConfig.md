@@ -29,7 +29,11 @@ The configuration file of the service is called ```appsettings.json```
       "SourceIdentifier": "carSpeed",
       "TargetIdentifier":  "vCar:Chassis" 
     }
-  ]
+  ],
+  "Licensing": {
+    "CustomerId": "00000000-0000-0000-0000-000000000000",
+    "LicenseServerUri": "https://localhost/mockSentinelEMS"
+  }
 }
 ```
 
@@ -64,3 +68,10 @@ Contains a list of source to target parameter name mappings.
 |-|-|
 | SourceIdentifier   |  The parameter identifier to rename in the source session |
 | TargetIdentifier   |  The parameter identifier to rename to in the output session |
+
+
+#### Licensing properties
+| Property | Description | Example |
+|--|--|--|
+| CustomerId| Unique id for every customer. It is used to identify if the customer is licensed to use this application. |  |
+| LicenseServerUri | License server URI, provided to the customer upfront. It is used to host the licensing service for customer license management and validation. | https://localhost/mockSentinelEMS |
