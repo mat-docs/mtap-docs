@@ -33,7 +33,12 @@ The configuration file of the service is called ```appsettings.json```
     "ConsumerGroup": "SignalR_production"
   },
  
-  "OAuthServer": "http://192.168.56.101:5000"
+  "OAuthServer": "http://192.168.56.101:5000",
+  
+  "Licensing": {
+    "CustomerId": "00000000-0000-0000-0000-000000000000",
+    "LicenseServerUri": "https://localhost/mockSentinelEMS"
+  }
 }
 ```
 
@@ -66,3 +71,10 @@ The configuration file of the service is called ```appsettings.json```
 | DependencyService       |  The [dependency service] to publish dependencies to when replaying a session     |           |    `"http://dependency-service/api/dependencies/"`          |
 | BrokerList        | Address of the message broker cluster. Multiple can be specified using comma  |               |    `"127.0.0.1"`       |  
 | ConsumerGroup         | The identity to use when reading from Kafka. | `SignalR_production` | |
+
+
+#### Licensing properties
+| Property | Description | Example |
+|--|--|--|
+| CustomerId| Unique id for every customer. It is used to identify if the customer is licensed to use this application. |  |
+| LicenseServerUri | License server URI, provided to the customer upfront. It is used to host the licensing service for customer license management and validation. | https://localhost/mockSentinelEMS |
