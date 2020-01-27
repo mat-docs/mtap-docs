@@ -1,0 +1,63 @@
+{
+  "$id": "http://mclaren.com/appliedtechnologies/ocs/streaming/protocol/tdata",
+  "title": "tdata",
+  "type": "object",
+  "properties": {
+    "epoch": {
+      "type": "integer"
+    },
+    "time": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": [
+          "object"
+        ],
+        "properties": {
+          "status": {
+            "type": "array",
+            "items": {
+              "type": "integer"
+            }
+          },
+          "min": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "max": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "avg": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          },
+          "first": {
+            "type": "array",
+            "items": {
+              "type": "number"
+            }
+          }
+        },
+        "required": [
+          "status"
+        ]
+      }
+    }
+  },
+  "required": [
+    "time",
+    "data"
+  ]
+}
