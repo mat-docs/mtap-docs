@@ -11,6 +11,15 @@
 
 # Getting Started 
 
+## Licence
+You need to be licensed to use the TAP API microservice(s). For this you need to have a customer id in the TAP licensing system and be entitled to use 'tap2_api_influxdb' feature. In the applications configuration file you need to provide your customer id and the licensing server address given to you as follows:
+```
+  "Licensing": {
+    "CustomerId": "00000000-0000-0000-0000-000000000000",
+    "LicenseServerUri": "https://localhost/mockSentinelEMS"
+  }
+```
+
 The TAP API microservice(s) must be configured to one or more specified data sources. 
 
 [Postman](https://www.getpostman.com/) or [Swagger](#swagger) or your own automation software can be used to configure the API.
