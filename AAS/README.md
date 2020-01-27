@@ -308,14 +308,309 @@ This JSON is published as a dependency using the library  `DataFormatClient`, an
 
 The data format id is in every message to allow a long-running stream to transition to including additional parameters. This would define a new data format, and therefore a new dependency identifier.
 
-## Binding a View
+#### Binding a View
 
 The library allows a client to define a view onto a feed: a list of parameters and aggregates it expects to see.
 
 The effect of this view is that upstream sources can insert additional parameters into a feed without breaking client compatibility, as the view presents a stable list of parameters to the client code.
+
 ## Specification
 ### Streaming protocol
+#### Topics, Streams and Sessions
+
+**Topic**
+
+A topic should represent a meaningful subset of parameters, where a consumer is likely to be interested in most of the data on the topic. It can carry multiple concurrent sessions, or streams.
+
+**Stream**
+
+Streams are labelled sequences of messages within a topic. There can be many concurrent streams in one topic, which is particularly useful if there are many sources of data.
+
+**Session**
+
+Similar to the ATLAS Session concept, and necessary for interaction with the ATLAS ecosystem. Implemented on top of Streams.
+
+For more information, read the article  [Topics, Streams and Sessions](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003548034).
+
+#### Time
+
+Stream sessions use nanosecond data precision, relative to a specified epoch (also in ns).
+
+For more information, read the article  [It's all about Time](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003731473).
+
+#### Message structure
+
+Kafka messages have a key and a value.
+
+##### Keys
+
+In ATLAS Advanced Streams, the key is always structured in two parts, like this:
+
+`<type>:<stream id>`
+
+The  `type`  indicates the message content, which allows a client to select an appropriate parser for the message value. This article includes a defined list of message types, but a conforming client  _must_  accept (and likely ignore) other message types to allow extensibility.
+
+The  `stream id`  distinguishes the stream to which the message belongs. Messages with the same stream id must be sent on the same partition to maintain message sequencing; note that this means that default Kafka stream of distributing messages by key hash must not be used.
+
+Keys must be encoded as UTF-8 with no  [BOM](https://en.wikipedia.org/wiki/Byte_order_mark).
+
+##### Values
+
+The value format is determined by the message type.
+
+Values are typically either empty, or well-formed JSON - see attached schemas.  
+JSON values should be encoded as UTF-8 with no BOM.
+
+Clients must not assume that  _all_  messages are JSON; future versions of the protocol may include more compact binary encodings, with their own message types.
+
+#### Messages
+
+##### $start
+
+Indicates the start of a stream - enables clients to identify partial streams.
+
+Clients must not send stream messages before sending $start.
+
+This message has an empty payload.
+
+##### $end
+
+Indicates the end of a stream.
+
+Clients must not send stream messages after sending $end.
+
+This message has an empty payload.
+
+##### session
+
+Identifies the stream as a session.
+
+Contains descriptive metadata, traceability and references to dependencies.
+
+The session message is repeated at intervals to ensure that a client can join a live session and establish all necessary context, and as a heartbeat so that clients can determine whether the upstream process generating the session is still alive.
+
+Example:
+```json
+{
+  "id": "f2b8755c-c426-4cdc-9e51-ee7cd95a7879",
+  "state": "open",
+  "identifier": "random_walk",
+  "dependencies": {
+    "atlasConfiguration": ["e7548e787967"],
+    "dataFormat": ["9a9627b7bc25"]
+  },
+  "activity": {
+    "start": "2017-11-19T15:00:00Z",
+    "durationNanos": 30000000
+  }
+}
+```
+
+Notice the declaration of both  `dataFormat`  and  `atlasConfiguration`  dependencies. This is a minimum requirement to use the ATLAS 10 stream recorder.
+
+[session.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343833/session.schema.json)
+
+##### tdata
+
+Contains telemetry data, on a common timebase.
+
+Example:
+```json
+{
+  "epoch": 1511091963784000000,
+  "time": [10000000, 20000000],
+  "data": [
+    {
+      "status": [1, 1],
+      "avg": [0.0, 10.0]
+    }
+  ],
+  "feed": "",
+  "format": "9a9627b7bc25"
+}
+```
+
+Aggregate arrays can include:  `avg`,  `min`,  `max`, &  `first`.
+
+Status values reflect results of data retrieval, and are defined as the following bitwise flags:
+
+0
+
+Missing
+
+_Missing sample_
+
+1
+
+Sample
+
+_Valid sample; if there is at least one sample in the interval._
+
+2
+
+Default
+
+_Default sample; typically due to sensor failure._
+
+4
+
+Before Start
+
+_Data was requested before the first available sample._
+
+8
+
+After End
+
+_Data was requested after the last available sample._
+
+16
+
+Incomplete
+
+_Interval included missing samples. Common when down-sampling._
+
+32
+
+Interpolated
+
+_Sample is interpolated. Also common._
+
+64
+
+Pending
+
+_Sample is being fetched. Unlikely to be seen in streams._
+
+128
+
+Gap
+
+_Gap in data._
+
+These statuses provide detailed information for models that require it, but in general, all values are useful except when NaN.
+
+See  [Data Feeds, Formats and Views](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003734733)  for information about the  `feed`  and  `format`  fields.
+
+[tdata.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372934/tdata.schema.json)
+
+##### tsamples (v0.2.1+)
+
+Essentially a simplified version of  `tdata`, primarily for data ingest - where aggregates and statuses are not useful.
+
+Example:
+```json
+{
+  "epoch": 1511091963784000000,
+  "time": [10000000, 20000000],
+  "data": [
+    [0.0, 10.0]
+  ],
+  "feed": "",
+  "format": "9a9627b7bc25"
+}
+```
+
+Not yet supported in released versions.
+
+[tsamples.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372914/tsamples.schema.json)
+
+##### lap
+
+Denotes a lap trigger.
+
+Example:
+```json
+{
+  "number": 0,
+  "epoch": 1511049600000000000,
+  "time": 50639840000000,
+  "type": "outLap",
+  "triggerSource": 3
+}
+```
+
+Trigger sources include:
+
+0
+
+Main straight
+
+1
+
+Pit lane
+
+2
+
+Default
+
+3
+
+Telemetry start
+
+4
+
+Telemetry end
+
+These triggers give rise to business logic to describe the lap type, which is one of:  
+`fastLap`,  `pitLane`,  `outLap`, or  `inLap`. The exact business logic is outside the scope of this specification and may vary slightly by race formula.
+
+[lap.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343813/lap.schema.json)
+
+##### sync
+
+Sync messages create synchronization points across message types.
+
+See  [It's all about Time](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003731473)  for more information.
+
+-   [lap.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343813/lap.schema.json)
+    
+    542 Bytes  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343813/lap.schema.json)
+    
+-   [session.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343833/session.schema.json)
+    
+    2 KB  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343833/session.schema.json)
+    
+-   [tsamples.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372914/tsamples.schema.json)
+    
+    648 Bytes  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372914/tsamples.schema.json)
+    
+-   [tdata.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372934/tdata.schema.json)
+    
+    1 KB  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372934/tdata.schema.json)
 ### Protobuf extension
+
+The  _MAT.OCS.Streaming.Codecs.Protobuf_  package provides a faster, more-compact serialization for telemetry data and samples. Prefer this codec when working with large topics.
+
+#### Enabling the Codec
+
+##### Enabling in your code
+
+Bring the package into your project using NuGet.
+
+To register the codec to parse incoming data, call:
+
+ProtobufCodecs.RegisterCodecs();
+
+To use the codec by default to both send and receive data, call:
+
+ProtobufCodecs.RegisterCodecs(true);
+
+##### Enabling in the Gateway Service
+
+This option is available from 0.7.0 (Beta 4).
+
+Set the  _ProtobufCodecEnabled_  option to  _True_.
+
+#### IDL
+
+Use the IDL (attached to this page) to generate a parser in a wide range of languages.
+
+For more information, see  [https://developers.google.com/protocol-buffers/](https://developers.google.com/protocol-buffers/)
+
+-   [protocol.proto](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/360010920114/protocol.proto)
+    
+    1 KB  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/360010920114/protocol.proto)
 
 ### Versions
 - [**MTAP 2019.2.x and before**](2019.1/README.md)<br>
