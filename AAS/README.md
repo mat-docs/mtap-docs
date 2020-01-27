@@ -2,6 +2,13 @@
 
 Atlas Advanced Stream is the transportation protocol over Kafka/MQTT used by MTAP.
 
+### Concepts
+#### Design Concept
+#### Architecture Overview
+#### Topics, Streams and Sessions
+#### It's all about Time
+#### Data Feeds, Formats, and Views
+
 
 ### Versions
 - [**MTAP 2019.2.x and before**](2019.1/README.md)<br>
