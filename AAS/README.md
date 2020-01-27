@@ -6,9 +6,9 @@ Atlas Advanced Stream is the transportation protocol over Kafka/MQTT used by MTA
 - [**Concepts**](README.md#concepts)
   - [Design Concept](README.md#design-concepts)
   - [Architecture Overview](README.md#architecture-overview)
-  - [Topics, Streams and Sessions](README.md#concepts)
-  - [It's all about Time](README.md#concepts)
-  - [Data Feeds, Formats, and Views](README.md#concepts)
+  - [Topics, Streams and Sessions](README.md#topics-steams-and-sessions)
+  - [It's all about Time](README.md#its-all-about-time)
+  - [Data Feeds, Formats, and Views](README.md#data-feeds-formats-and-views)
 
 - [**Specification**](README.md#specification)
   - [Streaming protocol](README.md#straming-protocol)
