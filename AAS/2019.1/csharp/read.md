@@ -11,10 +11,10 @@
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
   - [Advanced Samples](advanced.md#advanced-samples)
-
+- [**Python Samples**](../python/README.md)<br>
 
 ## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read and write to and from Kafka or Mqtt streams.
+Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read from Kafka or Mqtt streams.
 
 First of all you need to configure the [dependencies](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L60-L63)
 ```cs
