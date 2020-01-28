@@ -115,10 +115,6 @@ A sample configuration and an explanation of settings is given below.
     "BufferSize": 100, 
     "EscapeLineProtocol": false
   },
-  "Licensing": {
-    "CustomerId": "00000000-0000-0000-0000-000000000000",
-    "LicenseServerUri": "https://localhost/mockSentinelEMS"
-  },
   "InitializeDatabase": true,
   "SeedOption": "",
   "SeedData": null
@@ -132,12 +128,6 @@ A sample configuration and an explanation of settings is given below.
 | InitializeDatabase | Enable creation and migration of service database defined in `ConnectionStrings.HostingDb` | true |
 | SeedOption | [See seeding data section](/docs/SeedData.md) | ""
 | SeedData | [See seeding data section](/docs/SeedData.md) | null
-
-#### Licensing Configuration
-| Property | Description | Suggested Value |
-|--|--|--|
-| CustomerId| Unique id for every customer. It is used to identify if the customer is licensed to use this application. |  |
-| LicenseServerUri | License server URI, provided to the customer upfront. It is used to host the licensing service for customer license management and validation. | https://localhost/mockSentinelEMS |
 
 
 #### Writer Configuration

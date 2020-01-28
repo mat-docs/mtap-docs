@@ -1,0 +1,38 @@
+{
+  "$id": "http://mclaren.com/appliedtechnologies/ocs/streaming/protocol/tsamples",
+  "title": "tsamples",
+  "type": "object",
+  "properties": {
+    "format": {
+      "type": "string"
+    },
+    "feed": {
+      "type": "string"
+    },
+    "epoch": {
+      "type": "integer"
+    },
+    "time": {
+      "type": "array",
+      "items": {
+        "type": "integer"
+      }
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": [
+          "array"
+        ],
+        "items": {
+          "type": "number"
+        }
+      }
+    }
+  },
+  "required": [
+    "format",
+    "time",
+    "data"
+  ]
+}
