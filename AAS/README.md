@@ -1,6 +1,6 @@
-# ![logo](/Media/branding.png) Atlas Advanced Stream
+# ![logo](/Media/branding.png) Atlas Advanced Streams
 
-Atlas Advanced Stream is the transportation protocol over Kafka/MQTT used by MTAP.
+Atlas Advanced Streams is the transportation protocol over Kafka/MQTT used by MTAP.
 
 # Table of Contents
 - [**Concepts**](README.md#concepts)
@@ -73,11 +73,15 @@ _Cluster-capable message broker._
 
 In production, this should be run on Linux.
 
-For developer machines, we have provided a simple command-line tool that provides an instant mini-broker is a small footprint. Requires Java 8 runtime.
+For developer machines, we have provided a simple command-line tool that provides an instant mini-broker with a small footprint. Requires Java 8 runtime.
 
 #### MAT Streaming Topic Management Service
 
 _Front end to manage Kafka topics._
+
+Apache Kafka uses the concept of named, persistent topics – which can be browsed and configured for the desired data retention and scalability. 
+
+The Topic Management Service provides a REST API and a web user interface to set topics up for use with ATLAS Advanced Streams. A C# client library for the REST interface is included.
 
 Kafka can be managed with command-line tools, but this service provides a convenient web front-end to create, edit and delete topics.
 
@@ -87,7 +91,14 @@ MSI provided. Requires Java 8 runtime or later.
 
 _REST service containing schemas describing the streaming data._
 
+This microservice stores reference data off-stream. This improves efficiency, helps support late-joining streams, and time-based data expiry. 
+ATLAS Advanced Streams uses this service to describe topic parameter selection and ATLAS configuration – but it can be used for any reference data associated with a stream. 
+
 Think of this as equivalent to managing CFG and PGV files - it takes that job away from Kafka for simpler management.
+
+CFG: ECU Logging configuration. 
+
+PGV: ECU Program Version File.
 
 MSI provided. Requires .NET 4.5.2.
 
@@ -96,6 +107,10 @@ MSI provided. Requires .NET 4.5.2.
 _Publishes subsets of parameters as engineering data topics._
 
 It receives live data directly from the ADS using an embedded DST recorder.
+
+ADS: ATLAS Data Server – a desktop application interfacing with MAT loggers and multicasting telemetry to ATLAS clients. 
+
+DST recorder: Data Server Telemetry recorder (wideband)
 
 MSI provided. Requires .NET 4.6.2 and a compatible SQL Race Recorder.
 
@@ -567,8 +582,6 @@ Example:
   "format": "9a9627b7bc25"
 }
 ```
-
-Not yet supported in released versions.
 
 [tsamples.schema.json](resources/tsamples.schema.json)
 
