@@ -379,7 +379,7 @@ Unique team id, for RDA (Reduced Data Access). Optional.
 #### ParameterGroup
 
 Node in a tree of parameters. Contains both child groups and child parameters (leaf nodes).
-ATLAS actually bodges together group identifiers by concatenating group names together with underscore prefixes. We interpret that as meaning there isn't really a Description attribute as such - it's all just names. Needless to say the parameters are bound to the groups by the concatenated identifier
+ATLAS actually binds together group identifiers by concatenating group names together with underscore prefixes. We interpret that as meaning there isn't really a Description attribute as such - it's all just names. Needless to say the parameters are bound to the groups by the concatenated identifier
 
 #### Parameter
 
