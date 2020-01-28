@@ -4,14 +4,14 @@ Atlas Advanced Stream is the transportation protocol over Kafka/MQTT used by MTA
 
 # Table of Contents
 - [**Concepts**](README.md#concepts)
-  - [Design Concept](README.md#design-concepts)
+  - [Design Concept](README.md#design-concept)
   - [Architecture Overview](README.md#architecture-overview)
-  - [Topics, Streams and Sessions](README.md#topics-steams-and-sessions)
+  - [Topics, Streams and Sessions](README.md#topics-streams-and-sessions)
   - [It's all about Time](README.md#its-all-about-time)
   - [Data Feeds, Formats, and Views](README.md#data-feeds-formats-and-views)
-
+  - [Atlas configuration](README.md#atlas-configuration)
 - [**Specification**](README.md#specification)
-  - [Streaming protocol](README.md#straming-protocol)
+  - [Streaming protocol](README.md#streaming-protocol)
   - [Protobuf extension](README.md#protobuf-extension)
   
 ## Concepts
@@ -61,7 +61,7 @@ Sinks could include:
 
 ATLAS Advanced Streams is designed to work as part of your infrastructure, rather than as interconnected desktop applications.
 
-Here is the overall picture:![architecture-v2.svg](https://mclarenappliedtechnologies.zendesk.com/hc/article_attachments/360003913553/architecture-v2.svg)
+Here is the overall picture:![architecture-v2.svg](resources/architecture-v2.svg)
 
 Your code interacts with Kafka through a client library provided as nuget packages.
 
@@ -314,6 +314,63 @@ The library allows a client to define a view onto a feed: a list of parameters a
 
 The effect of this view is that upstream sources can insert additional parameters into a feed without breaking client compatibility, as the view presents a stable list of parameters to the client code.
 
+### Atlas configuration
+A tree-like structure that defines the display structure of your data, using the following levels in the tree:
+
+```python
+AtlasConfiguration({"config_name":
+        ApplicationGroup(groups={"group_name":
+            ParameterGroup(parameters={"parameter_name":
+                Parameter(name="parameter_display_name")})})})
+```
+Of course there can be multiple of each, hence the dictionary based tree-like structure.
+Atlas configuration needs to be set and put to the dependency service only if you want to display your data in Atlas10.
+
+#### AtlasConfiguration
+Represents one or more ATLAS-compatible configuration sets. The key of an item should correspond to the app identifier/name (e.g. "Chassis").
+
+#### ApplicationGroup
+Represents all configuration for an application - equivalent to the ATLAS concept.
+
+ - Conversions
+ 
+ Conversion functions to translate samples into engineering values. Useful when injecting uncalibrated data into a stream, but any data sourced from a time-series store (like SQL Race) can usually be expected to be pre-calibrated, requiring no conversion. The dictionary key must correspond to the Conversion Id. This should be unique and of the form 'foo:{appname}'. For example: "SomeParamConv:MyApp". It is case-sensitive."
+ 
+  - Conversion
+  
+  Conversion function - from a raw sample to an engineering value.
+  
+ - Events
+ 
+ Definitions of events - which can happen at any particular moment, not aligned to a sample interval. The dictionary key must correspond to the Event Definition Id. This should be unique and of the form '{id:4}:{appname}'. For example: "02D4:MyApp". It is case-sensitive.
+
+  - EventDefinition
+  
+  Defines an event - something that can happen independently of any sampling. Each Event can carry sample values, for context.
+  There are three supported types of conversion function: RationalConversion, TableConversion, TextConversion
+  
+  - EventPriority
+  
+  Event priority. This concept is similar to common logging frameworks. Options are High, Medium, Low, Debug
+  
+- ApplicationId
+
+Unique application id. Optional.
+
+- RdaOwnerId
+
+Unique team id, for RDA (Reduced Data Access). Optional.
+
+#### ParameterGroup
+
+Node in a tree of parameters. Contains both child groups and child parameters (leaf nodes).
+ATLAS actually bodges together group identifiers by concatenating group names together with underscore prefixes. We interpret that as meaning there isn't really a Description attribute as such - it's all just names. Needless to say the parameters are bound to the groups by the concatenated identifier
+
+#### Parameter
+
+Parameter within a ParameterGroup
+
+ 
 ## Specification
 ### Streaming protocol
 #### Topics, Streams and Sessions
@@ -330,13 +387,13 @@ Streams are labelled sequences of messages within a topic. There can be many con
 
 Similar to the ATLAS Session concept, and necessary for interaction with the ATLAS ecosystem. Implemented on top of Streams.
 
-For more information, read the article  [Topics, Streams and Sessions](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003548034).
+For more information, read the article  [Topics, Streams and Sessions](README.md#topics-steams-and-sessions).
 
 #### Time
 
 Stream sessions use nanosecond data precision, relative to a specified epoch (also in ns).
 
-For more information, read the article  [It's all about Time](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003731473).
+For more information, read the article  [It's all about Time](README.md#its-all-about-time).
 
 #### Message structure
 
@@ -408,7 +465,7 @@ Example:
 
 Notice the declaration of both  `dataFormat`  and  `atlasConfiguration`  dependencies. This is a minimum requirement to use the ATLAS 10 stream recorder.
 
-[session.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343833/session.schema.json)
+[session.schema.json](resources/session.schema.json)
 
 ##### tdata
 
@@ -490,9 +547,9 @@ _Gap in data._
 
 These statuses provide detailed information for models that require it, but in general, all values are useful except when NaN.
 
-See  [Data Feeds, Formats and Views](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003734733)  for information about the  `feed`  and  `format`  fields.
+See  [Data Feeds, Formats and Views](README.md#data-feeds-formats-and-views)  for information about the  `feed`  and  `format`  fields.
 
-[tdata.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372934/tdata.schema.json)
+[tdata.schema.json](resources/tdata.schema.json)
 
 ##### tsamples (v0.2.1+)
 
@@ -513,7 +570,7 @@ Example:
 
 Not yet supported in released versions.
 
-[tsamples.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372914/tsamples.schema.json)
+[tsamples.schema.json](resources/tsamples.schema.json)
 
 ##### lap
 
@@ -555,29 +612,22 @@ Telemetry end
 These triggers give rise to business logic to describe the lap type, which is one of:  
 `fastLap`,  `pitLane`,  `outLap`, or  `inLap`. The exact business logic is outside the scope of this specification and may vary slightly by race formula.
 
-[lap.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343813/lap.schema.json)
+[lap.schema.json](resources/lap.schema.json)
 
 ##### sync
 
 Sync messages create synchronization points across message types.
 
-See  [It's all about Time](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003731473)  for more information.
+See  [It's all about Time](README.md#its-all-about-time)  for more information.
 
--   [lap.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343813/lap.schema.json)
+-   [lap.schema.json](resources/lap.schema.json)
     
-    542 Bytes  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343813/lap.schema.json)
+-   [session.schema.json](resources/115004343833/session.schema.json)
     
--   [session.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343833/session.schema.json)
+-   [tsamples.schema.json](resources/tsamples.schema.json)
     
-    2 KB  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004343833/session.schema.json)
-    
--   [tsamples.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372914/tsamples.schema.json)
-    
-    648 Bytes  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372914/tsamples.schema.json)
-    
--   [tdata.schema.json](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372934/tdata.schema.json)
-    
-    1 KB  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/115004372934/tdata.schema.json)
+-   [tdata.schema.json](resources/tdata.schema.json)
+
 ### Protobuf extension
 
 The  _MAT.OCS.Streaming.Codecs.Protobuf_  package provides a faster, more-compact serialization for telemetry data and samples. Prefer this codec when working with large topics.
@@ -608,9 +658,7 @@ Use the IDL (attached to this page) to generate a parser in a wide range of lang
 
 For more information, see  [https://developers.google.com/protocol-buffers/](https://developers.google.com/protocol-buffers/)
 
--   [protocol.proto](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/360010920114/protocol.proto)
-    
-    1 KB  [Download](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/article_attachments/360010920114/protocol.proto)
+-   [protocol.proto](resources/protocol.proto)
 
 ### Versions
 - [**MTAP 2019.2.x and before**](2019.1/README.md)<br>
