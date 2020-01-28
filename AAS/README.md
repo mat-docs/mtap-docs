@@ -137,7 +137,7 @@ The ATLAS Advanced Streams API separates messages by stream to feed them into yo
 
 #### Sessions
 
-Sessions are intended to be a close analogue of the ATLAS Session concept.
+Sessions are intended to be a close analogue of the ATLAS Session concept. A session represents a period of captured telemetry data. This could be a race, a test session or a journey
 
 They are implemented on top of streams, which means that you can have multiple concurrent sessions in a topic, and that the API will separate the sessions to feed them into your code.
 
