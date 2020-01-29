@@ -21,7 +21,7 @@ The service is built using SignalR, therefore we suggest the use of the an [offi
 The service is authenticating against the OAuth provider defined in [service config](ServiceConfig.md). Examples of how to pass token to SignalR service can be found [here](https://docs.microsoft.com/en-us/aspnet/core/signalr/authn-and-authz).
 
 # Telemetry Data Hub
-The telemetry data bub is the only hub available on the API. You can subscribe to various endpoints to be notified about new or closing streams. Also, you can subscribe to new parameter data notifications.
+The telemetry data hub is the only hub available on the API. You can subscribe to various endpoints to be notified about new or closing streams. Also, you can subscribe to new parameter data notifications.
 
 TypeScript example
 ``` TypeScript
@@ -126,10 +126,10 @@ Notifies about session metadata or state change.
 | topicName | Name of the topic the session is streaming on |
 | streamId | The unique id of this stream |
 | sessionName | The name of the session, also known as Identifier in TAP |
-sessionDetails | Detail name (string) to detail value (string) dictionary |
+| sessionDetails | Detail name (string) to detail value (string) dictionary |
 | state | State of the session as string. Possible values are `Unknown`, `Waiting`, `Open`, `Closed`, `Truncated`, `Failed`, `Abandoned` |
 | sessionStart | DateTime using ISO 8601 |
-| dataState | Parameter data state as a string. Possible values:<br>`NoData`: Session is live but no data yet <br>`Interrupted`: Session is live and had data, but not in last 10 seconds<br>`Running`: Session is live and is streaming data <br> `Closed`: Session is closed
+| dataState | Parameter data state as a string. Possible values:<br>`NoData`: Session is live but no data yet <br>`Interrupted`: Session is live and had data, but not in last 10 seconds<br>`Running`: Session is live and is streaming data <br> `Closed`: Session is closed |
 
 
 ``` TypeScript

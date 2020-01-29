@@ -33,12 +33,7 @@ The configuration file of the service is called ```appsettings.json```
     "ConsumerGroup": "SignalR_production"
   },
  
-  "OAuthServer": "http://192.168.56.101:5000",
-  
-  "Licensing": {
-    "CustomerId": "00000000-0000-0000-0000-000000000000",
-    "LicenseServerUri": "https://localhost/mockSentinelEMS"
-  }
+  "OAuthServer": "http://192.168.56.101:5000"
 }
 ```
 
@@ -50,7 +45,7 @@ The configuration file of the service is called ```appsettings.json```
 |-|-|-|
 | Server | The API server configuration. [See below](#server-properties). | |
 | TopicNames | An array of topic names to listen to for live data | `[ "Topic1", "Topic2" ]` |
-| Kafka | The Kafka broker configuration. [See below](#kafka-properties).
+| Kafka | The Kafka broker configuration. [See below](#kafka-properties). | |
 | OAuthServer        | The OAuth service provider adddress. TAP comes with [Identity Service] as OAuth provider.              |     `"http://identity-server"`      |  
 
 
@@ -68,13 +63,6 @@ The configuration file of the service is called ```appsettings.json```
 
 | Property  | Description                                                 | Default value | Example                                                                   |  
 |-|-|-|-|
-| DependencyService       |  The [dependency service] to publish dependencies to when replaying a session     |           |    `"http://dependency-service/api/dependencies/"`          |
-| BrokerList        | Address of the message broker cluster. Multiple can be specified using comma  |               |    `"127.0.0.1"`       |  
+| DependencyService       |  The [dependency service](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003531373) to publish dependencies to when replaying a session     |           |    `"http://dependency-service/api/dependencies/"`          |
+| BrokerList        | Address of the message broker cluster. Multiple can be specified using comma  |               |    `"127.0.0.1:9092"`       |  
 | ConsumerGroup         | The identity to use when reading from Kafka. | `SignalR_production` | |
-
-
-#### Licensing properties
-| Property | Description | Example |
-|--|--|--|
-| CustomerId| Unique id for every customer. It is used to identify if the customer is licensed to use this application. |  |
-| LicenseServerUri | License server URI, provided to the customer upfront. It is used to host the licensing service for customer license management and validation. | https://localhost/mockSentinelEMS |
