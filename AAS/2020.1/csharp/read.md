@@ -7,14 +7,15 @@
   - Read
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Events](read.md#events)
   - [Write](write.md#basic-samples)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+    - [Events](write.md#events)
   - [Advanced Samples](advanced.md#advanced-samples)
-- [**Python Samples**](../python/README.md)<br>
 
-## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read from Kafka or Mqtt streams.
+## Basic samples (Read)
+Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Events Reads to and from Kafka or Mqtt streams.
 
 First of all you need to configure the [dependencies](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L60-L63)
 ```cs
@@ -77,15 +78,47 @@ input.SamplesInput.AutoBindFeeds((s, e) => // Take the input and bind feed to an
 });
 ```
 
-You can optionally handle the [StreamFinished event](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L88).
+### Events
+
+In this example we [subscribe to **EventsInput** with a handler method](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L45) and simply [print out some details of each event received](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L52-L63).
+
 ```cs
-input.StreamFinished += (sender, e) => Trace.WriteLine("Finished"); // Handle the steam finished event
+input.EventsInput.EventsBuffered += (sender, e) => // Subscribe to incoming events
+{
+    if (atlasConfiguration == null)
+    {
+        return;
+    }
+
+    var events = e.Buffer.GetData(); // read incoming events from buffer
+
+    // In this sample we consume the incoming events and print it
+    foreach (var ev in events)
+    {
+        var eventDefinition = atlasConfiguration.AppGroups?.First().Value?.Events.GetValueOrDefault(ev.Id);
+        if (eventDefinition == null)
+        {
+            continue;
+        }
+
+        Console.WriteLine($"- Event: {ev.Id} - {eventDefinition.Description} - Priority: {eventDefinition.Priority.ToString()} - Value: {ev.Values?.First()}");
+    }
+};
 ```
 
+Notice that we are [querying the Atlas configuration dependency](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L57) for event details. These details include properties like `Description`, `Priority`. You must [subscribe to session dependencies change](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L35-L43) to get this Atlas configuration dependency.
+
+
+### Waits for completion
 In order to successfully read and consume the stream, make sure to [wait until connected](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L92-L93) and [wait for the first stream](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L94). Optionally you can tell the pipeline to wait for a specific time [while the stream is being idle](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L95), before exiting from the process.
 ```cs
 if (!pipeline.WaitUntilConnected(TimeSpan.FromSeconds(30), CancellationToken.None)) // Wait until the connection is established
      throw new Exception("Couldn't connect");
 pipeline.WaitUntilFirstStream(TimeSpan.FromMinutes(1), CancellationToken.None); // Wait until the first stream is ready to read.
 pipeline.WaitUntilIdle(TimeSpan.FromMinutes(5), CancellationToken.None); // Wait for 5 minutes of the pipeline being idle before exit.
+```
+
+You can optionally handle the [StreamFinished event](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L88).
+```cs
+input.StreamFinished += (sender, e) => Trace.WriteLine("Finished"); // Handle the steam finished event
 ```

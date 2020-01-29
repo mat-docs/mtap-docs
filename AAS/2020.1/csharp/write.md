@@ -7,14 +7,15 @@
   - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Events](read.md#events)
   - Write
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+    - [Events](write.md#events)
   - [Advanced Samples](advanced.md#advanced-samples)
-- [**Python Samples**](../python/README.md)<br>
 
-## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples write to Kafka or Mqtt streams.
+## Basic samples (Write)
+Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Events Writes to and from Kafka or Mqtt streams.
 
 First of all you need to configure the [dependencies](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L102-L113)
 ```cs
@@ -70,7 +71,7 @@ output.SessionOutput.SendSession();
 
 
 ### Telemetry Data
-You will need **TelemetryData** to write to the output. In this example we [generate some random telemetryData](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L128) for the purpose of demonstration.
+You will need **TelemetryData** to write to the output. In this example we [generate some random telemetry data](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L128) for the purpose of demonstration.
 ```cs
 var telemetryData = GenerateData(10, (DateTime)output.SessionOutput.SessionStart); // Generate some telemetry data
 ```
@@ -87,7 +88,7 @@ Task.WaitAll(outputFeed.EnqueueAndSendData(telemetryData)); // enqueue and send 
 ```
 
 ### Telemetry Samples
-You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetrySamples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L125) for the purpose of demonstration.
+You will need **TelemetrySamples** to write to the output. In this example we [generate some random telemetry samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L125) for the purpose of demonstration.
 ```cs
 var telemetrySamples = GenerateSamples(10, (DateTime)output.SessionOutput.SessionStart); // Generate some telemetry samples
 ```
@@ -103,15 +104,21 @@ var outputFeed = output.SamplesOutput.BindFeed(feedName); // bind your feed by i
 Task.WaitAll(outputFeed.SendSamples(telemetrySamples)); // send the samples to the output through the outputFeed
 ```
 
+### Events
+You will need **Events** to write to the output. In this example we [generate some random event samples](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L67) for the purpose of demonstration.
+```cs
+var events = GenerateEvents(20, (DateTime)output.SessionOutput.SessionStart); // Generate some events data
+```
 
-Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L132) 
+Then you can just [send the events using `SendEvent` method on **EventsOuput**](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsWrite.cs#L68).
+```cs
+var tasks = events.Select(ev => output.EventsOutput.SendEvent(ev)).ToArray(); // enqueue and send the events to the output through the EventsOutput
+```
+
+### Closing session
+
+Once you sent all your data, don't forget to [set the session state to closed](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L135) and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L136).
 ```cs
 output.SessionOutput.SessionState = StreamSessionState.Closed; // set session state to closed. In case of any unintended session close, set state to Truncated
-```
-
-and [send the session details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L133).
-```cs
 output.SessionOutput.SendSession(); // send session
 ```
-
-

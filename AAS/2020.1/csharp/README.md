@@ -7,11 +7,12 @@
   - [Read](read.md)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Events](read.md#events)
   - [Read](write.md)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
+    - [Events](write.md#events)
   - [Advanced Samples](advanced.md)
-- [**Python Samples**](../python/README.md)<br>
 
 # Introduction
 This API provides infrastructure for streaming data around the ATLAS technology platform.
