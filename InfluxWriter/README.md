@@ -4,4 +4,5 @@ Telemetry data and metadata about sessions are saved to various storage implemen
 
 ### Versions
 - [**0.10.2 and before**](0.10.2/README.md)<br>
-- [**MTAP 2019.1.0 and later**](2019.1.0/README.md)<br>
+- [**MTAP 2019.1.0**](2019.1.0/README.md)<br>
+- [**MTAP 2020.1**](2020.1/README.md)<br>
