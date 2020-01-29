@@ -439,24 +439,19 @@ Clients must not assume that  _all_  messages are JSON; future versions of the p
 
 ##### $start
 
-Indicates the start of a stream - enables clients to identify partial streams.
-
-Clients must not send stream messages before sending $start.
-
+Indicates the start of a stream - enables clients to identify partial streams.\
+Clients must not send stream messages before sending $start.\
 This message has an empty payload.
 
 ##### $end
 
-Indicates the end of a stream.
-
-Clients must not send stream messages after sending $end.
-
+Indicates the end of a stream.\
+Clients must not send stream messages after sending $end.\
 This message has an empty payload.
 
 ##### session
 
-Identifies the stream as a session.
-
+Identifies the stream as a session.\
 Contains descriptive metadata, traceability and references to dependencies.
 
 The session message is repeated at intervals to ensure that a client can join a live session and establish all necessary context, and as a heartbeat so that clients can determine whether the upstream process generating the session is still alive.
@@ -502,66 +497,23 @@ Example:
 }
 ```
 
-Aggregate arrays can include:  `avg`,  `min`,  `max`, &  `first`.
-
+Aggregate arrays can include:  `avg`,  `min`,  `max`, &  `first`.\
 Status values reflect results of data retrieval, and are defined as the following bitwise flags:
 
-0
+|Value|Name|Description|
+|---|---|---|
+|0|Missing|_Missing sample_|
+|1|Sample|_Valid sample; if there is at least one sample in the interval._|
+|2|Default|_Default sample; typically due to sensor failure._|
+|4|Before Start|_Data was requested before the first available sample._|
+|8|After End|_Data was requested after the last available sample._|
+|16|Incomplete|_Interval included missing samples. Common when down-sampling._|
+|32|Interpolated|_Sample is interpolated. Also common._|
+|64|Pending|_Sample is being fetched. Unlikely to be seen in streams._|
+|128|Gap|_Gap in data._|
 
-Missing
 
-_Missing sample_
-
-1
-
-Sample
-
-_Valid sample; if there is at least one sample in the interval._
-
-2
-
-Default
-
-_Default sample; typically due to sensor failure._
-
-4
-
-Before Start
-
-_Data was requested before the first available sample._
-
-8
-
-After End
-
-_Data was requested after the last available sample._
-
-16
-
-Incomplete
-
-_Interval included missing samples. Common when down-sampling._
-
-32
-
-Interpolated
-
-_Sample is interpolated. Also common._
-
-64
-
-Pending
-
-_Sample is being fetched. Unlikely to be seen in streams._
-
-128
-
-Gap
-
-_Gap in data._
-
-These statuses provide detailed information for models that require it, but in general, all values are useful except when NaN.
-
+These statuses provide detailed information for models that require it, but in general, all values are useful except when NaN.\
 See  [Data Feeds, Formats and Views](README.md#data-feeds-formats-and-views)  for information about the  `feed`  and  `format`  fields.
 
 [tdata.schema.json](resources/tdata.schema.json)
@@ -602,25 +554,13 @@ Example:
 
 Trigger sources include:
 
-0
-
-Main straight
-
-1
-
-Pit lane
-
-2
-
-Default
-
-3
-
-Telemetry start
-
-4
-
-Telemetry end
+|Value|Name|
+|---|---|
+|0|Main straight|
+|1|Pit lane|
+|2|Default|
+|3|Telemetry start|
+|4|Telemetry end|
 
 These triggers give rise to business logic to describe the lap type, which is one of:  
 `fastLap`,  `pitLane`,  `outLap`, or  `inLap`. The exact business logic is outside the scope of this specification and may vary slightly by race formula.
@@ -634,11 +574,8 @@ Sync messages create synchronization points across message types.
 See  [It's all about Time](README.md#its-all-about-time)  for more information.
 
 -   [lap.schema.json](resources/lap.schema.json)
-    
 -   [session.schema.json](resources/115004343833/session.schema.json)
-    
 -   [tsamples.schema.json](resources/tsamples.schema.json)
-    
 -   [tdata.schema.json](resources/tdata.schema.json)
 
 ### Protobuf extension
@@ -651,12 +588,10 @@ The  _MAT.OCS.Streaming.Codecs.Protobuf_  package provides a faster, more-compac
 
 Bring the package into your project using NuGet.
 
-To register the codec to parse incoming data, call:
-
+To register the codec to parse incoming data, call:\
 ProtobufCodecs.RegisterCodecs();
 
-To use the codec by default to both send and receive data, call:
-
+To use the codec by default to both send and receive data, call:\
 ProtobufCodecs.RegisterCodecs(true);
 
 ##### Enabling in the Gateway Service
