@@ -5,4 +5,4 @@ The Telemetry Analytics API (TAP API) service provides programmatic access to pe
 ### Versions
 - [**MTAP 2019.1.x and before**](2019.1/README.md)<br>
 - [**MTAP 2019.2**](2019.2/README.md)<br>
-- [**MTAP 2020.1 and later**](2020.1/README.md)<br>
+- [**MTAP 2020.1**](2020.1/README.md)<br>

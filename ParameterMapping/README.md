@@ -4,4 +4,5 @@ The Parameter Mapping Service translates parameter names according to a configur
 The translation is done only on the configured parameters and all others are written to the target stream with the source stream name.
 
 ### Versions
-- [**MTAP 2019.2 and later**](2019.2/README.md)<br>
+- [**MTAP 2019.2**](2019.2/README.md)<br>
+- [**MTAP 2020.1**](2020.1/README.md)<br>

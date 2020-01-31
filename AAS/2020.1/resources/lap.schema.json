@@ -1,0 +1,29 @@
+{
+  "$id": "http://mclaren.com/appliedtechnologies/ocs/streaming/protocol/lap",
+  "title": "lap",
+  "type": "object",
+  "properties": {
+    "number": {
+      "type": "integer"
+    },
+    "epoch": {
+      "type": "integer"
+    },
+    "time": {
+      "type": "integer"
+    },
+    "type": {
+      "type": "string",
+      "enum": [ "fastLap", "pitLane", "outLap", "inLap" ]
+    },
+    "triggerSource": {
+      "type": "integer"
+    }
+  },
+  "required": [
+    "number",
+    "time",
+    "type",
+    "triggerSource"
+  ]
+}
