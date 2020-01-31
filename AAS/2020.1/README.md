@@ -574,7 +574,7 @@ Sync messages create synchronization points across message types.
 See  [It's all about Time](README.md#its-all-about-time)  for more information.
 
 -   [lap.schema.json](resources/lap.schema.json)
--   [session.schema.json](resources/115004343833/session.schema.json)
+-   [session.schema.json](resources/session.schema.json)
 -   [tsamples.schema.json](resources/tsamples.schema.json)
 -   [tdata.schema.json](resources/tdata.schema.json)
 
