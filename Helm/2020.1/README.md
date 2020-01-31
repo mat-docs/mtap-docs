@@ -4,12 +4,6 @@
 
 Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application. 
 
-## Folders structure
-
-- /builds: Contains Azure DevOps yaml files to deploy Helm Charts to different artifacts repositories like Artifactory or Azure DevOps pipelines.
-- /mat.tap.requisites: Contains the Helm charts needed to deploy the pre-requisites of a mat.tap.services deployment. Storage services like Mssql or InfluxDB are defined here.
-- /mat.tap.services: Contains the Helm charts needed to deploy all TAP services in Kubernetes.
-
 ## Pre-requisites
 
 You will need a Kubernetes cluster and some basic knowledge about Kubernetes and Helm to be able to use these Helm charts.
