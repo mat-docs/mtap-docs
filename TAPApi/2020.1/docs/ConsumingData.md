@@ -7,6 +7,7 @@
 - [**Authorization**](Authorization.md)<br>
 - [**Querying Metadata**](Metadata.md)<br>
 - **Consuming Data**<br>
+- [**Consuming Events**](ConsumingEvents.md)<br>
 - [**Session Versions**](SessionVersions.md)<br>
 
 Consuming Data

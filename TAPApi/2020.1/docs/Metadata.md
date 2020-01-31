@@ -7,6 +7,7 @@
 - [**Authorization**](Authorization.md)<br>
 - **Querying Metadata**<br>
 - [**Consuming Data**](ConsumingData.md)<br>
+- [**Consuming Events**](ConsumingEvents.md)<br>
 - [**Session Versions**](SessionVersions.md)<br>
 
 
@@ -951,4 +952,142 @@ Result
   "streamId": "06f2d6d8-5811-48f0-a7a0-50e84db12704",
   "triggerSource": 0
 }
+```
+
+
+
+Events
+======  
+
+The ```/sessions/{sessionId}/events``` endpoint gives you access to a list of **Events definitions** available for a specific session. The list of **Events definitions** of a session are the fields related to the data that we can consume as described in [Consuming Data] (/docs/ConsumingData.md) section.
+
+Endpoint
+```
+GET api/v1/connections/{connection name}/sessions/{sessionId}/events
+```
+
+Example  
+```
+GET api/v1/connections/Connection/sessions/92ce7a51-83d1-43ec-bb0a-9cda685ca47c/events
+```
+
+This endpoint provides a set of optional parameters.
+
+| Parameter name | Description                                                 | Example           |  
+|----------------|-------------------------------------------------------------|-------------------|  
+| page           | Index of page returned in result (0 is first page)          | 3                 |  
+| pageSize       | Size of one page.                                           | 50                |  
+| contains       | Text filter applied to the event <ins>identifier</ins>.     | Bios              |
+| startsWith     | Text filter applied to the event <ins>identifier</ins>.     | 0010:TAG          |
+| filter         | It allows filtering on the results.                         | AppGroup;eq;TAG320BIOS   |
+| order          | It allows ordering of the results.                          | priority:desc     |
+| sessionVersion | Session version.                                            | 3                 |
+
+### Paging  
+
+Example  
+```
+GET api/v1/connections/M800960/sessions/92ce7a51-83d1-43ec-bb0a-9cda685ca47c/events?page=2&pageSize=50
+```
+  
+### Filtering
+
+It is possible to provide filtering for events.
+  
+Example 
+```
+GET api/v1/connections/Connection/sessions/92ce7a51-83d1-43ec-bb0a-9cda685ca47c/events?contains=Bios
+```
+  
+Result  
+```json
+[
+  {
+    "id": "0010:TAG320BIOS",
+    "description": "AP1A-BOOT-0010 [Flash] Prog Error",
+    "priority": "High",
+    "conversions": [
+      {
+        "id": "CONV_1TO1HEX_ADDR_HIGH:TAG320BIOS",
+        "format": "Address: 0x%04X",
+        "units": ""
+      },
+      {
+        "id": "CONV_1TO1HEX_ADDR_LOW:TAG320BIOS",
+        "format": ":%04X",
+        "units": ""
+      },
+      {
+        "id": "CONV_ERRCODE:TAG320BIOS",
+        "format": "Error: %10.0f",
+        "units": ""
+      }
+    ],
+    "appGroup": "TAG320BIOS"
+  },
+  {
+    "id": "0014:TAG320BIOS",
+    "description": "AP1A-BOOT-0014 [CfgBlk] Validation Failed",
+    "priority": "High",
+    "conversions": [
+      {
+        "id": "CONV_APPLAYER:TAG320BIOS",
+        "format": "%5s",
+        "units": ""
+      },
+      {
+        "id": "CONV_CFGBLK_FAIL:TAG320BIOS",
+        "format": "%19s",
+        "units": ""
+      },
+      {
+        "id": "CONV_SMID_EVENT:TAG320BIOS",
+        "format": "SM ID: 0x%02X",
+        "units": ""
+      }
+    ],
+    "appGroup": "TAG320BIOS"
+  },
+  {
+    "id": "0016:TAG320BIOS",
+    "description": "AP1A-BOOT-0016 [InterCtrl] Comms Failure",
+    "priority": "High",
+    "conversions": [
+      {
+        "id": "CONV_APPLAYER:TAG320BIOS",
+        "format": "%5s",
+        "units": ""
+      },
+      {
+        "id": "CONV_INTERCTRL_FAIL:TAG320BIOS",
+        "format": "%14s",
+        "units": ""
+      },
+      {
+        "id": "CONV_SMID:TAG320BIOS",
+        "format": "%5s",
+        "units": ""
+      }
+    ],
+    "appGroup": "TAG320BIOS"
+  },
+  {
+    "id": "0017:TAG320BIOS",
+    "description": "AP1A-BOOT-0017 [InterCtrl] TeamId Failure",
+    "priority": "High",
+    "conversions": [
+      {
+        "id": "CONV_APPLAYER:TAG320BIOS",
+        "format": "%5s",
+        "units": ""
+      },
+      {
+        "id": "CONV_SMID:TAG320BIOS",
+        "format": "%5s",
+        "units": ""
+      }
+    ],
+    "appGroup": "TAG320BIOS"
+  }
+]
 ```
