@@ -4,3 +4,4 @@ TAP Helm charts allows you to define and deploy a functional TAP platform into t
 
 ### Versions
 - [**MTAP 2019.2 and later**](2019.2/README.md)<br>
+- [**MTAP 2020.1**](2020.1/README.md)<br>
