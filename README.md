@@ -12,7 +12,7 @@ It includes two core capabilities:
 - Ingesting data streams from outside ATLAS
 - Modernized, scalable model execution pipelines
 
-Includes connectivity services for wideband and SQL Race databases, and an ATLAS 10 recorder, and .NET Core/Framework nuget package for software integration.
+Includes connectivity services for wideband, SQL Race databases, an ATLAS 10 recorder, and .NET Core/Framework nuget package for software integration.
 
 **Telemetry Analytics API** extends the ATLAS and SQL Race ecosystem with data search and aggregation capabilities across sessions.
 
