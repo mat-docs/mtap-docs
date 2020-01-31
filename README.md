@@ -18,7 +18,7 @@ Includes connectivity services for wideband and SQL Race databases, and an ATLAS
 
 - InfluxDB – a popular open source time-series database – is integrated to provide a high-level query language and powerful search and aggregation capabilities. This product is a good complement to the core session storage capabilities provided by SQL Race, with broad community support in tools like Grafana – for dashboarding.
 
-- A web services query layer provides a common interface across InfluxDB and SQL Race: ideal for ad-hoc tooling and visualization.
+- A web services query layer provides a common interface across InfluxDB: ideal for ad-hoc tooling and visualization.
 These capabilities work together to create an integrated experience: ATLAS Advanced Streams carries data from the ECU, models and other racing applications, and the Telemetry Analytics API includes a service to feed this data live into InfluxDB for search and dashboarding.
 
 ### Table of Contents
