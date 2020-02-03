@@ -2,7 +2,7 @@
 
 ## What is TAP Helm Charts
 
-[TAP Helm charts](https://github.com/mat-docs/mtap-docs/blob/master/Helm/README.md) allows you to define and deploy a functional TAP platform into the Kubernetes cluster with just an easy configuration file and a command-line.
+[TAP Helm charts](https://github.com/mat-docs/mtap-docs/blob/master/Helm/README.md) allows you to define and deploy a functional Telemetry Analytics Platform Platform into the Kubernetes cluster with just an easy configuration file and a command-line.
 
 Helm Charts helps you define, install, and upgrade even the most complex Kubernetes application. 
 
@@ -16,9 +16,9 @@ Helm Charts helps you define, install, and upgrade even the most complex Kuberne
 
 You will need a Kubernetes cluster and some basic knowledge about Kubernetes and Helm to be able to use these Helm charts.
 
-Apart from this, the TAP platform requires some external services to run properly:
+Apart from this, the Telemetry Analytics Platform Platform requires some external services to run properly:
 
-- Apache Kafka: Kafka is used as the message broker of our services. You will need to install an instance of Kafka separately and make it accessible from the Kubernetes cluster to be able to run the TAP platform.
+- Apache Kafka: Kafka is used as the message broker of our services. You will need to install an instance of Kafka separately and make it accessible from the Kubernetes cluster to be able to run the Telemetry Analytics Platform Platform.
 
 - InfluxDB database: One or more InfluxDB time-series databases to persist and query Telemetry data in the platform. The default Helm chart configuration uses a unique instance of this database but you can override easily the rest of the services to set up more than one InfluxDB instances. You can use your InfluxDB instances from outside the cluster or you can use the provided `mat.tap.requisites` helm chart to deploy several InfluxDB instances into the Kubernetes cluster.
 
@@ -67,7 +67,7 @@ Create `values.yaml` file to define the parameters of the cluster deployment. Th
 
 ### Global variables
 
-There is a Global section in the values yaml file to define common parameters to all the services of the TAP platform. Some of these parameters are essential to be able to run our platform, like Kafka broker, relational database or InfluxDB url.
+There is a Global section in the values yaml file to define common parameters to all the services of the Telemetry Analytics Platform Platform. Some of these parameters are essential to be able to run our platform, like Kafka broker, relational database or InfluxDB url.
 
 Example:
 
@@ -319,7 +319,7 @@ You can find more extensive documentation in [InfluxDb writer documentation](htt
 
 #### Configuring SignalR service
 
-SignalR service needs a list of Kafka topic names as an input configuration to be able to run properly in TAP platform. Use `topicNames` parameter to define this list of topics:
+SignalR service needs a list of Kafka topic names as an input configuration to be able to run properly in Telemetry Analytics Platform Platform. Use `topicNames` parameter to define this list of topics:
 
 ``` bash
 signalr:
@@ -385,7 +385,7 @@ The following tables list all the possible Global parameters of the TAP requisit
 
 ### TAP Requisites
 
-These charts help you to install some requisites services for TAP platform. You can use these Helm deployment or use your own services. This is the complete list of services deployable through this `mat.tap.requisites` charts:
+These charts help you to install some requisites services for Telemetry Analytics Platform Platform. You can use these Helm deployment or use your own services. This is the complete list of services deployable through this `mat.tap.requisites` charts:
 
 | Service | Description | Documentation |
 |-|-|-|
