@@ -289,11 +289,12 @@ For convenience, there is the concept of a "default" feed, which has an empty na
 The telemetry data messages are not self-describing, which implies there is a dependency describing the data format.
 
 A data format can be defined using the library using a fluent builder syntax:
-
+```
 DataFormat.DefineFeed().
   Parameter(DataAggregateSelection.Avg, "vCar:Chassis").
   Parameters(DataAggregateSelection.Min | DataAggregateSelection.Max, "gLat:Chassis", "gLong:Chassis").
   BuildFormat();
+```
 
 In JSON this looks like:
 ```json
