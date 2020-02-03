@@ -22,7 +22,7 @@ Includes connectivity services for wideband, SQL Race databases, an ATLAS 10 rec
 These capabilities work together to create an integrated experience: ATLAS Advanced Streams carries data from the ECU, models and other racing applications, and the Telemetry Analytics API includes a service to feed this data live into InfluxDB for search and dashboarding.
 
 ### Table of Contents
-- [**Atlas Advanced Stream**](/AAS/README.md)<br>
+- [**Atlas Advanced Streams**](/AAS/README.md)<br>
 - [**Influx Writer**](/InfluxWriter/README.md)<br>
 - [**Parameter Mapping**](/ParameterMapping/README.md)<br>
 - [**Replay Service**](ReplayService/README.md)<br>

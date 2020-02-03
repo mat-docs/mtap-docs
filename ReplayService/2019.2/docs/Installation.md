@@ -11,7 +11,7 @@
 
 ## Run with Docker
 
-Replay Service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/replay-service#read).
+Replay Service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/replay-service#read) (requires login to bintray).
 
 ## Run as a daemon service
 ### .NET Core runtime dependency

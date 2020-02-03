@@ -10,7 +10,7 @@
 
 ## Run with Docker
 
-SignalR service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/signalr-service#read).
+SignalR service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/signalr-service#read) (requires login to bintray).
 
 ## Run as a daemon service
 ### .NET Core runtime dependency

@@ -9,6 +9,7 @@
 [Identity Service]: /IdentityService/README.md
 [cors]: https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
 [protobuf]: https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/360008375233-Protobuf-Extension
+[dependency service]: https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003531373-API-Reference-Dependencies-Service
 
 The configuration file of the service is called ```appsettings.json```
 <details>
