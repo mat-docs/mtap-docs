@@ -9,7 +9,7 @@
 
 ## Run with Docker
 
-Parameter Mapping service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/parametermapping-service#read) (requires login to bintray).
+Parameter Mapping service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/mclarenappliedtechnologies/mtap/parameter-mapping-service#read) (requires login to bintray).
 
 ## Run as a daemon service
 ### .NET Core runtime dependency
