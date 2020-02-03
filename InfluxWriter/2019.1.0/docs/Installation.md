@@ -53,7 +53,7 @@ sudo apt-get --yes install aspnetcore-runtime-2.1
 
 ## Run with Docker
 
-Influx Writer is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/influx-writer-service?tab=readme).
+Influx Writer is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/influx-writer-service?tab=readme) (requires login to bintray).
 
 ## Run as standalone
 

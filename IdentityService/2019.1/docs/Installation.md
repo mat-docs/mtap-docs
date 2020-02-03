@@ -12,7 +12,7 @@
 
 ## Run with Docker
 
-Identity service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/identity-service?tab=readme).
+Identity service is shipped as a docker image. For detailed instruction steps, please visit the [docker image hosted on bintray](https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/identity-service?tab=readme) (requires login to bintray).
 
 
 ## .NET Core runtime dependency

@@ -21,7 +21,7 @@ The [**Identity Service**](/IdentityService/README.md) must be installed before 
 
 #### Deploy the Docker Container
 For production usage we recommend using the Docker containers downloadable here:
-https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/tapi-influx-service?tab=readme
+https://bintray.com/beta/#/mclarenappliedtechnologies/mtap/tapi-influx-service?tab=readme (requires login to bintray)
 
 #### Basic usage
 The API can be started from a console in Windows or Linux. This is useful for initial experimentation and familiarisation.
