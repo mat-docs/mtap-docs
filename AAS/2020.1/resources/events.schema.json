@@ -1,0 +1,41 @@
+{
+    "$id": "http://mclaren.com/appliedtechnologies/ocs/streaming/protocol/event",
+    "title": "event",
+    "type": "object",
+    "properties": {
+      "group": {
+        "type": [
+          "string"
+        ]
+      },
+      "epoch": {
+        "type": "integer"
+      },
+      "time": {
+        "type": "integer"
+      },
+      "uniqueEventKey": {
+        "type": "string"
+      },
+      "eventDefinitionKey": {
+        "type": "integer"
+      },
+      "statusText": {
+        "type": "string"
+      },
+      "values": {
+        "type": "array",
+        "items": {
+          "type": "number"
+        }
+      }
+    },
+    "required": [
+      "group",
+      "time",
+      "uniqueEventKey",
+      "eventDefinitionKey",
+      "statusText",
+      "values"
+    ]
+  }
