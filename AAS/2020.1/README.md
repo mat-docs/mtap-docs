@@ -550,9 +550,8 @@ Example:
 {
   "epoch": 1511091963784000000,
   "time": 10000000,
-  "uniqueEventKey": "IO2-2B02:TAG320BIOS",
-  "eventDefinitionKey": "IO2-2B02:TAG320BIOS",
-  "statusText": "Active",
+  "id": "IO2-2B02:TAG320BIOS",
+  "status": "Active",
   "values": [
     10.0, 20.0
   ]
