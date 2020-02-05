@@ -538,6 +538,28 @@ Example:
 
 [tsamples.schema.json](resources/tsamples.schema.json)
 
+#### events
+
+A discrete event at a given timestamp. These could be events such as gear shifts or doors opening.
+The `values` array contains any numerical values associated with the event. The parameters of which are
+described in the event definition.
+
+Example:
+
+```json
+{
+  "epoch": 1511091963784000000,
+  "time": 10000000,
+  "id": "IO2-2B02:TAG320BIOS",
+  "status": "Active",
+  "values": [
+    10.0, 20.0
+  ]
+}
+```
+
+[events.schema.json](resources/events.schema.json)
+
 ##### lap
 
 Denotes a lap trigger.
