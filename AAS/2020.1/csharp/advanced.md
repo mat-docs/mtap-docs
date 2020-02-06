@@ -2,6 +2,7 @@
 
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
+- [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
   - [Samples project](./src)
   - [Read](read.md#basic-samples)
