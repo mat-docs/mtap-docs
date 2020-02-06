@@ -13,7 +13,7 @@ Atlas Advanced Streams is the transportation protocol over Kafka/MQTT used by MT
 - [**Specification**](README.md#specification)
   - [Streaming protocol](README.md#streaming-protocol)
   - [Protobuf extension](README.md#protobuf-extension)
-- [**Code Samples**]
+- **Code Samples**
   - [C# samples](csharp/README.md)
   - [Python samples](python/README.md)
   
