@@ -519,20 +519,39 @@ See  [Data Feeds, Formats and Views](README.md#data-feeds-formats-and-views)  fo
 
 [tdata.schema.json](resources/tdata.schema.json)
 
-##### tsamples (v0.2.1+)
+##### tsamples
 
-Essentially a simplified version of  `tdata`, primarily for data ingest - where aggregates and statuses are not useful.
+Contains not aggregated telemetry data. Essentially used for data ingest - where aggregates and statuses are not useful. The `data` field is a dictionary of parameters containing a one to one representation of timestamps and values.
 
 Example:
 ```json
 {
-  "epoch": 1511091963784000000,
-  "time": [10000000, 20000000],
-  "data": [
-    [0.0, 10.0]
-  ],
-  "feed": "",
-  "format": "9a9627b7bc25"
+  "feed": "5hz",
+  "format": "9eb6ba4140f1",
+  "data": {
+    "parameter1": {
+      "values": [
+        53.424999237060547,
+        53.325000762939453,
+      ],
+      "epoch": 1581033600000000000,
+      "time": [
+        37132482000000,
+        37132682000000,
+      ]
+    },
+    "parameter2": {
+      "values": [
+        47.724998474121094,
+        47.5099983215332,
+      ],
+      "epoch": 1581033600000000000,
+      "time": [
+        37132882000000,
+        37133082000000,
+      ]
+    },
+  }
 }
 ```
 
