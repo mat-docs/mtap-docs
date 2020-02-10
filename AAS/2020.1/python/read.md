@@ -53,32 +53,22 @@ The stream pipeline exposes several public method and statuses for pipelen manag
 #### Pipeline management methods
 
  - **drain()**:\
-```diff
-- Not yet implemented
-```
+Not yet implemented.
 
  - **stop()**:\
 Stops the pipeline by detaching inputs without reading further messages.
  
   - **wait_until_connected(seconds)**:\
-```diff
-- Not yet implemented
-```
+Not yet implemented.
  
   - **wait_until_idle(seconds)**:\
-```diff
-- Not yet implemented
-```
+Not yet implemented.
 
   - **wait_until_first_stream(seconds)**:\
-```diff
-- Not yet implemented
-```
+Not yet implemented.
 
  - **wait_until_stopped(seconds)**:\
-```diff
-- Not yet implemented
-```
+Not yet implemented.
 
 #### Pipeline statuses
 
