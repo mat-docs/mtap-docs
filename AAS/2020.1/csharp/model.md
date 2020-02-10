@@ -1,4 +1,4 @@
-# ![logo](../branding.png) ATLAS Advanced Streaming Samples
+# ![logo](/Media/branding.png) Atlas Advanced Stream
 
 ### Table of Contents
 <!--ts-->
