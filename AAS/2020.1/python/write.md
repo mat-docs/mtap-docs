@@ -1,19 +1,18 @@
 # ![logo](/Media/branding.png) Atlas Advanced Stream
 
 ### Table of Contents
+<!--ts-->
 - [**Introduction**](../README.md)<br>
 - [**C# Samples**](../csharp/README.md)<br>
 - [**Python Samples**](README.md)<br>
-  - [Samples project](./src)
-  - [Read](read.md#basic-samples)
+  - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
-    - [Events](read.md#telemetry-events)
-  - Write
+  - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
-    - [Events](write.md#telemetry-events)
-  - [Model](models.md#model-sample)
+  - [Model execution](model.md#model-sample)
+<!--te-->
 
 ## Basic samples
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples write to Kafka or Mqtt streams.

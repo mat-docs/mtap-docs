@@ -1,22 +1,25 @@
 # ![logo](/Media/branding.png) Atlas Advanced Stream
 
 ### Table of Contents
+<!--ts-->
 - [**Introduction**](../README.md)<br>
 - [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
-  - Read
+  - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
-  - [Write](write.md#basic-samples)
+  - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
     - [Events](write.md#events)
+  - [Model execution](model.md#model-sample)
   - [Advanced Samples](advanced.md#advanced-samples)
+<!--te-->
 
-## Basic samples (Read)
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Events Reads to and from Kafka or Mqtt streams.
-The following chapters walk you through how to easily read different data types from a Kafka stream. The [full source code is here](./src).
+## Basic samples of **Read**
+The following chapters demonstrate the simple usage of Advanced Streams through basic samples, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Event **reads** from Kafka or Mqtt streams.\
+The [full source code of the samples is here](./src).
 
 ### Configurations and dependencies
 First of all you need to configure the [dependencies](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L60-L63)
