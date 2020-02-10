@@ -1,18 +1,21 @@
 # ![logo](/Media/branding.png) Atlas Advanced Stream
 
 ### Table of Contents
+<!--ts-->
 - [**Introduction**](../README.md)<br>
 - [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
-  - [Read](read.md)
+  - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
-  - [Write](write.md)
+  - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
     - [Events](write.md#events)
-  - [Advanced Samples](advanced.md)
+  - [Model execution](model.md#model-sample)
+  - [Advanced Samples](advanced.md#advanced-samples)
+<!--te-->
 
 # Introduction
 This API provides infrastructure for streaming data around the ATLAS technology platform.
