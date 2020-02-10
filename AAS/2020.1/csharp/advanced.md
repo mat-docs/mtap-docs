@@ -1,17 +1,21 @@
 # ![logo](/Media/branding.png) Atlas Advanced Stream
 
 ### Table of Contents
+<!--ts-->
 - [**Introduction**](../README.md)<br>
-- [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
-  - [Samples project](./src)
-  - [Read](read.md#basic-samples)
+  - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
-  - [Write](write.md#basic-samples)
+    - [Events](read.md#events)
+  - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
-  - Advanced Samples
+    - [Events](write.md#events)
+  - [Model execution](model.md#model-sample)
+  - [Advanced Samples](advanced.md#advanced-samples)
+- [**Python Samples**](../python/README.md)<br>
+<!--te-->
 
 # Advanced Samples
 
