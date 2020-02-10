@@ -8,7 +8,7 @@
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
-  - [Read](write.md)
+  - [Write](write.md)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
     - [Events](write.md#events)
