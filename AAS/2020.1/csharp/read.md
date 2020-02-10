@@ -18,6 +18,7 @@
 ## Basic samples (Read)
 Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Events Reads to and from Kafka or Mqtt streams.
 
+### Configurations and dependencies
 First of all you need to configure the [dependencies](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L60-L63)
 ```cs
 const string brokerList = "localhost:9092"; // The host and port where the Kafka broker is running
@@ -37,10 +38,21 @@ If you want to connect to MQTT, create a client of MqttStreamClient instead of K
 var client = new MqttStreamClient(new MqttConnectionConfig(brokerList, "userName", "password"));
 ```
 
+### Stream pipeline
+
 Create a stream pipeline using the KafkaStreamClient and the topicName. Stream the messages [.Into your handler method](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L68)
 ```cs
 var pipeline = client.StreamTopic(topicName).Into(streamId => // Stream Kafka topic into the handler method
 ```
+
+The stream pipeline will run a separate thread and starts polling messages from the Kafka topic, based on the topicName provided. If a new stream session is found on the Kafka topic, the above mentioned stream handler method will be invoked.
+The stream pipeline exposes several public method and statuses for pipelen management, monitoring and error handling:
+
+ - ```cs
+ IStreamPipeline Into(Func<string, IStreamInput> inputFactory)
+ ```
+Binds the specified input factory into an IStreamPipeline, which provides stream control and represents the disposable network resource. The factory is invoked for each child stream within a topic to allow a new instance of user processing code.
+
 
 [Create a SessionTelemetryDataInput](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L70) with the actual stream id and the dataFormatClient 
 ```cs
