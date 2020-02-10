@@ -27,21 +27,21 @@ With support for Apache Kafka, the streaming API also offers:
 - Replay of historic streams
 - Fault-tolerant, scalable broker architecture
 
-# Knowledgebase
-Be sure to look at our support knowledgebase on Zendesk: https://mclarenappliedtechnologies.zendesk.com/
-
-# Scope
-This pre-release version of the API demonstrates the event-based messaging approach, for sessions and simple telemetry data.
-
 ## Requirements
 You need to install the following PIP packages from [MAT source](https://artifactory-elb.core.mat.production.matsw.com/artifactory/pypi-local/mat.ocs.streaming/)
 
-* MAT.OCS.Streaming==1.5.3.11rc0
+* MAT.OCS.Streaming==2.0.13
 
-pip install --extra-index-url https://artifactory-elb.core.mat.production.matsw.com/artifactory/api/pypi/pypi-virtual/simple/ mat.ocs.streaming==1.5.3.11rc0
+pip install --extra-index-url https://artifactory-elb.core.mat.production.matsw.com/artifactory/api/pypi/pypi-virtual/simple/ mat.ocs.streaming==2.0.13
 
-## API Documentation
-There is a set of required steps that needs to be done, before you could actually start streaming.
+## Artifactory access
+You need to have access to Artifactory, here is a guidance https://confluence.mclaren.com/display/MATSOFT/Authenticate+with+Artifactory \
+Use your McLaren account to log in.
+
+## Scope, requirements and definitions 
+
+#### Requirements:
+There is a set of required information you must have, before you could actually start streaming:
 
  * Kafka broker address:
    * A valid and existing host name where a Kafka service is running.
