@@ -4,7 +4,6 @@
 - [**Introduction**](../README.md)<br>
 - [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
-  - [Samples project](./src)
   - [Read](read.md)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
@@ -28,6 +27,7 @@ With support for Apache Kafka, the streaming API also offers:
 - Replay of historic streams
 - Fault-tolerant, scalable broker architecture
 
+The [full source code of the samples is here](./src).
 
 # API Documentation
 - [**0.10.x**](https://mclarenappliedtechnologies.github.io/mat.atlas.advancedstreams-docs/0.10.0/api/index.html)<br>
