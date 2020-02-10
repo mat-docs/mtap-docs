@@ -521,7 +521,7 @@ See  [Data Feeds, Formats and Views](README.md#data-feeds-formats-and-views)  fo
 
 ##### tsamples
 
-Contains not aggregated telemetry data. Essentially used for data ingest - where aggregates and statuses are not useful. The `data` field is a dictionary of parameters containing a one to one representation of timestamps and values.
+Contains unaggregated telemetry data. Essentially used for data ingest - where aggregates and statuses are not useful. The `data` field is a dictionary of parameters containing a one to one representation of timestamps and values.
 
 Example:
 ```json
