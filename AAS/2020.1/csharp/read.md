@@ -96,6 +96,7 @@ Gets whether at least one stream has started.
 As the pipeline runs on a separate thread, the exceptions may occure are not being propageted to the main thread.
 You can check for errors through the *IsFaulted* status. In case of exception this would be stored in the pipelines *Exception* property.
 
+### Stream session input
 [Create a SessionTelemetryDataInput](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L70) with the actual stream id and the dataFormatClient 
 ```cs
 var input = new SessionTelemetryDataInput(streamId, dataFormatClient);
