@@ -3,7 +3,7 @@
 ### Table of Contents
 - [**Introduction**](../README.md)<br>
 - [**C# Samples**](../csharp/README.md)<br>
-- **Python Samples**<br>
+- [**Python Samples**](README.md)<br>
   - [Samples project](./src)
   - [Read](read.md#basic-samples)
     - [TData](read.md#telemetry-data)
