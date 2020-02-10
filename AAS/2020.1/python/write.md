@@ -3,7 +3,6 @@
 ### Table of Contents
 <!--ts-->
 - [**Introduction**](../README.md)<br>
-- [**C# Samples**](../csharp/README.md)<br>
 - [**Python Samples**](README.md)<br>
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
@@ -12,11 +11,13 @@
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
   - [Model execution](model.md#model-sample)
+- [**C# Samples**](../csharp/README.md)<br>
 <!--te-->
 
-## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples write to Kafka or Mqtt streams.
 
+## Basic samples of **Write**
+The following chapters demonstrate the simple usage of Advanced Streams through basic samples, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Event **write** to Kafka or Mqtt streams.\
+The [full source code of the samples is here](./src).
 First of all you need to configure the [dependencies](./src/TDataWrite.py#L33-L66)
 ```python
 """Setup details"""

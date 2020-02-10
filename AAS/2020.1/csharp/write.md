@@ -3,7 +3,6 @@
 ### Table of Contents
 <!--ts-->
 - [**Introduction**](../README.md)<br>
-- [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
@@ -15,6 +14,7 @@
     - [Events](write.md#events)
   - [Model execution](model.md#model-sample)
   - [Advanced Samples](advanced.md#advanced-samples)
+- [**Python Samples**](../python/README.md)<br>
 <!--te-->
 
 ## Basic samples of **Write**

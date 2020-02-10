@@ -3,7 +3,6 @@
 ### Table of Contents
 <!--ts-->
 - [**Introduction**](../README.md)<br>
-- [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
@@ -15,6 +14,7 @@
     - [Events](write.md#events)
   - [Model execution](model.md#model-sample)
   - [Advanced Samples](advanced.md#advanced-samples)
+- [**Python Samples**](../python/README.md)<br>
 <!--te-->
 
 ## Basic samples of Read
@@ -22,6 +22,7 @@ The following chapters demonstrate the simple usage of Advanced Streams through 
 The [full source code of the samples is here](./src).
 
 ### Configurations and dependencies
+
 First of all you need to configure the [dependencies](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L60-L63)
 ```cs
 const string brokerList = "localhost:9092"; // The host and port where the Kafka broker is running

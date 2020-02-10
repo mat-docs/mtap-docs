@@ -3,7 +3,6 @@
 ### Table of Contents
 <!--ts-->
 - [**Introduction**](../README.md)<br>
-- [**C# Samples**](../csharp/README.md)<br>
 - [**Python Samples**](README.md)<br>
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
@@ -12,10 +11,14 @@
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
   - [Model execution](model.md#model-sample)
+- [**C# Samples**](../csharp/README.md)<br>
 <!--te-->
 
-## Basic samples
-Basic samples demonstrate the simple usage of Advanced Streams, covering all the bare-minimum steps to implement Telematry Data and Telemetry Samples read from Kafka or Mqtt streams.
+## Basic samples of Read
+The following chapters demonstrate the simple usage of Advanced Streams through basic samples, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Event **reads** from Kafka or Mqtt streams.\
+The [full source code of the samples is here](./src).
+
+### Configurations and dependencies
 
 First of all you need to configure the [dependencies](./src/TDataRead.py#L11-L20)
 ```python
@@ -32,6 +35,8 @@ kafka_client = KafkaStreamClient(kafka_address=KAFKA_IP,
 
 The dependency_client is used to handle requests for AtlasConfigurations and DataFormats. You must provide an URI for this service. 
 The data_format_client handles the data formats through the dependency_client for the given group name.
+
+### Stream pipeline
 
 Create a stream pipeline using the kafka_client and the TOPIC_NAME. Stream the messages [.Into your handler method](./src/TDataRead.py#L36)
 ```python
