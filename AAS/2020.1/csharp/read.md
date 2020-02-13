@@ -57,6 +57,21 @@ Binds multiple input factories into an IStreamPipeline, which provides stream co
 The stream pipeline (ISteamPipeline impl) will run a separate thread and starts polling messages from the Kafka topic, based on the topicName provided. If a new stream session is found on the Kafka topic, the above mentioned stream handler method will be invoked.
 The stream pipeline exposes several public method and statuses for pipelen management, monitoring and error handling:
 
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *WithConsumerProperties* method:
+```cs
+var sslConfigurationDetails = new Dictionary<string, string>();
+sslConfigurationDetails.Add("security.protocol", "ssl");
+sslConfigurationDetails.Add("ssl.ca.location", @"C:\certificates\ca-cert");
+sslConfigurationDetails.Add("ssl.certificate.location", @"C:\\certificates\certificate.pem");
+sslConfigurationDetails.Add("ssl.key.location", @"C:\certificates\key.pem");
+sslConfigurationDetails.Add("ssl.key.password", "password");
+
+
+var pipeline = client.StreamTopic(topicName).WithConsumerProperties(sslConfigurationDetails).Into(streamId => // Stream Kafka topic into the handler method
+```
+
 #### Pipeline management methods
 
  - **Drain()**:\

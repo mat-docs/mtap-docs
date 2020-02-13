@@ -50,6 +50,19 @@ Binds multiple input factories into an StreamPipeline, which provides stream con
 The stream pipeline (SteamPipeline impl) will run a separate thread and starts polling messages from the Kafka topic, based on the topicName provided. If a new stream session is found on the Kafka topic, the above mentioned stream handler method will be invoked.
 The stream pipeline exposes several public method and statuses for pipelen management, monitoring and error handling:
 
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *with_consumer_properties* method:
+```python
+ssl_config = {"security.protocol": "SSL",
+			  "ssl.ca.location": "\\certificates\\ca-cert",
+			  "ssl.certificate.location": "\\certificates\\certificate.pem",
+			  "ssl.key.location": "\\certificates\\key.pem",
+			  "ssl.key.password": "password"}
+
+pipeline: StreamPipeline = kafka_client.stream_topic(TOPIC_NAME).with_consumer_properties(ssl_config).into(stream_input_handler)
+```
+
 #### Pipeline management methods
 
  - **drain()**:\
