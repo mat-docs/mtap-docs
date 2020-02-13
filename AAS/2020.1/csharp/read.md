@@ -35,13 +35,14 @@ var client = new KafkaStreamClient(brokerList); // Create a new KafkaStreamClien
 var dataFormatClient = new DataFormatClient(new HttpDependencyClient(dependencyServiceUri, groupName)); // Create a new DataFormatClient
 ```
 
-The DependencyService is used to handle requests for AtlasConfigurations and DataFormats. You must provide an URI for this service. 
-The DataFormatClient handles the data formats through the DependencyService for the given group name.
+The [DependencyService](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003531373-API-Reference-Dependencies-Service) is used to handle requests for [AtlasConfigurations](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#atlas-configuration) and [DataFormats](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#data-feeds-formats-and-views). You must provide an URI for this service. 
+The DataFormatClient handles the data formats through the [DependencyService](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003531373-API-Reference-Dependencies-Service) for the given group name.
 
 If you want to connect to MQTT, create a client of MqttStreamClient instead of KafkaStreamClient:
 ```cs
 var client = new MqttStreamClient(new MqttConnectionConfig(brokerList, "userName", "password"));
 ```
+Read more about [Topics, Streams and Sessions here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#topics-streams-and-sessions).
 
 ### Stream pipeline
 
@@ -124,6 +125,10 @@ input.DataInput.BindDefaultFeed(ParameterId).DataBuffered += (sender, e) => // B
 };
 ```
 
+Read more about [Data Feeds, Formats, and Views here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#data-feeds-formats-and-views).
+
+Read more about [TData here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#tdata).
+
 ### Telemetry Samples
 In this example we [bind the **SamplesInput** to the handler method](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L77) and simply [print out some details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L78-L82) 
 ```cs
@@ -134,6 +139,8 @@ input.SamplesInput.AutoBindFeeds((s, e) => // Take the input and bind feed to an
     Trace.WriteLine(data.Parameters.Count);
 });
 ```
+
+Read more about [TSamples here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#tsamples).
 
 ### Events
 
@@ -165,6 +172,7 @@ input.EventsInput.EventsBuffered += (sender, e) => // Subscribe to incoming even
 
 Notice that we are [querying the Atlas configuration dependency](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L57) for event details. These details include properties like `Description`, `Priority`. You must [subscribe to session dependencies change](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L35-L43) to get this Atlas configuration dependency.
 
+Read more about [Events here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#events).
 
 ### Waits for completion
 In order to successfully read and consume the stream, make sure to [wait until connected](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L92-L93) and [wait for the first stream](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L94). Optionally you can tell the pipeline to wait for a specific time [while the stream is being idle](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L95), before exiting from the process.
