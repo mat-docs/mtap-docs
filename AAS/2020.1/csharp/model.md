@@ -23,7 +23,7 @@ A basic example of a model calculating the total horizontal acceleration paramet
 
 gTotal = |gLat| + |gLong|. 
 
-Model consists from two classes, [ModelSample](https://github.com/mat-docs/mtap-docs/tree/master/AAS/2020.1/csharp/src/MAT.OCS.Streaming.Samples/Samples/Models/ModelSample.cs) and [StreamModel](https://github.com/mat-docs/mtap-docs/tree/master/AAS/2020.1/csharp/src/MAT.OCS.Streaming.Samples/Samples/Models/StreamModel.cs)
+The sample includes two classes, [ModelSample](https://github.com/mat-docs/mtap-docs/tree/master/AAS/2020.1/csharp/src/MAT.OCS.Streaming.Samples/Samples/Models/ModelSample.cs) and [StreamModel](https://github.com/mat-docs/mtap-docs/tree/master/AAS/2020.1/csharp/src/MAT.OCS.Streaming.Samples/Samples/Models/StreamModel.cs)
 .
 ## Environment setup
 You need to prepare environment variables as follows:
