@@ -55,7 +55,7 @@ Binds the specified input factory into an IStreamPipeline, which provides stream
 Binds multiple input factories into an IStreamPipeline, which provides stream control and represents the disposable network resource. Each factory is invoked for each child stream within a topic to allow a new instance of user processing code.
 
 The stream pipeline (ISteamPipeline impl) will run a separate thread and starts polling messages from the Kafka topic, based on the topicName provided. If a new stream session is found on the Kafka topic, the above mentioned stream handler method will be invoked.
-The stream pipeline exposes several public method and statuses for pipelen management, monitoring and error handling:
+The stream pipeline exposes several public method and statuses for pipeline management, monitoring and error handling:
 
 #### Pipeline management methods
 
