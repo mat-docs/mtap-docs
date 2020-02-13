@@ -28,14 +28,22 @@ With support for Apache Kafka, the streaming API also offers:
 - Fault-tolerant, scalable broker architecture
 
 ## Prerequisite
-You need to install the following PIP packages from [MAT source](https://artifactory-elb.core.mat.production.matsw.com/artifactory/pypi-local/mat.ocs.streaming/)
+You need to install the following package:
 
 * MAT.OCS.Streaming==2.0.13
 
+External clients should use the provided Python Wheel file:
+```python
+pip install mat.ocs.streaming-2.0.13-py2.py3-none-any.whl
+```
+
+Internal (McLaren) clients also could use the PIP package from the [MAT source](https://artifactory-elb.core.mat.production.matsw.com/artifactory/pypi-local/mat.ocs.streaming/)
+```python
 pip install --extra-index-url https://artifactory-elb.core.mat.production.matsw.com/artifactory/api/pypi/pypi-virtual/simple/ mat.ocs.streaming==2.0.13
+```
 
 ## Artifactory access
-You need to have access to Artifactory, here is a guidance https://confluence.mclaren.com/display/MATSOFT/Authenticate+with+Artifactory \
+If you are an internal (McLaren) client and want to install the package from the [MAT source](https://artifactory-elb.core.mat.production.matsw.com/artifactory/pypi-local/mat.ocs.streaming/) then you need to have access to Artifactory, here is a guidance https://confluence.mclaren.com/display/MATSOFT/Authenticate+with+Artifactory \
 Use your McLaren account to log in.
 
 ## Requirements and definitions 
