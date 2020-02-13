@@ -94,7 +94,7 @@ Gets whether at least one stream has started.
 
 #### Pipeline exception/error handling
 
-As the pipeline runs on a separate thread, the exceptions may occure are not being propageted to the main thread.
+As the pipeline runs on a separate thread, the exceptions may occur are not being propageted to the main thread.
 You can check for errors through the *IsFaulted* status. In case of exception this would be stored in the pipelines *Exception* property.
 
 ### Stream session input
