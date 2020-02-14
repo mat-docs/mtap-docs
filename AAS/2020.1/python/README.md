@@ -1,19 +1,18 @@
-# ![logo](/Media/branding.png) Atlas Advanced Stream
+# ![logo](/Media/branding.png) Atlas Advanced Streams
 
 ### Table of Contents
+<!--ts-->
 - [**Introduction**](../README.md)<br>
-- [**C# Samples**](../csharp/README.md)<br>
 - [**Python Samples**](README.md)<br>
-  - [Samples project](./src)
-  - [Read](read.md#basic-samples)
+  - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
-    - [Events](read.md#telemetry-events)
-  - [Write](write.md#basic-samples)
+  - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
-    - [Events](write.md#telemetry-events)
-  - [Model](models.md#model-sample)
+  - [Model execution](model.md#model-sample)
+- [**C# Samples**](../csharp/README.md)<br>
+<!--te-->
 
 # Introduction
 This API provides infrastructure for streaming data around the ATLAS technology platform.
@@ -28,21 +27,29 @@ With support for Apache Kafka, the streaming API also offers:
 - Replay of historic streams
 - Fault-tolerant, scalable broker architecture
 
-# Knowledgebase
-Be sure to look at our support knowledgebase on Zendesk: https://mclarenappliedtechnologies.zendesk.com/
+## Prerequisite
+You need to install the following package:
 
-# Scope
-This pre-release version of the API demonstrates the event-based messaging approach, for sessions and simple telemetry data.
+* MAT.OCS.Streaming==2.0.13
 
-## Requirements
-You need to install the following PIP packages from [MAT source](https://artifactory-elb.core.mat.production.matsw.com/artifactory/pypi-local/mat.ocs.streaming/)
+External clients should use the provided Python Wheel file:
+```python
+pip install mat.ocs.streaming-2.0.13-py2.py3-none-any.whl
+```
 
-* MAT.OCS.Streaming==1.5.3.11rc0
+Internal (McLaren) clients also could use the PIP package from the [MAT source](https://artifactory-elb.core.mat.production.matsw.com/artifactory/pypi-local/mat.ocs.streaming/)
+```python
+pip install --extra-index-url https://artifactory-elb.core.mat.production.matsw.com/artifactory/api/pypi/pypi-virtual/simple/ mat.ocs.streaming==2.0.13
+```
 
-pip install --extra-index-url https://artifactory-elb.core.mat.production.matsw.com/artifactory/api/pypi/pypi-virtual/simple/ mat.ocs.streaming==1.5.3.11rc0
+## Artifactory access
+If you are an internal (McLaren) client and want to install the package from the [MAT source](https://artifactory-elb.core.mat.production.matsw.com/artifactory/pypi-local/mat.ocs.streaming/) then you need to have access to Artifactory, here is a guidance https://confluence.mclaren.com/display/MATSOFT/Authenticate+with+Artifactory \
+Use your McLaren account to log in.
 
-## API Documentation
-There is a set of required steps that needs to be done, before you could actually start streaming.
+## Requirements and definitions 
+
+#### Requirements:
+There is a set of required information you must have, before you could actually start streaming:
 
  * Kafka broker address:
    * A valid and existing host name where a Kafka service is running.
