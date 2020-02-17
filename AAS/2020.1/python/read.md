@@ -52,6 +52,9 @@ The stream pipeline exposes several public method and statuses for pipelen manag
 
 #### SSL connection
 
+ - **drain()**:\
+Not yet implemented.
+
 To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *with_consumer_properties* method:
 ```python
 ssl_config = {"security.protocol": "SSL",

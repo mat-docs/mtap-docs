@@ -110,6 +110,7 @@ public IStreamInput CreateStreamInput(string streamId)
     input.LapsInput.LapStarted += (s, e) => output.LapsOutput.SendLap(e.Lap);
 
     // we bind our models to specific feed and parameters.
+	// In this example the gTotalModel() method is used for data modelling and upstreaming
     input.DataInput.BindDefaultFeed("gLat:Chassis", "gLong:Chassis").DataBuffered += this.gTotalModel;
 
     return input;

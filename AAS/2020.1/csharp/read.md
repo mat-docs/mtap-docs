@@ -35,13 +35,16 @@ var client = new KafkaStreamClient(brokerList); // Create a new KafkaStreamClien
 var dataFormatClient = new DataFormatClient(new HttpDependencyClient(dependencyServiceUri, groupName)); // Create a new DataFormatClient
 ```
 
-The DependencyService is used to handle requests for AtlasConfigurations and DataFormats. You must provide an URI for this service. 
-The DataFormatClient handles the data formats through the DependencyService for the given group name.
+The [DependencyService](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003531373-API-Reference-Dependencies-Service) is used to handle requests for [AtlasConfigurations](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#atlas-configuration) and [DataFormats](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#data-feeds-formats-and-views). You must provide an URI for this service. 
+The DataFormatClient handles the data formats through the [DependencyService](https://mclarenappliedtechnologies.zendesk.com/hc/en-us/articles/115003531373-API-Reference-Dependencies-Service) for the given group name.
 
 If you want to connect to MQTT, create a client of MqttStreamClient instead of KafkaStreamClient:
 ```cs
 var client = new MqttStreamClient(new MqttConnectionConfig(brokerList, "userName", "password"));
 ```
+Read more about [Topics, Streams and Sessions here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#topics-streams-and-sessions).
+
+### Stream pipeline
 
 ### Stream pipeline
 
@@ -55,7 +58,7 @@ Binds the specified input factory into an IStreamPipeline, which provides stream
 Binds multiple input factories into an IStreamPipeline, which provides stream control and represents the disposable network resource. Each factory is invoked for each child stream within a topic to allow a new instance of user processing code.
 
 The stream pipeline (ISteamPipeline impl) will run a separate thread and starts polling messages from the Kafka topic, based on the topicName provided. If a new stream session is found on the Kafka topic, the above mentioned stream handler method will be invoked.
-The stream pipeline exposes several public method and statuses for pipelen management, monitoring and error handling:
+The stream pipeline exposes several public method and statuses for pipeline management, monitoring and error handling:
 
 #### SSL connection
 
@@ -71,6 +74,31 @@ sslConfigurationDetails.Add("ssl.key.password", "password");
 
 var pipeline = client.StreamTopic(topicName).WithConsumerProperties(sslConfigurationDetails).Into(streamId => // Stream Kafka topic into the handler method
 ```
+  
+  - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+  
+  - **WaitUntilFirstStream(TimeSpan timeout, CancellationToken ct)**:\
+Wait for at least one stream to start. Does not reset after the first stream. Returns true immediately if a stream has already started, even if it has since finished.
+
+ - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+
+#### Pipeline statuses
+
+ - **IsConnected**:\
+Gets whether the pipeline is connected to an upstream source.
+ - **IsStopped**:\
+Gets whether the pipeline is stopped.
+ - **IsFaulted**:\
+Gets when the pipeline has stopped due to an unhandled exception.
+ - **HasFirstStream**:\
+Gets whether at least one stream has started.
+
+#### Pipeline exception/error handling
+
+As the pipeline runs on a separate thread, the exceptions may occur are not being propageted to the main thread.
+You can check for errors through the *IsFaulted* status. In case of exception this would be stored in the pipelines *Exception* property.
 
 #### Pipeline management methods
 
@@ -139,6 +167,10 @@ input.DataInput.BindDefaultFeed(ParameterId).DataBuffered += (sender, e) => // B
 };
 ```
 
+Read more about [Data Feeds, Formats, and Views here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#data-feeds-formats-and-views).
+
+Read more about [TData here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#tdata).
+
 ### Telemetry Samples
 In this example we [bind the **SamplesInput** to the handler method](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L77) and simply [print out some details](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TSamples.cs#L78-L82) 
 ```cs
@@ -149,6 +181,8 @@ input.SamplesInput.AutoBindFeeds((s, e) => // Take the input and bind feed to an
     Trace.WriteLine(data.Parameters.Count);
 });
 ```
+
+Read more about [TSamples here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#tsamples).
 
 ### Events
 
@@ -180,6 +214,7 @@ input.EventsInput.EventsBuffered += (sender, e) => // Subscribe to incoming even
 
 Notice that we are [querying the Atlas configuration dependency](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L57) for event details. These details include properties like `Description`, `Priority`. You must [subscribe to session dependencies change](./src/MAT.OCS.Streaming.Samples/Samples/Basic/EventsRead.cs#L35-L43) to get this Atlas configuration dependency.
 
+Read more about [Events here](https://github.com/mat-docs/mtap-docs/blob/task/TAP-2839/AAS/2020.1/README.md#events).
 
 ### Waits for completion
 In order to successfully read and consume the stream, make sure to [wait until connected](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L92-L93) and [wait for the first stream](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L94). Optionally you can tell the pipeline to wait for a specific time [while the stream is being idle](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L95), before exiting from the process.
