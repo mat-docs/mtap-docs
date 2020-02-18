@@ -62,7 +62,7 @@ The stream pipeline exposes several public method and statuses for pipeline mana
 
 #### SSL connection
 
-To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *WithConsumerProperties* method:
+To connect to your Kafka broker through https using your SSL certificates, you must provide the following configuration details to *WithConsumerProperties* method:
 ```cs
 var sslConfigurationDetails = new Dictionary<string, string>();
 sslConfigurationDetails.Add("security.protocol", "ssl");

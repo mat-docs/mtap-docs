@@ -51,7 +51,7 @@ var client = new MqttStreamClient(new MqttConnectionConfig(brokerList, "userName
 
 #### SSL connection
 
-To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *KafkaStreamClient* constructor:
+To connect to your Kafka broker through https using your SSL certificates, you must provide the following configuration details to *KafkaStreamClient* constructor:
 ```cs
 var sslConfigurationDetails = new Dictionary<string, string>();
 sslConfigurationDetails.Add("security.protocol", "ssl");
