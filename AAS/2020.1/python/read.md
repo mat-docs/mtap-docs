@@ -7,6 +7,7 @@
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
@@ -157,4 +158,85 @@ telemetry_input.events_input.data_buffered += print_event
 You can optionally handle the stream_finished event.
 ```python
 telemetry_input.stream_finished += lambda x, y: print('Stream finished')
+```
+
+### Buffers
+
+TData and Events messages are getting buffered once polled from the Kafka stream. The following samples show the usage of the buffer and some practical use cases.
+
+#### TData buffer
+
+As you could see in the [TData](read.md#telemetry-data) example, you can subscribe to the *data_buffered* event and receive the polled TData message immediately from the buffer.
+You can also create a reference to the buffer and use it or read from it directly, whenever you need to.
+
+```python
+buffer = telemetry_input.data_input.bind_feed("").buffer
+```
+
+The *TelemetryDataBuffer* type has a few public methods:
+ - void put(data):\
+Put data into the buffer.
+ - TelemetryData get_first():\
+Get the oldest item out of the buffer.
+ - TelemetryData read_first():\
+Read the oldest item in the buffer without removing it.
+ - TelemetryData get_last():\
+Get the newest item out of the buffer.
+ - TelemetryData read_last():\ 
+Read the newest item in the buffer without removing it.
+ - List[TelemetryData] get_within(start: int, end: int):\
+Get data out of the buffer within a specified start and end time
+ - List[TelemetryData] read_within(start: int, end: int):\
+Read data out of the buffer within a specified start and end time, without removing them from the buffer.
+
+A typical use case could be that you would read the buffer content only when a Lap is completed:
+```python
+def on_laps_completed(buffer: TelemetryDataBuffer):
+	while not buffer._q.empty():
+            data: TelemetryData = buffer.get()
+	    
+	data_within_time_range = buffer.get_within(69226230000000, 69254750000000)
+	
+ def stream_input_handler(stream_id: str) -> StreamInput:
+        print("Streaming session: " + stream_id)
+        telemetry_input = SessionTelemetryDataInput(stream_id=stream_id, data_format_client=data_format_client)
+        buffer = telemetry_input.data_input.bind_feed("").buffer
+        telemetry_input.laps_input.lap_completed += lambda sender, data: on_laps_completed(buffer)
+```
+
+You can create your own conditions, for example reaching a specific date time.
+Here is a combined example, where you hold a reference to the buffer, but also subscribing to new TData messages and once yout date time condition is met, you read a set of TData from the buffer for a given time frame, using the *GetDataInCompleteWindow*:
+```python
+def on_data_received(buffer: TelemetryDataBuffer):
+	data_within_time_range = buffer.get_within(69226230000000, 69254750000000)
+	
+ def stream_input_handler(stream_id: str) -> StreamInput:
+        print("Streaming session: " + stream_id)
+        telemetry_input = SessionTelemetryDataInput(stream_id=stream_id, data_format_client=data_format_client)
+        buffer = telemetry_input.data_input.bind_feed("").buffer
+	telemetry_input.data_input.bind_feed("").buffer.data_buffered += lambda sender, data: on_data_received(buffer)
+```
+
+#### Events buffer
+
+Events buffer uses the base *DataBuffer* implementation, with almost identical set of public methods as the TData's buffer implementation:
+
+- void put(data):\
+Put data into the buffer.
+ - TelemetryData get_first():\
+Get the oldest item out of the buffer.
+ - TelemetryData read_first():\
+Read the oldest item in the buffer without removing it.
+ - TelemetryData get_last():\
+Get the newest item out of the buffer.
+ - TelemetryData read_last():\ 
+Read the newest item in the buffer without removing it.
+ - List[TelemetryData] get_within(start: int, end: int):\
+Get data out of the buffer within a specified start and end time
+ - List[TelemetryData] read_within(start: int, end: int):\
+Read data out of the buffer within a specified start and end time, without removing them from the buffer.
+
+The usage is very similar to the TData buffer, you create a reference to the *events_input* buffer:
+```csharp
+buffer = telemetry_input.events_input.bind_feed("").buffer
 ```
