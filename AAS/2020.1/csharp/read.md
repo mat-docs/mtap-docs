@@ -9,7 +9,7 @@
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
-    - [Buffer](read.md#buffer)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
@@ -231,9 +231,9 @@ You can optionally handle the [StreamFinished event](./src/MAT.OCS.Streaming.Sam
 input.StreamFinished += (sender, e) => Trace.WriteLine("Finished"); // Handle the steam finished event
 ```
 
-### Buffer
+### Buffers
 
-TData nad Events messages are getting buffered once polled from the Kafka stream. The following samples show the usage of the buffer and some practical use cases.
+TData and Events messages are getting buffered once polled from the Kafka stream. The following samples show the usage of the buffer and some practical use cases.
 
 #### TData buffer
 
