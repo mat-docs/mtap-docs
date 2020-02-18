@@ -285,7 +285,7 @@ var pipeline = client.StreamTopic(topicName).Into(streamId => // Stream Kafka to
 		}
 	}
 }
-
+```
 
 #### Events buffer
 
