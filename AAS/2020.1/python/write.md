@@ -56,6 +56,21 @@ client = KafkaStreamClient(kafka_address=KAFKA_IP,
                             consumer_group=DEPENDENCY_GROUP)
 ```
 
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must provide the following configuration details to *KafkaStreamClient* constructor:
+```python
+ssl_config = {"security.protocol": "SSL",
+			  "ssl.ca.location": "\\certificates\\ca-cert",
+			  "ssl.certificate.location": "\\certificates\\certificate.pem",
+			  "ssl.key.location": "\\certificates\\key.pem",
+			  "ssl.key.password": "password"}
+
+client = KafkaStreamClient(kafka_address=KAFKA_IP,
+                            consumer_group=DEPENDENCY_GROUP,
+							producer_properties=ssl_config)
+							```
+
 The dependency_client is used to handle requests for AtlasConfigurations and DataFormats. You must provide an URI for this service. 
 The data_format_client handles the data formats through the dependency_client for the given group name.
 DataFormat is required when writing to stream, as it is used to define the structre of the data and data_format_id is used to retrieve dataformat from the dataFormatClient.

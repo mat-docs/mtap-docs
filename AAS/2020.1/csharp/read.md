@@ -46,6 +46,8 @@ Read more about [Topics, Streams and Sessions here](https://github.com/mat-docs/
 
 ### Stream pipeline
 
+### Stream pipeline
+
 Create a stream pipeline using the KafkaStreamClient and the topicName. Stream the messages [.Into your handler method](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L68)
 ```cs
 var pipeline = client.StreamTopic(topicName).Into(streamId => // Stream Kafka topic into the handler method
@@ -57,6 +59,46 @@ Binds multiple input factories into an IStreamPipeline, which provides stream co
 
 The stream pipeline (ISteamPipeline impl) will run a separate thread and starts polling messages from the Kafka topic, based on the topicName provided. If a new stream session is found on the Kafka topic, the above mentioned stream handler method will be invoked.
 The stream pipeline exposes several public method and statuses for pipeline management, monitoring and error handling:
+
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must provide the following configuration details to *WithConsumerProperties* method:
+```cs
+var sslConfigurationDetails = new Dictionary<string, string>();
+sslConfigurationDetails.Add("security.protocol", "ssl");
+sslConfigurationDetails.Add("ssl.ca.location", @"C:\certificates\ca-cert");
+sslConfigurationDetails.Add("ssl.certificate.location", @"C:\\certificates\certificate.pem");
+sslConfigurationDetails.Add("ssl.key.location", @"C:\certificates\key.pem");
+sslConfigurationDetails.Add("ssl.key.password", "password");
+
+
+var pipeline = client.StreamTopic(topicName).WithConsumerProperties(sslConfigurationDetails).Into(streamId => // Stream Kafka topic into the handler method
+```
+  
+  - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+  
+  - **WaitUntilFirstStream(TimeSpan timeout, CancellationToken ct)**:\
+Wait for at least one stream to start. Does not reset after the first stream. Returns true immediately if a stream has already started, even if it has since finished.
+
+ - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+
+#### Pipeline statuses
+
+ - **IsConnected**:\
+Gets whether the pipeline is connected to an upstream source.
+ - **IsStopped**:\
+Gets whether the pipeline is stopped.
+ - **IsFaulted**:\
+Gets when the pipeline has stopped due to an unhandled exception.
+ - **HasFirstStream**:\
+Gets whether at least one stream has started.
+
+#### Pipeline exception/error handling
+
+As the pipeline runs on a separate thread, the exceptions may occur are not being propageted to the main thread.
+You can check for errors through the *IsFaulted* status. In case of exception this would be stored in the pipelines *Exception* property.
 
 #### Pipeline management methods
 

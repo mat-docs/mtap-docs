@@ -49,6 +49,21 @@ If you want to connect to MQTT, create a client of MqttStreamClient instead of K
 var client = new MqttStreamClient(new MqttConnectionConfig(brokerList, "userName", "password"));
 ```
 
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must provide the following configuration details to *KafkaStreamClient* constructor:
+```cs
+var sslConfigurationDetails = new Dictionary<string, string>();
+sslConfigurationDetails.Add("security.protocol", "ssl");
+sslConfigurationDetails.Add("ssl.ca.location", @"C:\certificates\ca-cert");
+sslConfigurationDetails.Add("ssl.certificate.location", @"C:\\certificates\certificate.pem");
+sslConfigurationDetails.Add("ssl.key.location", @"C:\certificates\key.pem");
+sslConfigurationDetails.Add("ssl.key.password", "password");
+
+
+var client = new KafkaStreamClient(brokerList, sslConfigurationDetails); // Create a new KafkaStreamClient for connecting to Kafka broker, using SSL connection details
+```
+
 [Open the output topic](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L115) using the preferred client (KafkaStreamClient or MqttStreamClient) and the topicName.
 ```cs
 using (var outputTopic = client.OpenOutputTopic(topicName)) // Open a KafkaOutputTopic
