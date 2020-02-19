@@ -63,6 +63,46 @@ The stream pipeline exposes several public method and statuses for pipeline mana
 
 #### SSL connection
 
+To connect to your Kafka broker through https using your SSL certificates, you must provide the following configuration details to *WithConsumerProperties* method:
+```cs
+var sslConfigurationDetails = new Dictionary<string, string>();
+sslConfigurationDetails.Add("security.protocol", "ssl");
+sslConfigurationDetails.Add("ssl.ca.location", @"C:\certificates\ca-cert");
+sslConfigurationDetails.Add("ssl.certificate.location", @"C:\\certificates\certificate.pem");
+sslConfigurationDetails.Add("ssl.key.location", @"C:\certificates\key.pem");
+sslConfigurationDetails.Add("ssl.key.password", "password");
+
+
+var pipeline = client.StreamTopic(topicName).WithConsumerProperties(sslConfigurationDetails).Into(streamId => // Stream Kafka topic into the handler method
+```
+  
+  - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+  
+  - **WaitUntilFirstStream(TimeSpan timeout, CancellationToken ct)**:\
+Wait for at least one stream to start. Does not reset after the first stream. Returns true immediately if a stream has already started, even if it has since finished.
+
+ - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+
+#### Pipeline statuses
+
+ - **IsConnected**:\
+Gets whether the pipeline is connected to an upstream source.
+ - **IsStopped**:\
+Gets whether the pipeline is stopped.
+ - **IsFaulted**:\
+Gets when the pipeline has stopped due to an unhandled exception.
+ - **HasFirstStream**:\
+Gets whether at least one stream has started.
+
+#### Pipeline exception/error handling
+
+As the pipeline runs on a separate thread, the exceptions may occur are not being propageted to the main thread.
+You can check for errors through the *IsFaulted* status. In case of exception this would be stored in the pipelines *Exception* property.
+
+#### SSL connection
+
 To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *WithConsumerProperties* method:
 ```cs
 var sslConfigurationDetails = new Dictionary<string, string>();
