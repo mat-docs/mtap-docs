@@ -7,6 +7,7 @@
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)

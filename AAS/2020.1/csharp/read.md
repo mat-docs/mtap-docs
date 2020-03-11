@@ -9,6 +9,7 @@
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
@@ -63,6 +64,46 @@ The stream pipeline exposes several public method and statuses for pipeline mana
 #### SSL connection
 
 To connect to your Kafka broker through https using your SSL certificates, you must provide the following configuration details to *WithConsumerProperties* method:
+```cs
+var sslConfigurationDetails = new Dictionary<string, string>();
+sslConfigurationDetails.Add("security.protocol", "ssl");
+sslConfigurationDetails.Add("ssl.ca.location", @"C:\certificates\ca-cert");
+sslConfigurationDetails.Add("ssl.certificate.location", @"C:\\certificates\certificate.pem");
+sslConfigurationDetails.Add("ssl.key.location", @"C:\certificates\key.pem");
+sslConfigurationDetails.Add("ssl.key.password", "password");
+
+
+var pipeline = client.StreamTopic(topicName).WithConsumerProperties(sslConfigurationDetails).Into(streamId => // Stream Kafka topic into the handler method
+```
+  
+  - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+  
+  - **WaitUntilFirstStream(TimeSpan timeout, CancellationToken ct)**:\
+Wait for at least one stream to start. Does not reset after the first stream. Returns true immediately if a stream has already started, even if it has since finished.
+
+ - **WaitUntilStopped(TimeSpan timeout, CancellationToken ct)**:\
+Wait for the pipeline to stop.
+
+#### Pipeline statuses
+
+ - **IsConnected**:\
+Gets whether the pipeline is connected to an upstream source.
+ - **IsStopped**:\
+Gets whether the pipeline is stopped.
+ - **IsFaulted**:\
+Gets when the pipeline has stopped due to an unhandled exception.
+ - **HasFirstStream**:\
+Gets whether at least one stream has started.
+
+#### Pipeline exception/error handling
+
+As the pipeline runs on a separate thread, the exceptions may occur are not being propageted to the main thread.
+You can check for errors through the *IsFaulted* status. In case of exception this would be stored in the pipelines *Exception* property.
+
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *WithConsumerProperties* method:
 ```cs
 var sslConfigurationDetails = new Dictionary<string, string>();
 sslConfigurationDetails.Add("security.protocol", "ssl");
@@ -228,4 +269,82 @@ pipeline.WaitUntilIdle(TimeSpan.FromMinutes(5), CancellationToken.None); // Wait
 You can optionally handle the [StreamFinished event](./src/MAT.OCS.Streaming.Samples/Samples/Basic/TData.cs#L88).
 ```cs
 input.StreamFinished += (sender, e) => Trace.WriteLine("Finished"); // Handle the steam finished event
+```
+
+### Buffers
+
+TData and Events messages are getting buffered once polled from the Kafka stream. The following samples show the usage of the buffer and some practical use cases.
+
+#### TData buffer
+
+As you could see in the [TData](read.md#telemetry-data) example, you can subscribe to the *DataBuffered* event and receive the polled TData message immediately from the buffer.
+You can also create a reference to the buffer and use it or read from it directly, whenever you need to.
+
+```csharp
+TelemetryDataBuffer buffer = input.DataInput.BindDefaultFeed(ParameterId).Buffer;
+```
+
+The *TelemetryDataBuffer* type has a few public methods:
+ - void PutData(TelemetryData data) 
+ - TelemetryData GetData(TelemetryData data)
+ - TelemetryData GetDataInWindow(ITimeWindowCursor cursor):\
+Gets buffered data in the cursor window. Data before the cursor window is discarded. The window may not be complete. Returns Buffered data in the cursor window.
+ - TelemetryData GetDataInCompleteWindow(ITimeWindowCursor cursor):\
+ Gets buffered data in the cursor window if there are samples beyond the end of the window. Returns Buffered data in the cursor window, or empty data if the window is incomplete.
+ - bool IsEmpty()
+ - TimeRange TimeRange():\
+Gets the time range covered by data in the buffer, or *TimeRange.Invalid* if the buffer is empty.
+
+A typical use case could be that you would read the buffer content only when a Lap is completed:
+```csharp
+var pipeline = client.StreamTopic(topicName).Into(streamId => // Stream Kafka topic into the handler method
+{
+	var input = new SessionTelemetryDataInput(streamId, dataFormatClient);
+	var buffer = input.DataInput.BindDefaultFeed(ParameterId).Buffer;
+	input.LapsInput.LapCompleted += (sender, args) =>
+		{
+			while (Equals(!buffer.IsEmpty))
+			{
+				var telemetryData = buffer.GetData();
+			}
+		};
+```
+
+You can create your own conditions, for example reaching a specific date time.
+Here is a combined example, where you hold a reference to the buffer, but also subscribing to new TData messages and once yout date time condition is met, you read a set of TData from the buffer for a given time frame, using the *GetDataInCompleteWindow*:
+```csharp
+var pipeline = client.StreamTopic(topicName).Into(streamId => // Stream Kafka topic into the handler method
+{
+	var input = new SessionTelemetryDataInput(streamId, dataFormatClient);
+	var buffer = input.DataInput.BindDefaultFeed(ParameterId).Buffer;
+	input.DataInput.BindDefaultFeed(ParameterId).DataBuffered += (sender, e) => // Bind the incoming feed and take the data
+	{
+		if (DateTime.Now >= new DateTime(2020, 2,17, 11, 45, 9, DateTimeKind.Utc))
+		{
+			var telemetryData = buffer.GetDataInCompleteWindow(new TimeStepCursor(1000, 0, 0));
+		}
+	}
+}
+```
+
+#### Events buffer
+
+Events buffer uses a generic *DataBuffer* implementation, with a little bit different set of public methods than the TData's buffer implementation:
+
+ - void PutData(T data) 
+ - void PutData(IEnumerable<T> data) 
+ - IList<T> GetData(TelemetryData data)
+ - IList<T> GetDataInWindow(TimeRange window):\
+Gets and removes all buffered data in the specified time window. Returns Buffered data in the time window.
+ - IList<T> GetDataInCompleteWindow(TimeRange window):\
+Gets and removes all buffered data in the specified time window IF there is data extending up to, or past the end of the specified window. Returns Buffered data in the time window, or an empty list if the window is incomplete.
+ - int Count()
+ - bool IsEmpty()
+ - TimeRange TimeRange():\
+Gets the time range covered by data in the buffer.
+
+The usage is very similar to the TData buffer, you create a reference to the *EventsInput.Buffer*:
+```csharp
+var input = new SessionTelemetryDataInput(streamId, dataFormatClient);
+var buffer = input.EventsInput.Buffer;
 ```

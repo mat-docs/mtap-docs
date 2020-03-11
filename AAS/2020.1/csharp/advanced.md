@@ -9,6 +9,7 @@
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)

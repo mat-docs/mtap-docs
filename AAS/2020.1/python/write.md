@@ -7,6 +7,7 @@
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
@@ -55,6 +56,21 @@ data_format_id = data_format_client.put_and_identify_data_format(data_format)
 client = KafkaStreamClient(kafka_address=KAFKA_IP,
                             consumer_group=DEPENDENCY_GROUP)
 ```
+
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *KafkaStreamClient* constructor:
+```python
+ssl_config = {"security.protocol": "SSL",
+			  "ssl.ca.location": "\\certificates\\ca-cert",
+			  "ssl.certificate.location": "\\certificates\\certificate.pem",
+			  "ssl.key.location": "\\certificates\\key.pem",
+			  "ssl.key.password": "password"}
+
+client = KafkaStreamClient(kafka_address=KAFKA_IP,
+                            consumer_group=DEPENDENCY_GROUP,
+							producer_properties=ssl_config)
+							```
 
 #### SSL connection
 

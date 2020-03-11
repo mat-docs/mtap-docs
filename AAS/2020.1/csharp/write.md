@@ -9,6 +9,7 @@
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
@@ -47,6 +48,21 @@ AtlasConfigurationId is needed only if you want to display your data in Atlas10.
 If you want to connect to MQTT, create a client of MqttStreamClient instead of KafkaStreamClient:
 ```cs
 var client = new MqttStreamClient(new MqttConnectionConfig(brokerList, "userName", "password"));
+```
+
+#### SSL connection
+
+To connect to your Kafka broker through https using your SSL certificates, you must use provide the following configuration details to *KafkaStreamClient* constructor:
+```cs
+var sslConfigurationDetails = new Dictionary<string, string>();
+sslConfigurationDetails.Add("security.protocol", "ssl");
+sslConfigurationDetails.Add("ssl.ca.location", @"C:\certificates\ca-cert");
+sslConfigurationDetails.Add("ssl.certificate.location", @"C:\\certificates\certificate.pem");
+sslConfigurationDetails.Add("ssl.key.location", @"C:\certificates\key.pem");
+sslConfigurationDetails.Add("ssl.key.password", "password");
+
+
+var client = new KafkaStreamClient(brokerList, sslConfigurationDetails); // Create a new KafkaStreamClient for connecting to Kafka broker, using SSL connection details
 ```
 
 #### SSL connection

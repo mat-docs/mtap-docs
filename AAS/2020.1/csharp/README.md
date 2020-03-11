@@ -3,11 +3,13 @@
 ### Table of Contents
 <!--ts-->
 - [**Introduction**](../README.md)<br>
+- [**Python Samples**](../python/README.md)<br>
 - [**C# Samples**](README.md)<br>
   - [Read](read.md#basic-samples-of-read)
     - [TData](read.md#telemetry-data)
     - [TSamples](read.md#telemetry-samples)
     - [Events](read.md#events)
+    - [Buffers](read.md#buffers)
   - [Write](write.md#basic-samples-of-write)
     - [TData](write.md#telemetry-data)
     - [TSamples](write.md#telemetry-samples)
