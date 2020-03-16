@@ -17,6 +17,7 @@
 
 ## Basic samples of Read
 The following chapters demonstrate the simple usage of Advanced Streams through basic samples, covering all the bare-minimum steps to implement Telematry Data, Telemetry Samples and Event **reads** from Kafka or Mqtt streams.\
+The library could consume pure JSON text messages or Protobuf encoded messages of the [known types](https://github.com/mat-docs/mtap-docs/blob/master/AAS/2020.1/resources/protocol.proto).
 The [full source code of the samples is here](./src).
 
 ### Configurations and dependencies

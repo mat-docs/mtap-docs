@@ -133,6 +133,14 @@ finally:
 Open the session within a Try Except block and handle sesseion status sending as shown above.
 You must add data_format_id and atlas_configuration_id to session dependencies to be able to use them during the streaming session.
 
+If you want to use Protobuf encoded messages instead of JSON, specify to *use_protobuf* when creating the SessionTelemetryDataOutput:
+
+```python
+output = SessionTelemetryDataOutput(output_topic=output_topic,
+                                    data_format_id=data_format_id,
+                                    data_format_client=data_format_client,
+                                    se_protobuf=True)
+```
 
 ### Telemetry Data
 
