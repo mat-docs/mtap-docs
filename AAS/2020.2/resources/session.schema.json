@@ -1,0 +1,98 @@
+{
+  "$id": "http://mclaren.com/appliedtechnologies/ocs/streaming/protocol/session",
+  "title": "session",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string"
+    },
+    "type": {
+      "type": "string"
+    },
+    "quality": {
+      "type": "number"
+    },
+    "state": {
+      "type": "string",
+      "enum": [
+        "waiting",
+        "open",
+        "closed",
+        "truncated",
+        "failed",
+        "abandoned"
+      ]
+    },
+    "identifier": {
+      "type": "string"
+    },
+    "details": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "string"
+        ]
+      }
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "group": {
+          "type": "string"
+        },
+        "version": {
+          "type": "integer"
+        },
+        "configuration": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "group"
+      ]
+    },
+    "dependencies": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "array"
+        ],
+        "items": {
+          "type": [
+            "string"
+          ]
+        }
+      }
+    },
+    "activity": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "format": "date-time"
+        },
+        "durationNanos": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "lastHeartbeat": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "id",
+    "state"
+  ]
+}
