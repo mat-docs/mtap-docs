@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+option csharp_namespace = "MAT.OCS.Streaming.Codecs.Protobuf.Protocol";
+option cc_generic_services = false;
+
+// ignore the warning in Visual Studio; this is a legit option for proto3
+option optimize_for = LITE_RUNTIME;
+
+message ParameterDataValues {
+	repeated uint32 statuses = 1;
+	repeated double min_values = 2;
+	repeated double max_values = 3;
+	repeated double avg_values = 4;
+	repeated double first_values = 5;
+}
+
+message ParameterDataValuesWithTimestamps {
+	int64 epoch_nanos = 1;
+	repeated int64 timestamps_nanos = 2;
+	ParameterDataValues values = 3;
+}
+
+message ParameterSampleValuesWithTimestamps {
+	int64 epoch_nanos = 1;
+	repeated int64 timestamps_nanos = 2;
+	repeated double values = 3;
+}
+
+message ParameterDataMessage {
+	string dataFormatId = 1;
+	string feed = 2;
+
+	int64 epoch_nanos = 3;
+	repeated int64 timestamps_nanos = 4;
+	map<int32, ParameterDataValues> parameters = 5;
+}
+
+message ParameterDataBackFillMessage {
+	string dataFormatId = 1;
+	string feed = 2;
+	
+	map<int32, ParameterDataValuesWithTimestamps> parameters = 3;
+}
+
+message ParameterSamplesMessage {
+	string dataFormatId = 1;
+	string feed = 2;
+	
+	map<int32, ParameterSampleValuesWithTimestamps> parameters = 3;
+}
+
+message ParameterSamplesBackFillMessage {
+	string dataFormatId = 1;
+	string feed = 2;
+	
+	map<int32, ParameterSampleValuesWithTimestamps> parameters = 3;
+}
+
+message EventMessage {
+	int64 epoch_nanos = 1;
+	int64 timestamps_nanos = 2;
+	string id = 3;
+	string status = 4;
+	repeated double values = 5;
+}
