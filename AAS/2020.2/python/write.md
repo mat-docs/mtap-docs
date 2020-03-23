@@ -139,7 +139,7 @@ If you want to use Protobuf encoded messages instead of JSON, specify to *use_pr
 output = SessionTelemetryDataOutput(output_topic=output_topic,
                                     data_format_id=data_format_id,
                                     data_format_client=data_format_client,
-                                    se_protobuf=True)
+                                    use_protobuf=True)
 ```
 
 ### Telemetry Data
