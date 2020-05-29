@@ -26,7 +26,7 @@ Example
 "server=localhost\\SQLEXPRESS;Initial Catalog=MyData;User Id=user;Password=password;"
 ```
 
-This connection string is used when creating topic configs when [seeding data](SeedingData.md).
+This connection string is used when creating topic configs when [seeding data](SeedData.md).
 
 ## InfluxDb installation
 **We strongly recommend deploying InfluxDb writer and InfluxDb on one Linux VM. InfluxDb performs better on Linux and by deploying it on one machine together with service you reduce unnecessary network bandwidth between those services.**
