@@ -20,7 +20,13 @@ InfluxWriter requires a SQL Server to save session metadata. This can be an exis
 
 If a new installation is required please [download](https://www.microsoft.com/en-gb/sql-server/sql-server-downloads) the version that is most appropriate for your environment. SQL can also be installed as a Docker container.
 
+A connection string that represents the server and database where you wish InfluxWriter to save the data should be provided.
+Example
+```
+"server=localhost\\SQLEXPRESS;Initial Catalog=MyData;User Id=user;Password=password;"
+```
 
+This connection string is used when creating topic configs when [seeding data](SeedingData.md).
 
 ## InfluxDb installation
 **We strongly recommend deploying InfluxDb writer and InfluxDb on one Linux VM. InfluxDb performs better on Linux and by deploying it on one machine together with service you reduce unnecessary network bandwidth between those services.**
