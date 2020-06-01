@@ -111,6 +111,36 @@ Result:
 
 You can also update and delete existing connections using `PUT` and `DELETE` requests based on the **connection identifier**. Please refer to the [Swagger UI](#swagger) for more information.
 
+### Seeding
+
+Data for the connections can also be seeded to the TAP API in a similar way it is done in InfluxWriter.
+The following is an example of seeding the same data as above (in appsettings.json)
+```
+"SeedOption": "always", // "" = do not seed, "always" = always seed, "empty" = seed if database is empty.
+"SeedData": [
+  {
+    "influxDbDetails": [
+      {
+        "topicName": "Topic1",
+        "label": "*",
+        "influxDbUrl": "http://localhost:8000",
+        "influxDbDatabase": "Database1",
+        "measurementName": "Marple"
+      },
+      {
+        "topicName": "Topic2",
+        "label": "*",
+        "influxDbUrl": "http://localhost:8000",
+        "influxDbDatabase": "Database1",
+        "measurementName": "Furnels"
+      }
+    ],
+    "identifier": "Season2017",
+    "sqlServerConnectionString": "server=.\\SQLEXPRESS;Initial Catalog=Database;User Id=UserId;Password=Password;"
+  }
+]
+```
+
 ## SqlRace Connections
 
 SQLRace connections retrieved via api/v1/connections are from the shared SQLRace configuration on the server. If you are working locally with this API service you can configure these connections using ATLAS 10 or SQLRace client. You can access connections configuration from Atlas 10 via Options -> Database Connection Manager:
