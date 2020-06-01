@@ -36,7 +36,9 @@ The TAP API allows connections to be queried (GET), created (POST), updated (PUT
 
 ## InfluxDb Connections
 
-Before being able to use the API to query the system, configure the InfluxDB connection(s) (`api/v1/connections`) to match the [InfluxDb Writer](/InfluxWriter/README.md) configuration(s). 
+Before being able to use the API to query the system, configure the InfluxDB connection(s) (`api/v1/connections`) to match the [InfluxDb Writer](/InfluxWriter/README.md) configuration(s).
+
+The SQL connection string should match the ones defined in the InfluxWriter topic configs. The same applies to the InfluxDB URL, database and measurement names. Each connection in TAP corresponds to a topic config in InfluxWriter.
 
 ### Description:
 
