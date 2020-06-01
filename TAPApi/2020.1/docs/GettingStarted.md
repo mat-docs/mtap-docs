@@ -36,7 +36,9 @@ The TAP API allows connections to be queried (GET), created (POST), updated (PUT
 
 ## InfluxDb Connections
 
-Before being able to use the API to query the system, configure the InfluxDB connection(s) (`api/v1/connections`) to match the [InfluxDb Writer](/InfluxWriter/README.md) configuration(s). 
+Before being able to use the API to query the system, configure the InfluxDB connection(s) (`api/v1/connections`) to match the [InfluxDb Writer](/InfluxWriter/README.md) configuration(s).
+
+The SQL connection string should match the ones defined in the InfluxWriter topic configs. The same applies to the InfluxDB URL, database and measurement names. Each connection in TAP corresponds to a topic config in InfluxWriter.
 
 ### Description:
 
@@ -108,6 +110,36 @@ Result:
 - `sqlServerConnectionString` is the connection string of the SQL database that stores session metadata.
 
 You can also update and delete existing connections using `PUT` and `DELETE` requests based on the **connection identifier**. Please refer to the [Swagger UI](#swagger) for more information.
+
+### Seeding
+
+Data for the connections can also be seeded to the TAP API in a similar way it is done in InfluxWriter.
+The following is an example of seeding the same data as above (in appsettings.json)
+```
+"SeedOption": "always", // "" = do not seed, "always" = always seed, "empty" = seed if database is empty.
+"SeedData": [
+  {
+    "influxDbDetails": [
+      {
+        "topicName": "Topic1",
+        "label": "*",
+        "influxDbUrl": "http://localhost:8000",
+        "influxDbDatabase": "Database1",
+        "measurementName": "Marple"
+      },
+      {
+        "topicName": "Topic2",
+        "label": "*",
+        "influxDbUrl": "http://localhost:8000",
+        "influxDbDatabase": "Database1",
+        "measurementName": "Furnels"
+      }
+    ],
+    "identifier": "Season2017",
+    "sqlServerConnectionString": "server=.\\SQLEXPRESS;Initial Catalog=Database;User Id=UserId;Password=Password;"
+  }
+]
+```
 
 ## SqlRace Connections
 
