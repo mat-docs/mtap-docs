@@ -20,7 +20,7 @@ The TAP API provides a micro service per persitence mechanism (Influx and SQLRac
 
 ### Prerequisites
 A SQL Server and InfluxDB installation are required for TAP running with an Influx backend.
-Please refer to the [InfluxWriter installation](/InfluxWriter/2020.1/docs/Installation.md) on how to install them.
+Please refer to the [InfluxWriter documentation](/InfluxWriter/Readme.md) on how to install them.
 
 #### Install the Identity Service
 The [**Identity Service**](/IdentityService/README.md) must be installed before installing MAT.TAP.TelemetryAnalytics.API.
